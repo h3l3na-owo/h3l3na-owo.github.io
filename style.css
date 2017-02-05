@@ -1,0 +1,27 @@
+body {
+	color: black;
+	background: #edab12;
+	font-size: 2em;
+	font-family: 'Shadows Into Light', cursive;
+}
+
+.greenbox {
+	border: 2px solid blue;
+	background:#ff3;
+	font-size:200%
+}
+
+.leftbox {
+	width: 40%;
+	float: left;
+	padding: 25px;
+	/*background:#f3f;*/
+}
+
+.rightbox {
+	width: 40%;
+	float: right;
+	padding: 25px;
+	/*background:#ff3;*/
+
+}
