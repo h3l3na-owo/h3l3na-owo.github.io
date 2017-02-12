@@ -5,10 +5,24 @@ body {
 	font-family: 'Shadows Into Light', cursive;
 }
 
+a {
+	color: white;
+	text-decoration: underline;
+
+}
+
 .greenbox {
 	border: 2px solid blue;
 	background:#ff3;
 	font-size:200%
+}
+
+.huge_yo {
+text-align: center;
+font-size: 900px;
+line-height: 80%;
+color: red;
+
 }
 
 .leftbox {
