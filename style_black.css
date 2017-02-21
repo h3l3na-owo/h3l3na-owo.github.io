@@ -1,0 +1,58 @@
+body {
+	color: red;
+	background: black;
+	font-size: 2em;
+	font-family: 'Shadows Into Light', cursive;
+	text-align: center;
+}
+
+a {
+	color: white;
+	text-decoration: underline;
+
+}
+
+img {
+    vertical-align: middle;
+
+}
+.center {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  overflow: auto;
+  border: solid black 2px;
+}
+.greenbox {
+	border: 2px solid blue;
+	background:#ff3;
+	font-size:200%
+}
+
+.huge_yo {
+text-align: center;
+font-size: 900px;
+line-height: 80%;
+color: red;
+
+}
+
+.leftbox {
+	width: 40%;
+	float: left;
+	padding: 25px;
+	/*background:#f3f;*/
+}
+
+.rightbox {
+	width: 40%;
+	float: right;
+	padding: 25px;
+	/*background:#ff3;*/
+
+}

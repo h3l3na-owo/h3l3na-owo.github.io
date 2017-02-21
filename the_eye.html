@@ -1,0 +1,34 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style_black.css">
+</head>
+
+<body>
+	<div class="center">
+		<a href="" onclick='
+
+var myElements = document.images;
+function scaleStep() {
+	var step = 10; 
+	var width = img.width || img.clientWidth;
+	var height = img.height || img.clientHeight;
+	img.setAttribute("width", width * 1.7);
+	img.setAttribute("height", height * 1.7);
+	console.log("scaleStep: "+img+", "+width+", "+height);
+}
+
+for (var i = 0; i < myElements.length; i++) {
+  var img = myElements[i];
+  img.style.transform = "rotate(1080deg)";
+  img.style.transition = "all 60s ease-in-out 0.3s";
+
+  var interval = window.setInterval(scaleStep, 100);
+}
+return false;
+'>
+			<img src="images/eye.png">
+		</a>
+	</div>
+
+</body>
+</html>
