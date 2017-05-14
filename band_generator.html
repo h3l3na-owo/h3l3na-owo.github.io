@@ -1,0 +1,63 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="ArtStyle.css">
+
+	<link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
+
+</head>
+<body>
+
+	<script type="text/javascript">
+function randomBand() {
+	// choose a random band
+	console.log("eryjy");
+
+	
+	console.log(bands);
+
+
+	// choose random integer
+	var bandIndex = Math.floor(Math.random() * (bands.length));
+	console.log(bandIndex);
+
+	// convert integer into band
+	var selectedBand = bands[bandIndex];
+	console.log(selectedBand);
+
+	// show band
+	var el = document.querySelector( "#bandname" );
+	el.textContent = selectedBand;
+	
+	return bands[bandIndex];
+}
+
+var bands = [
+	"My Chemical Romance",
+	"Twenty One Pilots",
+	"Christian Death",
+	"The Sex Pistols",
+	"The Sisters of Mercy",
+	"Bauhaus",
+	"Green Day",
+	"Panic! at the Disco",
+	"Evanesence",
+	"The Dead Kennedys",
+	"Nine Inch Nails",
+	"Against me!",
+	"Voltaire/Aurelio Voltaire",
+	"one-eyed doll",
+	"The Dresden Dolls",
+	"The Misfits",
+];
+	</script>
+
+<h1 style="text-align: center">
+		Are you bored?
+	</h1>
+<a href="#" onclick="randomBand()">
+Press here for a random band!</a>
+
+<div id="bandname" style="text-align: center">
+</div>
+</body>
+</html>
