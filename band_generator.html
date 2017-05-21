@@ -26,28 +26,81 @@ function randomBand() {
 
 	// show band
 	var el = document.querySelector( "#bandname" );
-	el.textContent = selectedBand;
+	el.textContent = selectedBand["name"];
+	var el = document.querySelector( "#genre" );
+	el.textContent = selectedBand["genre"];
 	
 	return bands[bandIndex];
 }
 
+
 var bands = [
-	"My Chemical Romance",
-	"Twenty One Pilots",
-	"Christian Death",
-	"The Sex Pistols",
-	"The Sisters of Mercy",
-	"Bauhaus",
-	"Green Day",
-	"Panic! at the Disco",
-	"Evanesence",
-	"The Dead Kennedys",
-	"Nine Inch Nails",
-	"Against me!",
-	"Voltaire/Aurelio Voltaire",
-	"one-eyed doll",
-	"The Dresden Dolls",
-	"The Misfits",
+	{
+		"name": "My Chemical Romance", 
+		"genre": "emo/hard rock",
+		
+	},
+	{
+		"name":	"Twenty One Pilots",
+		"genre": "IDK, m8",
+		
+	},
+	{
+		"name":"Christian Death",
+		"genre":"Goth/Deathrock",
+	},
+	{
+		"name":"The Sex Pistols",
+		"genre":"Punk rock",
+	},
+	{
+		"name":"The Sisters of Mercy",
+		"genre":"Goth",
+	},
+	{
+		"name":"Bauhaus",
+		"genre":"Goth/Post-punk",
+	},
+	{
+		"name": "Green Day",
+		"genre":"contemporary punk rock",
+	},
+	{
+		"name":"Panic! at the Disco",
+		"genre":"Cabaret rock, alternative pop, alternative rock",
+	},
+	{
+		"name":"Evanesence",
+		"genre":"Alternative metal",
+	},
+	{
+		"name": "The Dead Kennedys",
+		"genre":"punk rock",
+	},
+	{
+		"name":"Nine Inch Nails",
+		"genre":"industrial rock",
+	},
+	{
+		"name":"Against me!",
+		"genre":"contemporary punk rock",
+	},
+	{
+		"name":"Voltaire/Aurelio Voltaire",
+		"genre":"novelty goth music",
+	},
+	{
+		"name":"One-Eyed Doll",
+		"genre":"hard rock",
+	},
+	{
+		"name":"The Dresden Dolls",
+		"genre":"Cabaret punk",
+	},
+	{
+		"name":"The Misfits",
+		"genre":"Horror punk",
+	},
 ];
 	</script>
 
@@ -58,6 +111,8 @@ var bands = [
 Press here for a random band!</a>
 
 <div id="bandname" style="text-align: center">
+</div>
+<div id="genre" style="text-align: center">
 </div>
 </body>
 </html>
