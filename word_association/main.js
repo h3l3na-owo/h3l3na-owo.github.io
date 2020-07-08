@@ -28,10 +28,10 @@ $(document).ready(function() {
   * The following functions are what do the work for retrieving and displaying gifs
   * that we search for.
   */
+
   function error(){
     console.log("hi")
     clearInterval(timer);
-    const message = document.querySelector('p');
     message.textContent = "uh oh! looks like what you entered isn't a word."
   }
 
@@ -72,6 +72,9 @@ $(document).ready(function() {
   let nextWord;
   let timer;
   let list = document.querySelector('ol');
+  let message = document.querySelector('p');
+
+  message.textContent = "word association! type a word to start a string of others";
 
   $("#submitButton").on("click", function() {
     var query = $("#inputQuery").val();
