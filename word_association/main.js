@@ -44,28 +44,21 @@ $(document).ready(function() {
 
   function getWord(query) {
     console.log(query);
-    query = query.replace(' ', '+');
-    //var params = { 'api_key': apikey, 'q': query};
-    //params = encodeQueryData(params);
 
-    // api from https://github.com/Giphy/GiphyAPI#search-endpoint 
 
     httpGetAsync('https://api.datamuse.com/words?rel_trg='+query+'&max=10', function(data) {
         var words = JSON.parse(data);
         console.log(words);
         var randomElement = words[Math.floor(Math.random()*words.length)];
-        let firstWord;
         if (!randomElement){
           error();
         }
         else{
           const message = document.querySelector('p');
           message.textContent = "";
-          firstWord = randomElement.word;
-          console.log(firstWord);
-          displayWord(firstWord);
-          nextWord = firstWord;
-          first = query;
+          nextWord = randomElement.word;
+          console.log(nextWord);
+          displayWord(nextWord);
           if (nextWord === first){
             clearInterval(timer);
           }
@@ -74,23 +67,27 @@ $(document).ready(function() {
   }
 
   let nextWord;
-  let timer;
+  let timer = null;
   let list = document.querySelector('ol');
   let message = document.querySelector('p');
-  let first;
+  let first;  // the actual first word
 
   $("#submitButton").on("click", function() {
     var query = $("#inputQuery").val();
     first = query;
     nextWord = query;
-    timer = setInterval(function(){
-      getWord(nextWord);
-    },500);
-    getWord(query);
+
+    if (timer === null) {
+      timer = setInterval(function(){
+        getWord(nextWord);
+      },500);
+      getWord(query);
+    }
   });
 
   $("#stopButton").on("click", function() {
     clearInterval(timer);
+    timer = null;
   });
   $("#resetButton").on("click", function() {
     list.innerHTML = '';
