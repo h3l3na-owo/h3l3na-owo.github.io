@@ -39,7 +39,7 @@ $(document).ready(function() {
    const myLI = document.createElement('li');
     myLI.textContent = word;
     list.appendChild(myLI);
-    myLI.scrollIntoView();
+    myLI.scrollIntoView({behavior: "smooth"});
   }
 
   function getWord(query) {
@@ -51,20 +51,24 @@ $(document).ready(function() {
     // api from https://github.com/Giphy/GiphyAPI#search-endpoint 
 
     httpGetAsync('https://api.datamuse.com/words?rel_trg='+query+'&max=10', function(data) {
-      var words = JSON.parse(data);
-      console.log(words);
-      var randomElement = words[Math.floor(Math.random()*words.length)];
-      let firstWord;
-      if (!randomElement){
-        error();
-      }
-      else{
-        const message = document.querySelector('p');
-        message.textContent = "";
-        firstWord = randomElement.word;
-        console.log(firstWord);
-        displayWord(firstWord);
-        nextWord = firstWord;
+        var words = JSON.parse(data);
+        console.log(words);
+        var randomElement = words[Math.floor(Math.random()*words.length)];
+        let firstWord;
+        if (!randomElement){
+          error();
+        }
+        else{
+          const message = document.querySelector('p');
+          message.textContent = "";
+          firstWord = randomElement.word;
+          console.log(firstWord);
+          displayWord(firstWord);
+          nextWord = firstWord;
+          first = query;
+          if (nextWord === first){
+            clearInterval(timer);
+          }
       }
     });
   }
@@ -73,12 +77,11 @@ $(document).ready(function() {
   let timer;
   let list = document.querySelector('ol');
   let message = document.querySelector('p');
-
-  message.textContent = "word association! type a word to start a string of others";
+  let first;
 
   $("#submitButton").on("click", function() {
     var query = $("#inputQuery").val();
-
+    first = query;
     nextWord = query;
     timer = setInterval(function(){
       getWord(nextWord);
@@ -92,6 +95,8 @@ $(document).ready(function() {
   $("#resetButton").on("click", function() {
     list.innerHTML = '';
   });
+
+  
 })
 
 
