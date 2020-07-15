@@ -18,10 +18,15 @@ a {
 }
 
 .huge_yo {
-text-align: center;
-font-size: 900px;
-line-height: 80%;
-color: red;
+	text-align: center;
+	font-size: 400px;
+	line-height: 80%;
+	color: rgb(175,20,20);
+
+}
+
+h2 {
+	color:rgb(150,30,30);
 
 }
 
