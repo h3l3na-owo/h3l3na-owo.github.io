@@ -1,8 +1,10 @@
 body {
 	color: black;
 	background: #edab12;
-	font-size: 2em;
-	font-family: 'Shadows Into Light', cursive;
+	font-size: 70px;
+	font-family: 'Pacifico', cursive; ;
+  	
+  src: url(https://fonts.google.com/);
 }
 
 a {
@@ -10,6 +12,7 @@ a {
 	text-decoration: underline;
 
 }
+
 
 .greenbox {
 	border: 2px solid blue;
