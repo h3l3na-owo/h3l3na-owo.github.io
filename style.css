@@ -1,7 +1,7 @@
 body {
 	color: black;
 	background: #edab12;
-	font-size: 70px;
+	font-size: 60px;
 	font-family: 'Fondamento', cursive; ;
   	src: url(https://fonts.google.com/);
 }
@@ -22,7 +22,8 @@ a {
 
 .huge_yo {
 	text-align: center;
-	font-size: 400px;
+	/* font-size: 400px; */
+    font-size: 25vw;
 	line-height: 80%;
 	color: rgb(175,20,20);
 
