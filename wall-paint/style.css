@@ -23,24 +23,24 @@ div#query {
 }
 
 div#query input {
-	font-size: 20px;
+	font-size: 15px;
 }
 
 div#query input#brushSize {	
-	width:150px;
+	width:70px;
 }
 
 div#query select {
 	
-	font-size: 20px;
+	font-size: 15px;
 }
 
 div#query .label {
 	color:white;
-	font-size: 27px;
+	font-size: 20px;
 }
 #position {
-	font-size: 30px;
+	font-size: 20px;
 	color:white;
 	font-weight: bold;
 }

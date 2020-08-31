@@ -7,6 +7,8 @@ const colorPicker = document.querySelector('select#color');
 let color = 'rgb(20,250,20)'; 
 let e = window.event;
 let isDrawing = false;
+let circleRad = 25;
+
 
 //let posX = e.clientX;
 //let posY = e.clientY;
@@ -21,7 +23,7 @@ function circle(x, y){
 	ctx.fillStyle = color;
 	//ctx.strokeStyle = 'rgb(red, green, blue)';
 	ctx.beginPath();
-	ctx.arc(x, y, 25, degToRad(0), degToRad(360), false);
+	ctx.arc(x, y, circleRad, degToRad(0), degToRad(360), false);
 	ctx.fill();
 }
 
@@ -41,16 +43,13 @@ function trackMouse(evt){
   position.textContent = 'X;Y:'+ message;
   if(isDrawing === true){
     circle(mousePos.x, mousePos.y);
-    console.log("draw");
   }
 }
 canvas.addEventListener('mousedown', function(){
-   console.log('event');
    isDrawing = true;
 });
 
-canvas.addEventListener('mouseup', function(){
-   console.log('event2');
+canvas.addEventListener('mouseup', function(){}
    isDrawing = false;      
 });
 
@@ -62,7 +61,10 @@ colorPicker.addEventListener("change", function(){
 });
 
 document.querySelector('#resetButton').addEventListener("click", function() {
-    ctx.clearRect(0,0,width,height);
-  });
+  ctx.clearRect(0,0,width,height);
+});
    
+document.querySelector('#submitButton').addEventListener("click",function(){
+  circleRad = document.querySelector('input#brushSize').value;
+})
       
