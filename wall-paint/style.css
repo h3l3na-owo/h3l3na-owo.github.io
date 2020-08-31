@@ -1,0 +1,46 @@
+body {
+	font-family: 'Roboto', sans-serif;
+	font-style: oblique;
+	font-weight: 400;
+	line-height: 1.5;
+	font-size: 18px;
+	background-image:url('wall.jpg');
+	background-size: cover;
+	padding:15px;
+	
+}
+
+div#query {
+	
+	position:fixed;
+	right: 0;
+	border:1px;
+	top: 0;
+	padding:15px;
+	text-align: right;
+	right: 0;
+	background-color:rgb(20,20,20);
+}
+
+div#query input {
+	font-size: 20px;
+}
+
+div#query input#brushSize {	
+	width:150px;
+}
+
+div#query select {
+	
+	font-size: 20px;
+}
+
+div#query .label {
+	color:white;
+	font-size: 27px;
+}
+#position {
+	font-size: 30px;
+	color:white;
+	font-weight: bold;
+}
