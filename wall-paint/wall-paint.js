@@ -8,6 +8,9 @@ let color = 'rgb(20,250,20)';
 let e = window.event;
 let isDrawing = false;
 let circleRad = 25;
+let prevX = null;
+let prevY = null;
+
 
 
 //let posX = e.clientX;
@@ -19,12 +22,42 @@ function degToRad(degrees) {
 };
 
 function circle(x, y){
-	console.log("circle");
 	ctx.fillStyle = color;
 	//ctx.strokeStyle = 'rgb(red, green, blue)';
 	ctx.beginPath();
 	ctx.arc(x, y, circleRad, degToRad(0), degToRad(360), false);
 	ctx.fill();
+}
+
+function mouseCircle(x, y){
+
+  //find dot distance
+  let distance;
+  if(prevY !== null || prevX !== null){
+    distance = Math.sqrt((y-prevY)**2+(x-prevX)**2);
+  }
+
+  //if it's more than 1.5x dot's radius, draw dots in between
+  if(distance > 1.5*circleRad){
+    console.log("distance: "+distance);
+    ctx.beginPath();
+    ctx.strokeStyle = color;
+    ctx.lineWidth=circleRad*2;
+    ctx.moveTo(prevX, prevY);
+    ctx.lineTo(x,y);
+    ctx.stroke();
+  }
+
+  //draw circle
+  ctx.fillStyle = color;
+  //ctx.strokeStyle = 'rgb(red, green, blue)';
+  ctx.beginPath();
+  ctx.arc(x, y, circleRad, degToRad(0), degToRad(360), false);
+  ctx.fill();
+
+  //save previous x,y
+  prevX = x;
+  prevY = y; 
 }
 
 function getMousePos(canvas, evt) {
@@ -42,15 +75,19 @@ function trackMouse(evt){
   var mousePos = getMousePos(canvas, evt);
   position.textContent = 'X;Y:'+ message;
   if(isDrawing === true){
-    circle(mousePos.x, mousePos.y);
+    //circle(mousePos.x, mousePos.y);
+    mouseCircle(mousePos.x, mousePos.y);
+
   }
 }
 canvas.addEventListener('mousedown', function(){
    isDrawing = true;
 });
 
-canvas.addEventListener('mouseup', function(){}
-   isDrawing = false;      
+canvas.addEventListener('mouseup', function(){
+   isDrawing = false; 
+   prevX=null;
+   prevY=null;     
 });
 
 canvas.addEventListener('mousemove', trackMouse, false);
