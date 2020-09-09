@@ -1,6 +1,6 @@
 const canvas = document.querySelector('canvas');
-const width = canvas.width = window.innerWidth;
-const height = canvas.height = window.innerHeight;
+let w;
+let h;
 const ctx = canvas.getContext('2d');
 const position = document.querySelector('#position');
 const colorPicker = document.querySelector('select#color');
@@ -11,10 +11,33 @@ let circleRad = 25;
 let prevX = null;
 let prevY = null;
 
+/*function resizeCanvas() {
+  console.log("resize");
+  width = canvas.width = window.innerWidth;
+  height = canvas.height = window.innerHeight;
+  console.log("size:"+ width + ", "+ height);
+} */
 
 
-//let posX = e.clientX;
-//let posY = e.clientY;
+function resizeCanvas(){
+// create a temporary canvas obj to cache the pixel data //
+    var temp_cnvs = document.createElement('canvas');
+    var temp_cntx = temp_cnvs.getContext('2d');
+// set it to the new width & height and draw the current canvas data into it  
+    w = innerWidth;
+    h = innerHeight;
+    temp_cnvs.width = w; 
+    temp_cnvs.height = h;
+    //temp_cntx.fillStyle = _background;  // the original canvas's background color
+    //temp_cntx.fillRect(0, 0, w, h);
+    temp_cntx.drawImage(canvas, 0, 0);
+// resize & clear the original canvas and copy back in the cached pixel data //
+    canvas.width = w; 
+    canvas.height = h;
+    ctx.drawImage(temp_cnvs, 0, 0);
+}
+
+resizeCanvas();
 
 
 function degToRad(degrees) {
@@ -39,7 +62,6 @@ function mouseCircle(x, y){
 
   //if it's more than 1.5x dot's radius, draw dots in between
   if(distance > 1.5*circleRad){
-    console.log("distance: "+distance);
     ctx.beginPath();
     ctx.strokeStyle = color;
     ctx.lineWidth=circleRad*2;
@@ -50,6 +72,7 @@ function mouseCircle(x, y){
 
   //draw circle
   ctx.fillStyle = color;
+  console.log(color);
   //ctx.strokeStyle = 'rgb(red, green, blue)';
   ctx.beginPath();
   ctx.arc(x, y, circleRad, degToRad(0), degToRad(360), false);
@@ -77,7 +100,6 @@ function trackMouse(evt){
   if(isDrawing === true){
     //circle(mousePos.x, mousePos.y);
     mouseCircle(mousePos.x, mousePos.y);
-
   }
 }
 canvas.addEventListener('mousedown', function(){
@@ -98,10 +120,12 @@ colorPicker.addEventListener("change", function(){
 });
 
 document.querySelector('#resetButton').addEventListener("click", function() {
-  ctx.clearRect(0,0,width,height);
+  ctx.clearRect(0,0,w,h);
 });
    
 document.querySelector('#submitButton').addEventListener("click",function(){
   circleRad = document.querySelector('input#brushSize').value;
-})
-      
+});
+
+     
+window.addEventListener('resize', resizeCanvas, false);
