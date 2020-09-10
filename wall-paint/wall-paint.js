@@ -3,21 +3,16 @@ let w;
 let h;
 const ctx = canvas.getContext('2d');
 const position = document.querySelector('#position');
+const wallPicker = document.querySelector('select#wall');
 const colorPicker = document.querySelector('select#color');
-let color = 'rgb(20,250,20)'; 
+let color = 'rgb(20,250,20)';
+let wall = "url('wall.jpg')"; 
 let e = window.event;
 let isDrawing = false;
 let circleRad = 25;
 let prevX = null;
 let prevY = null;
-
-/*function resizeCanvas() {
-  console.log("resize");
-  width = canvas.width = window.innerWidth;
-  height = canvas.height = window.innerHeight;
-  console.log("size:"+ width + ", "+ height);
-} */
-
+let isErasing = false;
 
 function resizeCanvas(){
 // create a temporary canvas obj to cache the pixel data //
@@ -119,10 +114,29 @@ colorPicker.addEventListener("change", function(){
   color = colorPicker.value;
 });
 
+wallPicker.addEventListener("change", function(){
+  wall = wallPicker.value;
+  document.querySelector('body').style.backgroundImage = wall;
+});
+
 document.querySelector('#resetButton').addEventListener("click", function() {
   ctx.clearRect(0,0,w,h);
 });
-   
+ 
+
+/*document.querySelector('#eraseButton').addEventListener("click", function() {
+  if (isErasing = false){
+    console.log("erasing");
+    isErasing = true;
+    document.querySelector('#eraseButton').value = 'on';
+  }
+  else if (isErasing = true){
+    isErasing = false;
+    document.querySelector('#eraseButton').value = 'off';    
+  }
+}); */
+
+
 document.querySelector('#submitButton').addEventListener("click",function(){
   circleRad = document.querySelector('input#brushSize').value;
 });

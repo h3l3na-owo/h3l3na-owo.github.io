@@ -16,10 +16,22 @@
 				  <option value="rgb(20,250,20)" selected>Green</option>
 				  <option value="rgb(250,20,250)">Purple</option>
 				  <option value="rgb(255,255,0)">Yellow</option>
+				  <option value="rgb(0,0,0)">Black</option>
+				  <option value="rgb(255,255,255)">White</option>
+				  <option value="rgb(255,165,0)">orange</option>
+
 
 				</select> <br> <br>
         <input type="text" id="brushSize" value="25"><input type="button" id="submitButton" value="brush size"><br><br>
-        <input type="button" id="resetButton" value="reset canvas"><br>
+        <span class="label">Wall:</span>
+        <select name="Walls" id="wall">
+				  <option value="url('wall.jpg')" selected>Brick</option>
+				  <option value="url('metal.jpg')">Metal</option>
+				  <option value="url('wood.jpg')">Wood</option>
+				</select> <br> <br>
+				<span class="label">Eraser:</span>
+				<input type="button" id="eraseButton" ><br><br>
+				<input type="button" id="resetButton" value="reset canvas"><br><br>
         <span id="position"></span>
     </div>
 
