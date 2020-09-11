@@ -1,3 +1,7 @@
+//to do: remove eraser gaps
+
+//to do: make eraser a cirlce
+
 const canvas = document.querySelector('canvas');
 let w;
 let h;
@@ -39,13 +43,7 @@ function degToRad(degrees) {
   return degrees * Math.PI / 180;
 };
 
-function circle(x, y){
-	ctx.fillStyle = color;
-	//ctx.strokeStyle = 'rgb(red, green, blue)';
-	ctx.beginPath();
-	ctx.arc(x, y, circleRad, degToRad(0), degToRad(360), false);
-	ctx.fill();
-}
+
 
 function mouseCircle(x, y){
 
@@ -67,7 +65,6 @@ function mouseCircle(x, y){
 
   //draw circle
   ctx.fillStyle = color;
-  console.log(color);
   //ctx.strokeStyle = 'rgb(red, green, blue)';
   ctx.beginPath();
   ctx.arc(x, y, circleRad, degToRad(0), degToRad(360), false);
@@ -90,15 +87,36 @@ function getMousePos(canvas, evt) {
 function trackMouse(evt){
   var mousePos = getMousePos(canvas, evt);
   var message = mousePos.x + ',' + mousePos.y;
-  var mousePos = getMousePos(canvas, evt);
   position.textContent = 'X;Y:'+ message;
   if(isDrawing === true){
-    //circle(mousePos.x, mousePos.y);
-    mouseCircle(mousePos.x, mousePos.y);
+    
+    
+    if (isErasing === true){
+      erase(mousePos.x, mousePos.y);
+    }
+    else {
+      //circle(mousePos.x, mousePos.y);
+      mouseCircle(mousePos.x, mousePos.y);
+    }
   }
+
 }
+
+function erase(x, y){
+  //ctx.beginPath();
+  // ctx.arc(x, y, circleRad, degToRad(0), degToRad(360), false);
+  // ctx.clip();
+  // ctx.clearRect(0,0,w,h);
+  // ctx.restore();
+
+  //rectangular eraser
+  ctx.clearRect(x-circleRad/2, y-circleRad/2, circleRad, circleRad);
+}
+
+
+
 canvas.addEventListener('mousedown', function(){
-   isDrawing = true;
+  isDrawing = true;
 });
 
 canvas.addEventListener('mouseup', function(){
@@ -120,21 +138,24 @@ wallPicker.addEventListener("change", function(){
 });
 
 document.querySelector('#resetButton').addEventListener("click", function() {
+  ctx.restore();
   ctx.clearRect(0,0,w,h);
+  console.log("reset");
 });
  
 
-/*document.querySelector('#eraseButton').addEventListener("click", function() {
-  if (isErasing = false){
+document.querySelector('#eraseButton').addEventListener("click", function() {
+  if (isErasing === false){
     console.log("erasing");
     isErasing = true;
     document.querySelector('#eraseButton').value = 'on';
   }
-  else if (isErasing = true){
+  else if (isErasing === true){
     isErasing = false;
-    document.querySelector('#eraseButton').value = 'off';    
+    document.querySelector('#eraseButton').value = 'off';
+
   }
-}); */
+}); 
 
 
 document.querySelector('#submitButton').addEventListener("click",function(){
