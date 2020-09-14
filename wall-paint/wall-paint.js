@@ -103,7 +103,19 @@ function trackMouse(evt){
 
 }
 
+function erasingOn(){
+  document.body.style.cursor = 'crosshair';
+  console.log("erasing");
+  isErasing = true;
+  document.querySelector('#eraseButton').value = 'on';
+}
 
+function erasingOff(){
+    document.body.style.cursor = 'default';
+    isErasing = false;
+    document.querySelector('#eraseButton').value = 'off';
+    console.log("erasing off");
+}
 
 
 
@@ -125,11 +137,12 @@ canvas.addEventListener('mousemove', trackMouse, false);
 
 colorPicker.addEventListener("change", function(){
   color = colorPicker.value;
+  erasingOff();
 });
 
 wallPicker.addEventListener("change", function(){
   wall = wallPicker.value;
-  document.querySelector('body').style.backgroundImage = wall;
+  document.querySelector('body').style.backgroundImage = wall; 
 });
 
 document.querySelector('#resetButton').addEventListener("click", function() {
@@ -141,16 +154,10 @@ document.querySelector('#resetButton').addEventListener("click", function() {
 
 document.querySelector('#eraseButton').addEventListener("click", function() {
   if (isErasing === false){
-    document.body.style.cursor = 'crosshair';
-    console.log("erasing");
-    isErasing = true;
-    document.querySelector('#eraseButton').value = 'on';
+    erasingOn();
   }
   else if (isErasing === true){
-    document.body.style.cursor = 'default';
-    isErasing = false;
-    document.querySelector('#eraseButton').value = 'off';
-
+    erasingOff();
   }
 }); 
 
