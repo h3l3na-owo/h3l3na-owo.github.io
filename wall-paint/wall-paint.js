@@ -2,6 +2,8 @@
 
 //to do: make eraser a cirlce
 
+//maybe: change curser & favicon
+
 const canvas = document.querySelector('canvas');
 let w;
 let h;
@@ -53,6 +55,12 @@ function mouseCircle(x, y){
     distance = Math.sqrt((y-prevY)**2+(x-prevX)**2);
   }
 
+  if( isErasing){
+    ctx.globalCompositeOperation = "destination-out";
+  }
+  else{
+    ctx.globalCompositeOperation = 'source-over';
+  }
   //if it's more than 1.5x dot's radius, draw dots in between
   if(distance > 1.5*circleRad){
     ctx.beginPath();
@@ -66,6 +74,7 @@ function mouseCircle(x, y){
   //draw circle
   ctx.fillStyle = color;
   //ctx.strokeStyle = 'rgb(red, green, blue)';
+
   ctx.beginPath();
   ctx.arc(x, y, circleRad, degToRad(0), degToRad(360), false);
   ctx.fill();
@@ -89,40 +98,26 @@ function trackMouse(evt){
   var message = mousePos.x + ',' + mousePos.y;
   position.textContent = 'X;Y:'+ message;
   if(isDrawing === true){
-    
-    
-    if (isErasing === true){
-      erase(mousePos.x, mousePos.y);
-    }
-    else {
-      //circle(mousePos.x, mousePos.y);
       mouseCircle(mousePos.x, mousePos.y);
-    }
   }
 
 }
 
-function erase(x, y){
-  //ctx.beginPath();
-  // ctx.arc(x, y, circleRad, degToRad(0), degToRad(360), false);
-  // ctx.clip();
-  // ctx.clearRect(0,0,w,h);
-  // ctx.restore();
 
-  //rectangular eraser
-  ctx.clearRect(x-circleRad/2, y-circleRad/2, circleRad, circleRad);
-}
 
 
 
 canvas.addEventListener('mousedown', function(){
   isDrawing = true;
+  document.body.style.cursor = 'pointer';
+  console.log(ctx.globalCompositeOperation);
 });
 
 canvas.addEventListener('mouseup', function(){
    isDrawing = false; 
    prevX=null;
-   prevY=null;     
+   prevY=null; 
+   document.body.style.cursor = isErasing ? 'crosshair' : 'default';
 });
 
 canvas.addEventListener('mousemove', trackMouse, false);
@@ -146,11 +141,13 @@ document.querySelector('#resetButton').addEventListener("click", function() {
 
 document.querySelector('#eraseButton').addEventListener("click", function() {
   if (isErasing === false){
+    document.body.style.cursor = 'crosshair';
     console.log("erasing");
     isErasing = true;
     document.querySelector('#eraseButton').value = 'on';
   }
   else if (isErasing === true){
+    document.body.style.cursor = 'default';
     isErasing = false;
     document.querySelector('#eraseButton').value = 'off';
 
