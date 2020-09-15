@@ -133,7 +133,7 @@ canvas.addEventListener('mouseup', function(){
 });
 
 canvas.addEventListener('mousemove', trackMouse, false);
-
+canvas.addEventListener('touchmove', trackMouse, false);
 
 colorPicker.addEventListener("change", function(){
   color = colorPicker.value;
