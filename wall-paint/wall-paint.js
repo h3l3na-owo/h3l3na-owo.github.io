@@ -9,6 +9,7 @@ let w;
 let h;
 const ctx = canvas.getContext('2d');
 const position = document.querySelector('#position');
+const eventType = document.querySelector('#evtype');
 const wallPicker = document.querySelector('select#wall');
 const colorPicker = document.querySelector('select#color');
 let color = 'rgb(20,250,20)';
@@ -86,26 +87,31 @@ function mouseCircle(x, y){
 
 function getMousePos(canvas, evt) {
   var rect = canvas.getBoundingClientRect();
+  var x = evt.type === "mousemove" ? evt.clientX : evt.touches[0].clientX;
+  var y = evt.type === "mousemove" ? evt.clientY : evt.touches[0].clientY;
   return {
-    x: evt.clientX - rect.left,
-    y: evt.clientY - rect.top
+
+    x: x - rect.left,
+    y: y - rect.top
   };
 }
 
 
 function trackMouse(evt){
-  var mousePos = getMousePos(canvas, evt);
-  var message = mousePos.x + ',' + mousePos.y;
-  position.textContent = 'X;Y:'+ message;
-  if(isDrawing === true){
-      mouseCircle(mousePos.x, mousePos.y);
-  }
-
+  //if (evt.type === "mousemove"){
+    //console.log(evt);
+    var mousePos = getMousePos(canvas, evt);
+    var message = mousePos.x + ',' + mousePos.y;
+    position.textContent = 'X;Y:'+ message;
+    eventType.textContent = evt.type;
+    if(isDrawing === true || evt.type==="touchmove"){
+        mouseCircle(mousePos.x, mousePos.y);
+    }
+    evt.preventDefault();
 }
 
 function erasingOn(){
   document.body.style.cursor = 'crosshair';
-  console.log("erasing");
   isErasing = true;
   document.querySelector('#eraseButton').value = 'on';
 }
@@ -114,26 +120,32 @@ function erasingOff(){
     document.body.style.cursor = 'default';
     isErasing = false;
     document.querySelector('#eraseButton').value = 'off';
-    console.log("erasing off");
 }
 
-
-
-canvas.addEventListener('mousedown', function(){
-  isDrawing = true;
-  document.body.style.cursor = 'pointer';
-  console.log(ctx.globalCompositeOperation);
-});
-
-canvas.addEventListener('mouseup', function(){
+function stopDraw(){
    isDrawing = false; 
    prevX=null;
    prevY=null; 
    document.body.style.cursor = isErasing ? 'crosshair' : 'default';
+   evt.preventDefault();
+}
+
+canvas.addEventListener('mousedown', function(){
+  isDrawing = true;
+  document.body.style.cursor = 'pointer';
+  //console.log(ctx.globalCompositeOperation);
 });
 
 canvas.addEventListener('mousemove', trackMouse, false);
+canvas.addEventListener('mouseup', stopDraw, false);
+canvas.addEventListener('mouseout', stopDraw, false);
+
+
+canvas.addEventListener('touchstart', trackMouse, false);
 canvas.addEventListener('touchmove', trackMouse, false);
+canvas.addEventListener('touchend', stopDraw, false);
+canvas.addEventListener('touchcancel', stopDraw, false);
+
 
 colorPicker.addEventListener("change", function(){
   color = colorPicker.value;
@@ -148,7 +160,6 @@ wallPicker.addEventListener("change", function(){
 document.querySelector('#resetButton').addEventListener("click", function() {
   ctx.restore();
   ctx.clearRect(0,0,w,h);
-  console.log("reset");
 });
  
 

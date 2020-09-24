@@ -1,0 +1,3933 @@
+/*
+ * ====================================================================
+ *
+ * common-mo.css
+ *
+ * Shared style definitions for the Mozilla browser.
+ *
+ * ====================================================================
+ *
+ * X2 Development Corporation
+ *
+ * Copyright (c) 2002-2016 X2 Development Corporation.
+ * All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, is not permitted without a written agreement
+ * from X2 Development Corporation.
+ *
+ * ====================================================================
+ */
+
+/*
+ * Global style definitions
+ */
+@import url("font-awesome-4.6.3/css/font-awesome.min.css");
+ 
+body
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  margin: 0px 0px 0px 0px;
+}
+
+form 
+{
+  margin: 0px; 
+  padding: 0px; 
+}
+
+td, p, li, input, select, option, pre
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 9pt;
+}
+
+.translateForKey
+{
+  font-family: Arial, Helvetica;
+    font-size: x-small;
+  width: 100%;
+  resize: none
+}
+
+th
+{
+  font-size: 10px;
+  text-align: left;
+}
+
+hr
+{
+  border: 0px;
+  height: 1px;
+}
+
+a
+{
+  color: #0000dd;
+  text-decoration: none;
+}
+
+a:hover
+{
+  text-decoration: underline;
+}
+
+a img
+{
+    border: 0;
+}
+
+input.columnButton
+{
+  width: 100px;
+}
+
+.pointer
+{
+  cursor: pointer;
+}
+
+.fillHeight
+{
+    height: 100%;
+}
+
+.hidden
+{
+    display: none;
+}
+
+.inline
+{
+	display: inline;
+}
+
+.warning
+{
+    color: #ff0000;
+    font-weight: bold;
+}
+
+/*
+ * Application style definitions
+ */
+
+.addressViewFixedHeight
+{
+  height: 70px;
+  font-size: 10pt;
+  border-right: solid #999999 1px;
+  border-left: solid #999999 1px;
+  font-weight: bold;
+  padding: 0px 5px 0px 25px;
+}
+
+.alertTable
+{
+    color: #800000;
+}
+
+.alertCellHeaderText
+{
+  font-size: 14pt;
+  font-weight: bold;
+}
+
+.alertCellText
+{
+  font-size: 10pt;
+}
+
+.attendanceInputButton
+{
+  font-size: 8pt;
+  width: 42px;
+  text-align: center;
+  vertical-align: middle;
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.attendanceInputButtonReplace
+{
+  text-decoration: underline; 
+}
+
+.applicationSubtitle
+{
+  font-size: small;
+  font-weight: bold;
+  font-style: italic;
+}
+
+/*
+ * based on popup size defined in:
+ * gradeInput.js: gradeAuditDetail.do
+ * studentChangesLookup.jsp: studentChangesDetail.do
+ * nav-options-sis.xml: embeddedAuditDetail.do
+ */
+.auditListInfoOverflow
+{
+	overflow: scroll;
+	width: 1170px;
+	max-height: 540px;
+}
+
+.lightTitle
+{
+	color: white;
+}
+
+.applicationTitle
+{
+  font-size: large;
+  font-weight: bold;
+  padding-left: 10px;
+}
+
+.layoutHeader
+{
+  background-color: #585858;
+}
+
+#firstButton,
+#previousButton,
+#searchButton,
+#searchCurriculumMapButton,
+#nextButton,
+#lastButton
+{
+    margin-top: 2px;
+    margin-left: 4px;
+    height: 27px; 
+    width: 40px; 
+    overflow: hidden; 
+    position: relative;
+}
+
+.searchElement
+{
+    margin-bottom: 2px;
+    margin-top: 2px;
+    vertical-align: middle;
+    height: 20px;
+}
+
+.verticalTop
+{
+	vertical-align: top;
+}
+
+.curriculum-search-body
+{
+    height:100%;
+}
+
+.curriculum-search-table
+{
+    border: 1px solid black;
+    empty-cells: show;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    background: #fff;
+    border-collapse: collapse;
+}
+
+.curriculum-search-table td, .curriculum-search-table-headers th
+{
+    border-color: #111;
+    border-style: solid;
+    border-width: 1px;
+    min-width: 150px;
+    width: 150px;
+    text-align: center;
+}
+
+.curriculum-search-table-content
+{
+    color: #0066FF;
+    text-decoration: underline;
+}
+
+.navIconGeneral
+{
+    position: relative;
+    background-image: url("../images/detailnavcontrols.png");
+    background-repeat: no-repeat;
+    width: 35px;
+    height: 27px;   
+}
+
+.navIconFlat
+{
+	background-color: #f5f5f5;
+    border: none;
+}
+
+.navIconFlatPointer
+{
+    cursor: pointer;
+}
+
+.navIconFlatPointer:hover
+{
+	border-radius: 5px;
+	background-color: #CCCCCC;
+    cursor: pointer;
+}
+
+.controlHoverBackground
+{
+	border-radius: 5px;
+	background-color: #CCCCCC;
+}
+
+.navIconDisabled
+{
+	opacity: 0.2;
+}
+
+#searchStringButton
+{
+	margin-top: 2px;
+    margin-left: 4px;
+    height: 27px; 
+    width: 40px; 
+    overflow: hidden; 
+    position: relative;
+}
+
+.navString
+{
+    position: relative;
+    background-image: url("../images/studentSearchIcon.png");
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 27px;   
+}
+
+.searchStringHeader
+{
+	font-weight: bold;
+	text-align: center;
+}
+
+.searchStringDiv
+{
+    position: absolute;
+    background-color: #F3F3F3;
+    right: 9px;
+    top: 140px;
+    width: 320px;
+    height: 450px;
+    border: 1px solid #CCCCCC;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.searchStringLabel
+{
+	padding: 0px 5px 0px 5px;
+	color: #4E4E4E;
+}
+
+.searchStringTextArea 
+{
+	border: none;
+	background-color: transparent;
+	text-align: center;
+}
+
+.searchStringInputNameID
+{
+	height: 65%;
+	width: 90%;
+}
+
+.searchStringInput
+{
+	height: 65%;
+	width: 60%;
+}
+
+.searchStringDatePicker
+{
+	position: relative;               
+	top: 3px;                         
+	left: 2px;
+}
+
+.searchStringRequiredBottom
+{
+	border-bottom: 1px solid #CCCCCC;
+}
+
+.navFirst
+{
+    background-position: 0 0;
+}
+
+.navPrevious
+{
+    background-position: -36px 0;
+}
+
+.navSearch
+{
+    background-position: -69px 0;
+}
+
+.navNext
+{
+    background-position: -101px 0;
+}
+
+.navLast
+{
+    background-position: -136px 0;
+}
+
+.viewHeaderText
+{
+    font-style: italic; 
+    padding-top: 6px;
+    padding-right: 12px;
+}
+
+.breadcrumbs
+{
+  font-size: 13pt;
+  font-weight: bold;
+}
+
+.breadcrumbsOuterContainer
+{
+  padding-top: 10px; 
+  padding-bottom: 10px; 
+  padding-left: 10px;
+}
+
+.blobEdit
+{
+  background-color: #ffffff;
+  font-family: Courier New, Courier, Arial, Helvetica;
+  font-size: small;
+}
+
+.blobReadOnly
+{
+  background-color: #f2f2f2;
+  border: solid black 1px;
+  font-family: Courier New, Courier, Arial, Helvetica;
+  font-size: small;
+  height: 500px;
+  overflow: auto;
+  width: 750px;
+}
+
+.blobReferenceSelect
+{
+  font-family: Arial, Helvetica, sans-serif; 
+  font-size: small;
+  width: 100%;
+}
+
+.blobReferenceSelectFixed
+{
+  font-family: Arial, Helvetica, sans-serif; 
+  font-size: small;
+  min-width: 150px;
+  width: 100%
+}
+
+.blobText
+{
+  font-family: Arial, Helvetica, sans-serif; 
+  font-size: small;
+  width: 100%;
+}
+
+.blobTextPref
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+  width: 611px;
+}
+
+.blobTextSmall
+{
+  font-family: Arial, Helvetica, sans-serif; 
+  font-size: x-small;
+  width: 100%;
+}
+
+.blobTextReadOnly
+{
+  background-color: #f2f2f2;
+  border: solid black 1px;
+  font-family: Arial, Helvetica, sans-serif; 
+  font-size: small;
+  height: 500px;
+  overflow: auto;
+  width: 750px;
+}
+
+.comment
+{
+  background-color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif; 
+  font-size: small; 
+}
+
+.controlIconDark
+{
+    filter: alpha(opacity = 100);
+    opacity: 1;
+}
+
+a:hover img
+{
+    filter: alpha(opacity = 45);
+    opacity: 0.45;
+}
+
+.draggableIcon
+{
+    background-image: url("../images/dragBar.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+tr.dragMidState td 
+{
+    font-style: italic;
+    background-color: #ABCFFF;
+}
+
+.horizontalRule
+{
+  border-bottom: solid 1px;
+}
+
+.horizontalRuleTemplate
+{
+  border-bottom: solid #999999 1px;
+}
+
+.notePopup
+{
+  border: solid 1px #999999;
+  display: none;
+  font-family: Arial, Helvetica, sans-serif; 
+  font-size: x-small;
+  height: 200px;
+  margin-top: 3px;
+  padding: 3px;
+  position: absolute;
+  overflow: auto;
+  width: 350px;
+  z-index: 1000;
+}
+
+.progressMeterCell
+{
+  background-color: white;
+}
+
+.referenceSelectList
+{
+  width: 350px;
+}
+
+.systemError
+{
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.systemErrorBorder
+{
+  border-radius: 25px;
+  border: 1px solid #B5B5B5;
+  padding: 20px;
+  width: 50%;
+  background-color: #E8E8E8;
+}
+
+.systemErrorButton
+{
+	color: #FFFFFF; 
+	background-color: #888888
+}
+.systemErrorStackTrace
+{
+  background-color: #f2f2f2;
+  border: solid black 1px;
+  font-family: Courier New, Courier, Arial, Helvetica;
+  font-size: small;
+  height: 200px;
+  overflow: auto;
+  width: 100%;
+}
+
+.totalRecords
+{
+  font-size: 11px;
+}
+
+/*
+ * Style definitions for message layout (success and error message boxes)
+ */
+
+.messageBox
+{
+  background-color: #ffffff;
+  border: solid 1px;
+  border-color: black;
+  display: none;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 5px;
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  position: absolute;
+  z-index: 1000;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.errorMessageH1 
+{
+	border-bottom: solid 0.5px;
+    border-color: #8C8787;
+    margin: 0px 0px 0px 0px;
+    padding: 2px;
+    background-color: #952428;
+    padding-top: 20px;
+    padding-bottom: 8px;
+}
+
+.messageBoxH1 
+{
+    border-bottom: solid 0.5px;
+    border-color: #8C8787;
+    margin: 0px 0px 0px 0px;
+    padding: 2px;
+    background-color: #26AF89;
+    padding-top: 20px;
+    padding-bottom: 8px;
+}
+
+.warningMessageH1 
+{
+    border-bottom: solid 0.5px;
+    border-color: #8C8787;
+    margin: 0px 0px 0px 0px;
+    padding: 2px;
+    background-color: #f1f17d;
+    padding-top: 20px;
+    padding-bottom: 8px;
+}
+
+.messageBoxCloseButtonCell 
+{
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background-color: #F9F9F9;
+	border-top: solid 1px;
+	border-color: #8C8787;
+	text-align: right;
+}
+
+.warningColor
+{
+	color:#eae31b;
+}
+.messageText
+{
+    font-size:15px;
+}
+
+.messageBoxButton
+{
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.messageExtraInfo
+{
+  background-color: #f5f5f3;
+  border: solid black 1px;
+  font-family: Arial, Helvetica, sans-serif; 
+  font-size: 14px;
+  width: 100%;
+  white-space: pre-wrap;
+  resize: none;
+}
+
+.messageRule
+{
+  border-color: black;
+}
+
+.alertBackground
+{
+  background-color: white;
+}
+
+.errorBackground
+{
+  background-color: white;
+}
+
+.successBackground
+{
+  background-color: white;
+}
+
+/*
+ * Style definitions for text zoom divs
+ */
+
+.textDisplayBox
+{
+    background-color: #DEDEDE;
+}
+
+.textDisplayBoxHeaderCell
+{
+    color: gray;
+    font-size: small;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    padding-left: 10px;
+}
+
+.textDisplayBoxHeaderTable
+{
+    border-bottom: 1px solid #CCCCCC;
+    width: 490px;
+    height: 30px;
+}
+
+.textDisplayBoxCloseButton
+{
+    font-size: x-small;
+    font-family: Arial, Helvetica, sans-serif;
+    float: right;
+}
+
+.textDisplayInnerBody
+{
+    height: 250px;
+    width: 480px;
+    position: absolute;
+    overflow: auto;
+    padding: 10px;
+}
+
+.helpTextHoverBox
+{
+    position: absolute; 
+    border: 1px solid #CCCCCC;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+    background-color: white; 
+    padding: 10px;
+    font-size: 12px;
+    font-weight: bold;
+    z-index: 1000;
+    white-space: normal;
+}
+
+.helpTextHoverIcon
+{
+    display: inline;
+    vertical-align: text-top;
+}
+
+.textDisplayPadding
+{
+    padding-bottom: 20px;
+}
+
+.floatingDivBody
+{
+    position: absolute;
+    overflow: auto;
+    height: 90%;
+    width: 100%;
+}
+
+.noBorderLayoutShell
+{
+    margin: 0;
+    padding: 0;
+    height: 99.9%;
+}
+
+.textInformationBox
+{
+  background-color: #FFF;
+  border-radius: 4px;
+  border: 1px solid #AAA;
+  font-size: 12px;
+  padding: 8px;
+}
+
+.textWarningBox
+{
+    background-color: #FFFACD;
+    border-radius: 4px;
+    border: 1px solid #AAA;
+    font-size: 12px;
+    padding: 8px;
+}
+
+/*
+ * Style definitions for primary-level navigation layout
+ */
+
+.bodyBackground
+{
+  background-color: #F5F5F5;
+}
+
+.navTab
+{
+  font-size: 11pt;
+  font-weight: bold;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  white-space: nowrap;
+  display: block;
+}
+
+.navTab:hover
+{
+  text-decoration: none;
+}
+
+.navTabDividerSolid
+{
+    background-color: #000000;
+    filter: alpha(opacity = 85);
+    opacity: 0.85;
+}
+
+.navTabBackground
+{
+    background-image: url("../images/topTabHighlight.png");
+    background-repeat: repeat-x;    
+}
+
+.navTabBackgroundHover
+{
+    background-color: #DCDCDC;
+}
+
+.navTabBackground a
+{
+	display: block;
+	color: white;
+}
+
+.navTabBackgroundSelected
+{
+    background-color: #F5F5F5; 
+}
+
+.navTabBackgroundSelected a, .navTabBackgroundHover a
+{
+    color: black;
+}
+
+/**
+ * Styles definitions for top tabs scroll arrows
+ */
+#right-arrow-container {
+    padding: 8px 25px 8px 4px;
+    box-sizing: border-box;
+    border-left: 1px solid black;
+}
+
+#right-arrow-container:hover .arrowToRight {
+    border-color: #000 transparent transparent #000;
+}
+
+#left-arrow-container {
+    padding: 8px 20px 8px 10px;
+    box-sizing: border-box;
+    border-right: 1px solid black;
+}
+
+#left-arrow-container:hover .arrowToLeft {
+    border-color: #000 transparent transparent #000;
+}
+
+.arrowToRight {
+    width: 10px;
+    height: 10px;
+    border: 2px solid;
+    border-color: #fff transparent transparent #fff;
+    transform: rotate(135deg);
+}
+
+.arrowToLeft {
+    width: 10px;
+    height: 10px;
+    border: 2px solid;
+    border-color: #fff transparent transparent #fff;
+    transform: rotate(-45deg);
+}
+
+
+/*
+ * Style definitions for secondary-level navigation layout
+ */
+.verticalTabGroupLabel
+{
+	filter: alpha(opacity = 60);
+	opacity: 0.60;
+	display: table-cell;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    padding-right: 15px;
+}
+
+.borderRight
+{
+  border-right: solid 1px #CCCCCC;
+}
+
+.verticalTabHighlight
+{
+    background-color: white;
+}
+
+.verticalTabText
+{
+  color: black;
+  font-size: small;
+}
+
+.verticalTabLink
+{
+	color: black;
+}
+
+.verticalTabText:hover
+{
+  text-decoration: none;
+}
+
+.verticalTabTextSelected
+{
+  font-size: small;
+  font-weight: bold;
+}
+
+.verticalTabTextSelected:hover
+{
+  text-decoration: none;
+}
+
+ .verticalTab
+{	
+   border-bottom: solid 1px #CCCCCC;
+   border-right: solid 1px #929292;
+   padding-left: 10px;
+   padding-top: 7px;
+   padding-bottom: 7px;
+   text-align: left;
+   background-color: #E0E0E0;
+}
+
+.verticalTab:hover, .verticalTabHighlight
+{
+	background-color: #ECECEC;
+}
+
+.unselectedGradient
+{
+  background: #F5F5F5; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(#F5F5F5, #E6E6E6); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#F5F5F5, #E6E6E6); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#F5F5F5, #E6E6E6); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#F5F5F5, #E6E6E6); /* Standard syntax (must be last) */
+}
+
+.verticalTabTopBorder
+{
+  border-top: solid 1px #CCCCCC;
+}
+
+.verticalTabSelected
+{
+  background-color: #ffffff;
+  text-align: left;
+}
+
+.verticalTabBar
+{
+  border-left: solid 5px;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+}
+
+.verticalTabShadowDown
+{
+/*   box-shadow: 3px 3px 8px #8A8A8A; */
+  border-bottom: solid 1px #8A8A8A;
+}
+
+.verticalTabShadowUp
+{
+/*   box-shadow: 3px -3px 8px #8A8A8A;*/
+  border-top: solid 1px #8A8A8A; 
+  border-bottom: 1px solid #CCCCCC;
+}
+
+.verticalTabBarColor
+{
+  border-color: #cccccc;
+}
+
+.verticalTabLabel
+{
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 15px;
+}
+
+.verticalTabLabel a
+{
+  display: block;
+  width: 100%;
+}
+
+.nestedNodeText
+{
+  font-size: x-small;
+  font-weight: bold;
+}
+
+.nestedNodeText:hover
+{
+  text-decoration: none;
+}
+
+.nestedNodeText img
+{
+    margin: 0 2px 2px 0;
+    vertical-align: middle;
+}
+
+a.nestedNodeText
+{
+    display: block;
+    width: 100%;
+}
+
+.doubleScore
+{
+  border-bottom: solid #888888 1px;
+  border-top: solid #888888 1px;
+}
+
+.contentPad
+{
+  padding-top: 5px;
+}
+         
+.contentContainer
+{
+  background-color: #ffffff;
+  border-bottom: solid 1px #CCCCCC;
+  border-top: solid 1px #CCCCCC;
+  padding-top: 5px;
+  padding-right: 5px;
+  padding-bottom: 5px;
+  padding-left: 15px;
+}
+
+/*
+ * Style definitions for the toolbar
+ */
+
+.toolbarText
+{
+	color: #ffffff;
+}
+
+.toolbarItem
+{
+	float: left;
+	color: #ffffff;
+    font: x-small Verdana, sans-serif;
+	padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 10px;
+    padding-left: 10px;
+    font-size: 9pt;
+}
+
+.toolbarItem a
+{
+	padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.toolbarText:hover
+{
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.toolbarBackground
+{
+  background-color: #595959;
+}
+
+.optionsBar
+{
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.menuBarSegment
+{
+	padding-top: 8px;
+	padding-bottom: 8px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-right: 10px;
+	border-radius: 5px;
+	background-image: url("../images/topTabHighlight.png");
+    background-repeat: repeat-x;    
+}
+
+.menuBarSegmentDisabled
+{
+	padding-top: 8px;
+	padding-bottom: 8px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-right: 10px;
+	border-radius: 5px;
+    background-color: #f5f5f5;
+}
+
+.menuBarSegmentRight
+{
+	background-image: url("../images/topTabHighlight.png");
+    background-repeat: repeat-x;    
+	padding-top: 3px;
+	padding-bottom: 3px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-right: 10px;
+	border-radius: 5px;
+}
+
+.menuBarSegmentRight div.menu
+{
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-top: 3px;
+	margin-bottom: 3px;	
+	display: inline-block;
+}
+
+.menuBarSegmentRight div.findMenuBarWidget
+{
+	float: left;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+/*
+ * Style definitions for list-related layout
+ */
+ 
+.detailValueHorizontal
+{
+  height: 25px;
+  padding: 2px 5px 2px 5px;
+  border-right: 1px solid #ABCDEF;
+}
+
+.horizontalListHeader
+{
+	color: white;
+	padding: 5px;
+	font-size: small;
+	margin: 5px 0px 5px 0px;
+}
+
+.listFilterLabel
+{
+	padding-right: 16px;	
+}
+
+.listGridFixedHorizontal
+{
+  background-color: white;
+  border: solid gray 1px;
+  border-radius: 4px;
+}
+
+.listGridHorizontal
+{
+  background-color: #999999;
+  border: solid black 1px;
+  overflow: auto;
+  width: 800px;  
+}
+
+.listGridHorizontalFixedTable
+{
+	width: 100%;
+}
+
+.listGridButtonRow
+{
+	text-align: right;
+}
+
+.listCellBorder
+{
+  border: solid black 1px;
+}
+
+.listGrid
+{
+  background-color: #f5f5f5;
+  border: solid #CCCCCC 1px;
+  overflow: auto;
+  width: 800px;  
+}
+
+.listGridMonitor
+{
+  background-color: #f5f5f5;
+  border: solid #CCCCCC 1px;
+  overflow: auto;
+  width: 100%;  
+}
+
+
+.listGridFixed
+{
+  background-color: #999999;
+  border: solid #CCCCCC 1px;
+}
+
+.listHeader
+{
+  height: 40px;
+  font-size: 10pt;
+}
+
+.listHeaderSmallList
+{
+  height: 20px;
+  font-size: 10pt;
+}
+
+.listHeaderControl
+{
+  font-size: 10pt;
+}
+
+.listHeaderDropdown
+{
+  width: 200px;
+  font-size: 10pt;
+}
+
+.listHeaderStatus
+{
+  font-size: small;
+}
+
+.listHeaderText
+{
+  font-size: 9pt;
+  font-weight: bold;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.listHeaderTextCenter
+{
+  font-size: x-small;
+  font-weight: bold;
+  text-align: center;
+}
+
+.listCell
+{
+  background-color: #ffffff;
+  height: 30px;
+}
+
+.listCellSmallList
+{
+  background-color: #ffffff;
+  height: 20px;
+}
+
+.listCell td
+{
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.listCellSmallList td
+{
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.listCellCenter
+{
+  background-color: #ffffff;
+  height: 30px;
+  text-align: center;  
+}
+
+.topAlignText
+{
+  vertical-align: text-top;	
+}
+
+.listCellWarning
+{
+  background-color: yellow;
+  height: 30px;
+}
+
+.listCellDisabledText
+{
+  color: #666666;
+  font-style: italic;
+}
+
+.listRowHeight
+{
+	height: 30px;
+}
+
+.listRowHeight td
+{
+	height: 30px;
+}
+
+.listRowHeightSmallList
+{
+	height: 30px;
+}
+
+.listRowHeightSmallList td
+{
+	height: 30px;
+}
+
+.listCellHighlight
+{
+  background-color: #e5e5e5 !important;
+  height: 30px;  
+}
+
+.listCellHighlight td
+{
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.listCellHighlightSmallList td
+{
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.listCellLastSelectionHighlight td
+{
+	padding-left: 10px;
+	padding-right: 10px;	
+}
+
+.listWorkflowCellHighlight
+{
+    background-color: #e5e5e5 !important;
+    height: 30px;
+}
+
+td .listCellError
+{
+  background-color: #ff9999;
+}
+
+.listTranslateLocale
+{
+  padding-left: 2px;
+  height: 15px;
+  margin: 3px 0 3px 0;
+  text-align: left;
+}
+
+.listTranslateLocale select
+{
+  margin-top: -2px;
+  min-width: 150px; 
+}
+
+.listTranslateLocale input
+{
+  margin-left: 17px;
+  position: relative;
+  margin-top: -2px;
+  top: 3px;
+}
+
+.listTranslateLocale span
+{
+  padding-left: 5px;
+  color: green;
+}
+
+.listTranslateLocale span.error
+{
+  color: red;
+}
+
+.leftFloat
+{
+  vertical-align: middle; 
+  text-align: left; 
+  float: left;
+}
+
+.rightFloat
+{
+    vertical-align: middle; 
+    text-align: right; 
+    float: right;
+}
+
+.tagContainer
+{
+  border: 1px solid;
+  border-radius: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  white-space: nowrap;
+}
+
+.tagGrey
+{
+  background: #DDDDDD;
+  border: 1px solid #BBBBBB;
+}
+
+.tagBlue
+{
+  background: #D4E5FC;
+    border: 1px solid #B0BED1;
+}
+
+.fitToContents
+{
+    display: inline-block;  
+}
+
+.listNoRecordsText
+{
+  text-align: center;
+}
+
+/*
+ * Style definitions for header control box
+ */
+ 
+.headerControlBox
+{
+    height: 10%;
+    border: 1px solid #CECECE;
+    border-radius: 5px;
+    padding: 5px;
+    float: left;
+}
+ 
+.headerLabelBackground 
+{ 
+  background-color: #ECECEC;
+}
+ 
+.headerLabelBackgroundList
+{
+  background-image: url("../images/topTabHighlight.png");
+  background-repeat: repeat-x;   
+  background-color: #D4D4D4;
+} 
+.inputControlButton
+{
+  width: 37px;
+  height: 33px;
+}
+ 
+.inputGridCell
+{
+  vertical-align: top;
+}
+
+.remarkCellFixedWidth
+{
+  min-width: 160;
+  table-layout:fixed;
+  vertical-align: middle; 
+}
+
+.studentSubmisisonCellFixedWidth
+{
+  min-width: 130;
+  table-layout:fixed;
+  vertical-align: middle;
+}
+
+.inputGridCellReadOnly
+{
+	font-style: italic;
+}
+
+.inputGridFootnoteSpan
+{
+  font-size: 6pt;
+  color: #008b45;
+  vertical-align: sub;
+  display: inline-block;
+}
+
+.inputGridSpan
+{ 
+  display: inline-block;
+  text-align: right;
+  white-space: nowrap;
+  z-index: 10;
+}
+
+.inputGridDownloadSpan
+{
+    width: *;
+    display: inline-block;
+    text-align: right;
+}
+
+.inputGridCalculatedCell
+{
+  font-weight: bold;
+}
+
+.inputGridCellActive
+{
+  background-color: #92a5e8 !important;
+  font-weight: bold;
+}
+
+.inputGridCellEditing .absentTardyIndicator  {
+	display: none;
+}
+
+.absentTardyIndicator {
+    float:right;
+}
+
+.inputGridCellExempt
+{
+  text-decoration: line-through;
+}
+
+.inputGridCellDropped
+{
+  text-decoration: line-through;
+  color: gray;
+}
+
+.inputGridCellExcluded 
+{
+    background: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 5px,
+        #ccc 5px,
+        #ccc 10px
+    );
+}
+
+.inputGridCellShaded
+{
+  background-color: #f5f5f5;
+}
+
+.inputGridCellUnshaded
+{
+  background-color: #ffffff;
+}
+
+.inputGridCellColAvg
+{
+  background-color: #D4D4D4;
+  font-weight: bold;
+  vertical-align: middle;
+}
+
+.gbExcludedIndicatorBackground
+{
+  background-color : lightgray;
+}
+
+.gbExcludedIndicatorText
+{
+  text-decoration: line-through;
+}
+
+.gbHeaderText
+{
+    font-size: 14pt;
+}
+
+.gbSubHeaderText
+{
+  font-size: 10pt;
+}
+
+.gbHeaderTextBox
+{
+  padding: 8px; 
+  float: left;
+}
+
+.gbIconSpriteContainer
+{
+    height: 16px; 
+    width: 16px; 
+    float: left;
+    overflow: hidden; 
+    position: relative; 
+}
+
+.gbIconGeneral
+{
+    position: relative;
+    background-image: url("../images/gbIcons/gradebookIconSet.png");
+    background-repeat: no-repeat;
+    height: 16px; 
+    width: 16px;    
+}
+    
+.gbIconDownload
+{
+    background-position: 0 0;
+}
+
+.gbIconLockOn
+{
+    background-position: -88px 0;
+}
+
+.gbIconLockOff
+{
+    background-position: -104px 0;
+}
+
+.gbIconVisPrivate
+{
+    background-position: -19px 0;
+}
+
+.gbIconVisPublicNoGrade
+{
+    background-position: -37px 0;
+}
+
+.gbIconVisPublic
+{
+    background-position: -55px 0;
+}
+
+.gbPortalAverageDisplayTable td
+{
+	padding: 0;
+	margin: 0;
+}
+
+.gbPortalViewText
+{
+    padding-left: 2px;
+    padding-right: 5px;
+    white-space: nowrap;
+    float: right;
+}
+
+.gbPortalAverageSpriteContainer
+{
+	height: 16px;
+	width: 16px;
+}
+
+.gbIconPortalAverage
+{
+    background-image: url("../images/gbIcons/portalIcon.png");
+    background-repeat: no-repeat;
+    position: relative;
+    bottom: 0;
+    overflow: hidden; 
+}
+
+.gbPortalAverageIconShow
+{
+    background-position: -16 0;
+    float: left;
+}
+
+.gbPortalAverageIconHide
+{
+    background-position: 0 0;
+    float: right;
+}
+
+.inputGridCommentIcon
+{
+}
+
+.inputGridCommentHR
+{
+ border: 0; 
+ width: 80%; 
+ color: black; 
+ background-color: black; 
+ height: 1px;
+}
+
+.inputGridControlHeader
+{
+  font-weight: bold;
+  height: 16px;
+  vertical-align: top;
+}
+
+.inputGridControlHeader2
+{
+  font-weight: bold;
+  height: 16px;
+  vertical-align: middle;
+  width: 113px;
+  padding-left: 25px;
+  padding-bottom: 5px;
+  white-space: -moz-pre-wrap !important;  /* Mozilla  */
+  white-space: -pre-wrap;      /* Opera 4-6 */
+  white-space: -o-pre-wrap;    /* Opera 7 */
+  white-space: pre-wrap;       /* css-3 */
+  word-break: break-all;
+  white-space: normal;
+}
+
+.inputGridControlHeader3
+{
+  font-weight: bold;
+  height: 16px;
+  vertical-align: middle;
+  width: 113px;
+  padding-bottom: 5px;
+  white-space: -moz-pre-wrap !important;  /* Mozilla  */
+  white-space: -pre-wrap;      /* Opera 4-6 */
+  white-space: -o-pre-wrap;    /* Opera 7 */
+  white-space: pre-wrap;       /* css-3 */
+  word-break: break-all;
+  white-space: normal;
+}
+
+.inputGridControlHeader4
+{
+  font-weight: bold;
+  font-size: 10px;
+}
+
+.inputGridEditCell
+{
+  height: 17px;
+  width: 40px;
+  border: 0px;
+}
+
+.inputGridEditCellTranslateList
+{
+  width: 50%;
+}
+
+.inputGridColumnHeader
+{
+  width: 60px;
+}
+
+.inputGridHeader
+{
+  height: 55px;
+}
+
+/*
+ * The height below MUST be at least 25 to avoid "bouncing" in Safari. This is due to Safari's lack
+ * of ability to stylize input cells. We are at the mercy of the aqua theme.
+ */
+.inputGridRow
+{
+  height: 25px;
+}
+
+.inputGridRowHighlight
+{
+  background-color: #c6d1fb;
+  font-weight: bold;
+}
+
+.inputGridRowWarning
+{
+  height: 25px;
+  background-color: yellow;
+}
+
+/*
+ * Style definitions for detail-related layout
+ */
+
+.detailContainer
+{
+  background-color: #ffffff;
+  border: solid #CCCCCC 1px;
+}
+
+.detailEmptyMessage
+{
+    padding: 5px;
+    font-size: small;
+    text-align: center;
+}
+
+.detailHorizontalControlContainer
+{
+    margin-bottom: 12px;
+}
+
+.detailHorizontalControlPropertyGutter
+{
+  padding-top: 5px;
+}
+
+.detailHorizontalControlValue
+{
+  font-size: 12px;
+  height: 25px;
+  padding: 2px 5px 2px 5px;
+}
+
+.detailHorizontalGutterWide
+{
+  background-color: #ffffff;
+  width: 40px;
+}
+
+.detailHorizontalProperty
+{
+  border-right: solid #CCCCCC 1px;
+  border-left: solid #CCCCCC 1px;
+  font-weight: bold;
+  padding: 0px 8px 0px 8px;
+}
+
+.detailProperty
+{
+  border-right: solid #CCCCCC 1px;
+  border-left: solid #CCCCCC 1px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  width: 125px;
+  text-align: left;
+  color: #4E4E4E;
+}
+
+.detailPropertyDynamic
+{
+  border-right: solid #CCCCCC 1px;
+  border-left: solid #CCCCCC 1px;
+  padding: 0px 5px 0px 5px;
+}
+
+.detailPropertyAddendumTable
+{
+    border-spacing: 0px;
+}
+
+.detailPropertyAddendum
+{
+  background-color: #dddddd;
+  border: solid #CCCCCC 0px;
+  padding: 0px 5px 0px 5px;
+}
+
+.detailPropertyGutter
+{
+  border-right: solid #CCCCCC 1px;
+  border-left: solid #CCCCCC 1px;
+  padding-top: 5px;
+}
+
+.detailValue
+{
+  height: 25px;
+  padding: 2px 5px 2px 5px;
+}
+
+.detailValueGutter
+{
+  padding-top: 5px;
+}
+
+.detailGroupHeader
+{
+  border-right: solid #CCCCCC 1px;
+  border-left: solid #CCCCCC 1px;
+  color: black;
+  padding: 5px 5px 5px 5px;
+  text-decoration: underline;
+}
+
+.detailGroupHeaderValue
+{
+  background-color: #FFFFFF;
+  color: black;
+  font-weight: bold;
+  padding: 5px 5px 5px 5px;
+  text-decoration: underline;
+}
+
+.fileDownloadInfo
+{
+    font-size: 10px;
+    font-style: italic;
+    color: #595959;
+}
+
+.fileIcon
+{
+    vertical-align: middle; 
+    padding: 3px;
+}
+
+/*
+ * Style definitions for menu-related layout
+ */
+
+.menu
+{
+  color: #ffffff;
+  font-size: small;
+  white-space:nowrap;
+}
+
+.menuPlainBackground
+{
+	background-color: white;
+}
+
+.menuDisabled
+{
+  color: #C0C0C0;
+  cursor: default;
+  font-size: small;
+  white-space:nowrap;
+}
+
+.menuGutter
+{
+  height: 2px;
+}
+
+.menuOption
+{
+  font-size: 10pt;	
+  padding-bottom: 5px;
+  padding-left: 2px;
+  padding-right: 5px;
+  padding-top: 5px;
+}
+
+.menuOptionFullPadding
+{
+  font-size: 10pt;	
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+}
+
+.menuPane
+{
+  display: none;
+  position: absolute;
+  z-index: 1000;
+  background-color: white;
+  border: solid 1px #CCCCCC;
+  border-left: solid 5px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.menuColumn
+{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-right: 5px;
+	padding-left: 5px;
+	float: right;
+}
+
+.menuDivider {
+  border-left: 1px solid #E2E2E2;
+  position: absolute;
+  top: 15;
+  bottom: 15;
+}
+
+.menuSeparator
+{
+	border-bottom: solid 1px #E6E5E5;
+}
+
+.whiteDownArrow
+{
+	padding-left:2px;
+}
+
+/*
+ * Style definitions for field set-related layout
+ */
+ 
+.resourceMemberSelection
+{
+  width: 275px;
+}
+
+.resourceMemberSelectionNarrow
+{
+  width: 152px;
+}
+
+.resourceSelection
+{
+  width: 210px;
+}
+
+.filterSelection
+{
+  width: 250px;
+}
+
+.spellCheckBackground
+{
+    background-color: #EEEEEE;
+}
+
+.spellCheckIframe
+{
+  padding: 2px;
+  border: solid gray 1px;
+  background-color: white;
+}
+
+.spellCheckCounterHighlight
+{
+	background-color:#FFB8C2;
+}
+
+.suggestionMenu
+{
+  margin: 0px 0px 0px 0px;
+  position: absolute;
+  color: #000000;
+  border: solid 1px;
+  visibility: hidden;
+  z-index: 1000;
+}
+
+.pendingStudentScheduleChange
+{
+  font-style: italic;
+  font-weight: bold;    
+}
+
+.percentFieldValueLabel
+{
+    width: 30px; 
+    height: 15px;
+    text-align: right; 
+    float: left; 
+    padding-right: 5px; 
+}
+
+.percentFieldContainer
+{
+  white-space: nowrap;
+  position: relative;
+  width: 100px;
+  height: 17px;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.percentFieldInlineLabel
+{
+    line-height: 15px;
+    padding-left: 2px;  
+    color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.percentFieldBarFill
+{
+  color: #EBEBEB;
+    height: 13px; 
+    border: 1px solid #888;
+    border-right: none;
+    z-index: 200;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.percentFieldBarEmpty
+{
+    background-color: #EEE; 
+    border: 1px solid #888;
+    border-left: none; 
+    height: 13px; 
+    z-index: 200;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+/*
+ * Style definitions for template tab layout
+ */
+
+.tabContainer
+{
+  background-color: white; 
+  padding: 5px; 
+  border-right: solid 1px #CCCCCC; 
+  border-left: solid 1px #CCCCCC; 
+  border-bottom: solid 1px #CCCCCC;
+}
+
+.templateTabNoHover
+{
+  border-bottom: solid 1px #CCCCCC;
+}
+
+.templateTabSelected
+{
+  border-right: solid 1px #CCCCCC;
+  border-top: solid  4px;
+  font-weight: bold;
+  padding: 3px;
+  text-align: center;
+  background-color: white;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.templateTabNotSelected
+{
+    border-top: 1px solid #CCCCCC;
+	border-bottom: solid 1px #CCCCCC;
+    border-right: 1px solid #CCCCCC;
+    border-left: 1px solid #CCCCCC;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.templateTabNotSelected:hover
+{
+	background: white;
+}
+
+
+/* TODO remove me!
+.templateTabBorder
+{
+  border-right: solid 1px #CCCCCC;
+}
+
+.templateTabBorderLeft
+{
+  border-left: solid 1px #CCCCCC;
+}
+
+
+.templateTabGutter
+{
+  border-bottom: solid 1px #CCCCCC;
+}
+*/
+  
+.templateTabTextSelected
+{
+  font-family: Verdana, Arial, Helvetica, sans-serif; 
+  font-size: 8pt;
+  font-weight: bold;
+}
+
+.templateTabTextSelected:hover
+{
+  text-decoration: none;
+}
+
+.templateTabText
+{
+  font-family: Verdana, Arial, Helvetica, sans-serif; 
+  font-size: 8pt;
+}
+
+.templateTabText:hover
+{
+  text-decoration: none;
+}
+
+.templateCell
+{
+  padding-left: 5px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-right: 5px; 
+}
+
+.templateCellShaded
+{
+  background-color: #ECECEC;
+}
+
+.templateSectionDropdown
+{
+  font-family: Verdana, Arial, Helvetica, sans-serif; 
+  font-size: x-small;
+  font-weight: bold;
+}
+
+.templateTextSmall
+{
+  font-size: 12px;
+}
+
+.templateTextMedium
+{
+  font-size: 12px;
+}
+
+.templateTextLarge
+{
+  font-size: 16px;
+}
+
+.templateTextBold
+{
+  font-weight: bold;
+}
+
+.templateTextItalic
+{
+  font-style: italic;
+}
+
+.templateTextUnderline
+{
+  text-decoration: underline;
+}
+
+.templateTextHidden
+{
+    display: none;
+}
+
+.templateTextWrap {
+    white-space: normal;
+}
+
+.translateCell
+{
+  width: 100%;
+}
+
+/*
+ * Style definitions for the health immunization form
+ */
+
+.unusedImmunizationDoseField
+{
+  background-color: #CCCCCC;
+}
+
+.waivedLabel
+{
+  color: #CC0033
+}
+
+/*
+ * Style definitions for the date picker popup
+ */
+
+.datePickerCell
+{
+  background-color: #ffffff;
+  color: #3366ff;
+  font-weight: bold;
+  font-size: 10pt;
+  text-align: center;
+  width: 34px;
+}
+
+.datePickerOriginal
+{
+  background-color: #e5e5e5;
+}
+
+.dateScrollArrow
+{
+    width: 16px;
+}
+
+/*
+ * Style definitions for the student alert popup
+ */
+  
+.studentAlertHeader
+{
+  padding-left: 5px;
+}
+ 
+.studentAlertLegalText
+{
+  padding: 5px;
+  font-size: small;
+  font-weight: bold;
+  color: #0000CF;
+}
+ 
+.studentAlertMedicalText
+{
+  padding: 5px;
+  font-size: small;
+  font-weight: bold;
+  color: #C10000;
+}
+
+.studentAlertOtherText
+{
+  padding: 5px;
+  font-size: small;
+  font-weight: bold;
+  color: #0000CF;
+}
+
+/*
+ * Style definitions for wizard-related layout
+ */
+
+.wizardContent
+{
+  height: 100%;
+  overflow: auto;
+  margin: 10px;
+}
+
+.wizardContentNoImage
+{
+  height: 100%;
+  overflow: auto;
+  margin: 10px;
+}
+
+.wizardGroupLabel
+{
+  margin-bottom: 5px;
+}
+
+.wizardGroupLabelText
+{
+  font-size: small;
+  font-weight: bold;
+}
+
+.wizardHeader
+{
+  margin: 5px;
+}
+
+.wizardRule
+{
+  height: 1px;
+  width: 100%;
+}
+
+.wizardWarning
+{
+  color: #C10000; 
+  font-size: 12px; 
+  font-weight: bold; 
+  padding: 8px;
+}
+
+/*
+ * Gradebook style definitions
+ */
+ 
+.assignmentQuizResponse
+{
+	height: 14px;
+    position: relative;
+    top: 3px;
+    width: 14px;
+}
+
+.gradeCalculationOverride
+{
+  color: #0000FF;
+}
+
+.postedColumn
+{
+  color: #C10000;
+}
+
+.rosterNewEnrollment
+{
+  color: #00C100;
+  font-weight: bold;
+}
+
+.rosterNewWithdrawal
+{
+  color: #C10000;
+  font-weight: bold;
+}
+
+.rosterGroupBox
+{
+  border: 1px solid; 
+  padding: 3px; 
+  width: 50%;
+}
+
+.rosterGroupBoxAdd
+{
+    padding-top: 5px;
+}
+
+/*
+ * Style definition for the schedule requests
+ */
+
+.unfilledRequest
+{
+  color: #C10000;
+  font-weight: bold;
+}
+
+/*
+ * Style definitions for the grade points grid
+ */
+
+.bumpIndicator
+{
+  color: #C10000;
+}
+
+/*
+ * Style definitions for tools
+ */
+
+.toolExportHeader
+{
+  font-weight: bold;
+}
+
+.toolStatusError
+{
+  color: #C10000;
+}
+
+/*
+ * Schedule expression highlighted cells
+ */
+.scheduledCell
+{
+   background-color: #C9C9FF;
+}
+
+.unscheduledCell
+ {
+   background-color: #ffffff;
+}
+
+.matrixViewToggle
+{
+	font-size: 10pt;	
+}
+
+/*
+ * Style definitions for the schedule pattern detail page
+ */
+
+.patternCellOn
+{
+  background-color: #6666ff;
+  color: white;
+}
+
+.patternCellOff
+{
+  background-color: #ffffff;
+}
+
+.patternCellSelected
+{
+  background-color: #cccccc;
+}
+
+.patternHeader
+{
+  font-size: large;
+}
+
+.patternHeaderSmall
+{
+  font-size: small;
+}
+
+.patternMatrixContainer
+{
+  background-color: #999999;
+  border: solid black 1px;
+}
+
+.patternMatrixContainerExpanded
+{
+
+}
+
+.patternShapeContainer
+{
+  background-color: #999999;
+}
+
+.patternTerm
+{
+  padding: 3px;
+}
+
+.patternTermSelected
+{
+  background-color: #6699ff;
+}
+
+.patternComponentSelected
+{
+    border: solid blue 3px;
+}
+
+/*
+ * Style definitions for workspace prescheduled fields
+ */
+.workspacePresched
+{
+  color: #C10000;
+}
+
+/*
+ * Style definitions for mass email recipients
+ */
+ 
+ .recipientCancel
+{
+    vertical-align: middle;
+    float: right
+}
+
+.recipientContainer
+{
+  height: 90px;
+  width: 100%;
+  overflow: auto;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  padding: 2px;
+}
+
+.recipientGridStudent
+{
+    table-layout: fixed;
+    background-color: #f7ddb7;
+}
+
+.recipientGridStaff
+{
+    table-layout: fixed;
+    background-color: #d0d7e0;
+}
+
+.recipientGridContact
+{
+    table-layout: fixed;
+    background-color: #d5f4c7;
+}
+
+.recipientGridDefault
+{
+    table-layout: fixed;
+    background-color: #cccccc;
+}
+
+.recipientGridMessage
+{
+    table-layout: fixed;
+    background-color: #bad5fc;
+    padding: 5px;
+}
+
+.recipientName
+{
+    overflow: hidden; 
+    text-overflow: ellipsis;
+}
+
+.recipientTotal
+{
+    vertical-align: bottom;
+}
+
+.studentsCheckbox
+{
+    border: solid 1px #999999;
+    background-color: #f7ddb7;
+    margin-top: 4px;
+    float: left;
+}
+
+.contactsCheckbox
+{
+    border: solid 1px #999999;
+    background-color: #d5f4c7;
+    margin-top: 4px;
+    float: left;
+}
+
+.teachersCheckbox
+{
+    border: solid 1px #999999;
+    background-color: #d0d7e0;
+    margin-top: 4px;
+    float: left;
+}
+
+.recipientCount
+{
+    line-height: 25px;
+    margin-top: 4px;
+    float: right;
+}
+
+.rubricCriterionContainer
+{
+  background-color: #999999;
+}
+
+.rubricHeader
+{
+  height: 30px;
+}
+
+.rubricHeaderText
+{
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.rubricDescriptorTextarea
+{
+  font-family: Arial, Helvetica, sans-serif; 
+  font-size: x-small;
+  width: 100%;
+  height: 50px;
+  overflow: auto;
+}
+
+.rubricHeaderDiv
+{
+  border: solid 1px;
+  position: absolute;
+  height: 13px;
+  margin-left: 2px;
+}
+
+.rubricScoreHeader
+{
+  font-weight: bold;
+  font-style: italic;
+}
+
+/*
+ * Style definitions for the workflow checklist
+ */
+ 
+.checklistCell
+{
+  border-bottom: solid #999999 1px;
+  height: 35px;
+  padding-left: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  vertical-align: top;
+}
+
+.checklistCompletedPhaseCell
+{
+  white-space: nowrap;
+  font-size: 10pt;
+  font-weight: bold;
+  color: #000000;
+}
+
+.checklistFuturePhaseCell
+{
+  font-size: 10pt;
+  font-weight: bold;
+  color: #999999;
+}
+
+.checklistHeaderCell
+{
+  vertical-align: bottom;
+  font-size: 9pt;
+  font-weight: bold;
+}
+
+.checklistProgressCell
+{
+  font-size: 10pt;
+  font-style: italic;
+  vertical-align: middle;
+}
+
+.checklistOutcomeDisplayCell
+{
+  font-size: 8pt;
+  font-style: italic;
+  white-space: nowrap;
+  margin-left: 15px;
+  vertical-align: top;
+  padding-top: 1px;
+}
+
+.checklistDisabledOutcomeDisplayCell
+{
+  color: #999999;
+}
+
+.checklistOutcomeSelectionCell
+{
+  white-space: nowrap;
+  margin-left: 20px;
+  padding-top: 3px;
+  font-size: 8pt;
+}
+
+/*
+ * Style definitions for the calendar views
+ */
+
+.calendarDateHeader
+{
+  background-color: #99ccff;
+  border-bottom: solid 1px #6699ff;
+}
+
+.calendarEvent
+{
+  margin-top: 1px;
+  margin-bottom: 1px;
+  padding: 2px;
+}
+
+.calendarNonSessionDay
+{
+  background-color: #f3f3f3;
+}
+
+/*
+ * Style definitions for the Dynamic Picklists
+ */
+.dynamicPickList
+{
+  margin: 0px 0px 0px 0px;
+  position: absolute;
+  color: #000000;
+  border: solid 1px;
+  visibility: hidden;
+}
+
+/*
+ * Style definitions for the Dynamic Picklists TD elements
+ */
+.dynamicPickListElement
+{
+    border-left: solid black 1px;
+    padding-left: 2px;
+    padding-right: 2px;
+    padding-top: 1px
+}
+
+/*
+ * Style definitions for the embedded popup overlay and iframe
+ */
+div.embeddedCoverClass
+{
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: .70;
+    z-index: 19;
+}
+
+iframe.embeddedFrameClass
+{
+    position: absolute;
+    z-index: 20;
+    border: 1px solid black;
+}
+
+.ieFixedWidth
+{
+  
+}
+
+.scrollTable table, .scrollGridTable table
+{
+    border-collapse: collapse;
+}
+
+.scrollTable table td, .scrollTable table th, .scrollGridTable table td, .scrollGridTable table th
+{
+    text-align: left;
+    margin: 2px;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    white-space: nowrap;
+}
+
+.scrollCell td, .scrollCell th
+{
+    border: solid #B8B7B9 1px;
+}
+
+.scrollGridBorder
+{
+    border: solid #B8B7B9 1px;  
+}
+
+.scrollDiv1 
+{
+    border-left: solid #B8B7B9 1px;
+    border-top: solid #B8B7B9 1px;
+}
+
+.scrollDiv2
+{
+    border-top: solid #B8B7B9 1px;
+    border-right: solid #B8B7B9 1px;
+}
+
+.scrollDiv3
+{
+    border-left: solid #B8B7B9 1px;
+}
+
+.scrollDiv5
+{
+    border-left: solid #B8B7B9 1px;
+    border-top: solid #B8B7B9 1px;
+    border-bottom: solid #B8B7B9 1px;
+}
+
+.scrollDiv6
+{
+    border-top: solid #B8B7B9 1px;
+}
+
+.embeddedTable tr td 
+{
+    border: hidden;
+}
+
+.passwordDiv
+{
+    border: 2px black solid;
+    box-sizing: border-box; 
+    padding-left: 5px; 
+    padding-right: 5px; 
+    padding-top: 5px;
+}
+
+.warningDelMessage {
+    color: #952428;
+}
+
+/*
+ * Styles for the seating chart
+ */
+
+#seat-dataGrid
+{
+  border: solid #CCCCCC 1px;
+  overflow: auto;
+  width: 500;
+} 
+
+.seat-cell
+{
+  width: 125px;
+  height: 125px;
+}
+
+.seat-cellAttendance
+{
+  padding-bottom: 3px;
+  padding-left: 5px;
+}
+
+.seat-cellAttendanceButtons
+{
+  padding-right: 5px;
+}
+
+.seat-cellEmpty
+{
+  width: 50px;
+  height: 50px;
+}
+
+.seat-cellIncomplete
+{
+  padding-top: 5px;
+  padding-left: 5px;
+  font-size: 10pt;
+  color: red;
+  font-weight: bold;
+}
+
+.seat-cellUsed
+{
+  border: solid #CCCCCC 1px;
+}
+
+.seat-cellModeLinks
+{
+  padding-top: 5px;
+  padding-right: 5px;
+}
+
+.seat-cellName
+{
+  font-weight: bold;
+  padding-bottom: 3px;
+  padding-left: 5px;
+}
+
+.seat-disabled
+{
+  background-color: #DDDDDD;
+}
+    
+.seat-cellPhoto
+{
+  padding-left: 5px;
+  padding-right: 2px;
+  padding-bottom: 5px;
+}
+
+.seat-cellWithdrawn
+{
+  color: red;
+  font-weight: bold;
+  padding-bottom: 3px;
+  padding-left: 5px;
+}
+
+.seat-image
+{
+  width: 50px;
+  height: auto;
+}
+
+/*
+ * Styles for the printable seating chart
+ */
+
+.seatp-cellName
+{
+  font-weight: bold;
+  padding-bottom: 3px;
+  padding-left: 5px;
+  text-align: center;
+}
+
+.seatp-cellPhoto
+{
+    padding-bottom: 3px;
+    text-align: center;
+}
+
+.seatp-cellWithdrawn
+{
+    color: red;
+    font-weight: bold;
+    padding-bottom: 3px;
+    padding-left: 5px;
+    text-align: center;
+}
+
+.requiredFieldFlag
+{
+   color: red;
+   font-weight: bold;
+}
+
+.buttonAreaHR
+{
+   border-top: 1px solid #aaaaaa; 
+   padding-top: 5px;
+}
+
+.buttonArea
+{
+   border: 1px solid #CCCCCC;
+}
+
+.listHide
+{
+   color: gray;
+}
+
+.listRowHighlight
+{
+    background-color: #D1D1D1 !important;
+}
+
+.listRowStandard
+{
+    background-color: white;
+}
+
+.loadingCover
+{
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    height: 100%;
+    width: 100%;
+    background-color: #F5F5F5;
+    text-align: center;
+    z-index: 1000;
+    font-size: 12pt;
+}
+
+.displayHide
+{
+   display: none;
+}
+
+.personDynamicPickListLabel
+{
+    width: 1;
+}
+
+.personDynamicPickListRadio
+{
+    height: 20;
+    width: 1;
+}
+
+.personNameSelection
+{
+  width: 275px;
+}
+
+.serviceEntryBackground
+{
+    background-color: #E0ECFE; 
+}
+
+.serviceEntryBorderLeft
+{
+    border-left: 1px #7F9DB9 solid;
+}
+
+.serviceEntryBorderHorizontal
+{
+    border-top: 1px #7F9DB9 solid;
+    border-bottom: 1px #7F9DB9 solid;
+}
+
+.serviceEntryBorderRight
+{
+    border-right: 1px #7F9DB9 solid;
+}
+
+.gradeInputRefreshButton
+{
+  font-size: xx-small;
+  width: 50px;
+}
+
+.shadow
+{
+    overflow: hidden;
+    position: absolute;
+    top: -1000px;
+    filter: alpha(Opacity = 10);
+    /*modify to change the shade solidity/opacity, same as below*/
+    opacity: 0.1; /*firefox 1.5 opacity*/
+    -moz-opacity: 0.1; /*mozilla opacity*/
+    -khtml-opacity: 0.1; /*opacity*/
+    z-index: 10
+}
+
+.timerAnimation
+{
+    width: 100%;
+    border-style: solid;
+    border-width: thin;
+    border-collapse: separated;
+    border-spacing: 3px;
+    empty-cells: show;
+}
+
+.timerAnimationCell1
+{
+    border-style: solid;
+    border-width: thin;
+    background-color: #ffffff;
+}
+
+.timerAnimationCell2
+{
+    border-style: solid;
+    border-width: thin;
+    background-color: #0000ff;
+}
+
+.timerCount
+{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+td.daySelected
+{
+  margin: 0px;
+  border: solid 1px black;
+  background-color: #99ccff;
+}
+
+td.dayUnselected
+{
+  margin: 0px;
+  border: solid 1px black;
+  background-color: #ffffff;
+}
+
+td.dayDisabled
+{
+  margin: 0px;
+  border: solid 1px black;
+  background-color: #ccaa88;
+}
+
+td.dayEmpty
+{
+  margin: 0px;
+  border: solid 1px black;
+  background-color: #cccccc;
+}
+
+.teacherAssignmentWidth
+{
+  width: 135px;
+}
+
+.hoverText 
+{
+    position: absolute;
+    display: block;
+}
+
+.hoverTextTop 
+{
+    display: block;
+    height: 5px;
+    margin-left: 5px;
+    overflow: hidden;
+}
+ 
+.hoverTextCont 
+{
+    display: block;
+    color: black;
+    background: white;
+    background-color: white;
+    border: 1px solid;
+    margin-left: 5px;
+    padding: 5px 5px 5px 5px;
+}
+ 
+.hoverTextBot 
+{
+    display: block;
+    height: 5px;
+    margin-left: 5px;
+    overflow: hidden;
+}
+
+.noPadding 
+{
+  margin: 0px; 
+  padding: 0px; 
+}
+
+.quotaHeader
+{
+    font-size: 13pt;
+    font-weight: bold;
+}
+
+.quotaRemaining
+{   
+    color: white; 
+    padding: 3px;
+    padding-left: 10px; 
+    padding-right: 4px;
+    padding-top: 5px;
+    font-size: 11px; 
+    cursor: pointer;
+}
+
+.quotaPickListAnchor
+{
+    text-decoration: none !important;
+}
+
+.reposMenuLeft
+{
+    float: left; 
+    padding: 3px; 
+    padding-left: 10px;
+    padding-right: 10px
+}
+
+.reposMenuRight
+{
+    float: right; 
+    padding-right: 10px
+}
+
+.translucent
+{
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+    filter: alpha(opacity = 40);
+    opacity: 0.4;
+}
+
+/*
+ * Customized styling for the ckeditor
+ */
+span.cke_skin_kama
+{
+    padding: 0px !important;
+}
+
+.comment-bank
+{
+  overflow: hidden;
+  position: relative;
+  clear: both;
+  padding: 0;
+}
+
+.comment-bank-nub
+{
+  text-align: right;
+}
+
+.comment-bank-nub img
+{
+  cursor: hand;
+  padding: 5px;
+}
+
+.comment-bank .cb-input
+{
+  margin: 0;
+  resize: none;
+  width: 100%;
+}
+
+.comment-bank-slider
+{
+  position: absolute;
+  top: 0px;
+  right: 0;
+  font-family: sans-serif;
+}
+
+.comment-bank-options
+{
+  padding: 0;
+  overflow-y: scroll;
+  display: none;
+  width: 350px;
+}
+
+.comment-bank-loading
+{
+  margin-left: 30px;
+  font-weight: bold;
+}
+
+.comment-bank-searchBox
+{
+  display: block;
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.comment-bank-option
+{
+  margin-bottom: 3px;
+  background: #cacaca;
+  padding: 5px;
+  cursor: pointer;
+  cursor: hand;
+  font-size: x-small;
+  white-space: normal !important;
+}
+
+.comment-bank-checkbox
+{
+  margin-left: 20px;
+}
+
+.comment-bank-option .preview
+{
+  font-style: italic;
+  margin-bottom: .5em;
+  display: block;
+}
+
+.comment-bank-option .category
+{
+  font-weight: bold;
+  padding: 2px;
+  margin-right: .5em;
+  background: #fff;
+  color: #000;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.comment-bank-option:hover
+{
+  background: #acacac;
+}
+
+.comment-bank-category
+{
+  display: block;
+  margin-bottom: 5px;
+  white-space: nowrap;
+}
+
+.comment-bank-category label
+{
+  font-weight: bold;
+  padding: 0 5px;
+}
+
+/*Nifty Corners Cube CSS by Alessandro Fulciniti, The Spelling Impaired
+The following classes are added dynamically by javascript,
+and their use should be avoided in the markup */
+b.niftycorners,b.niftyfill
+{
+    display: block
+}
+
+b.niftycorners *
+{
+    display: block;
+    height: 1px;
+    line-height: 1px;
+    font-size: 1px;
+    overflow: hidden;
+    border-style: solid;
+    border-width: 0 1px
+}
+/*normal*/
+b.r1
+{
+    margin: 0 3px;
+    border-width: 0 2px
+}
+
+b.r2
+{
+    margin: 0 2px
+}
+
+b.r3
+{
+    margin: 0 1px
+}
+
+b.r4
+{
+    height: 2px
+}
+
+b.rb1
+{
+    margin: 0 8px;
+    border-width: 0 2px
+}
+
+b.rb2
+{
+    margin: 0 6px;
+    border-width: 0 2px
+}
+
+b.rb3
+{
+    margin: 0 5px
+}
+
+b.rb4
+{
+    margin: 0 4px
+}
+
+b.rb5
+{
+    margin: 0 3px
+}
+
+b.rb6
+{
+    margin: 0 2px
+}
+
+b.rb7
+{
+    margin: 0 1px;
+    height: 2px
+}
+
+b.rb8
+{
+    margin: 0;
+    height: 2px
+}
+
+b.rs1
+{
+    margin: 0 1px
+}
+/*transparent inside*/
+b.t1
+{
+    border-width: 0 5px
+}
+
+b.t2
+{
+    border-width: 0 3px
+}
+
+b.t3
+{
+    border-width: 0 2px
+}
+
+b.t4
+{
+    height: 2px
+}
+
+b.tb1
+{
+    border-width: 0 10px
+}
+
+b.tb2
+{
+    border-width: 0 8px
+}
+
+b.tb3
+{
+    border-width: 0 6px
+}
+
+b.tb4
+{
+    border-width: 0 5px
+}
+
+b.tb5
+{
+    border-width: 0 4px
+}
+
+b.tb6
+{
+    border-width: 0 3px
+}
+
+b.tb7
+{
+    border-width: 0 2px;
+    height: 2px
+}
+
+b.tb8
+{
+    border-width: 0 1px;
+    height: 2px
+}
+
+b.ts1
+{
+    border-width: 0 2px
+}
+
+/* 
+ * Styles for rotateTableCellContent plugin
+ */
+.vertical
+{
+  vertical-align: middle;
+  font-size: x-small;
+}
+
+table div.rotated 
+{
+    text-align: right;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+ 
+table .vertical 
+{
+  white-space: nowrap;
+}
+
+thead th 
+{
+  vertical-align: top;
+}
+
+/*
+ * Styles for cursor drag and drop behavior
+ */
+.grabbable:hover 
+{ 
+  cursor: -moz-grab;
+  cursor: url(../images/grabber.png), default !important;
+}
+
+.grabbed:hover 
+{ 
+  cursor: -moz-grabbing;
+  cursor: url(../images/grabbing.png), default !important;
+}
+
+.grabbable 
+{ 
+  cursor: -moz-grab;
+  cursor: url(../images/grabber.png), default !important;
+}
+
+.grabbed
+{ 
+  cursor: -moz-grabbing;
+  cursor: url(../images/grabbing.png), default !important;
+}      
+
+/*
+ *  Styles for unselectable text.  Use in conjunction with the following tag attributes (e.g.):
+ *  <div unselectable="on" onselectstart="return false;" >
+ */
+.unselectable
+{
+    -moz-user-select: none; 
+    -webkit-user-select: none; 
+    -ms-user-select:none; 
+    user-select:none;
+    -o-user-select:none;"
+}
+
+.contentItemLink {
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 85%;
+    white-space: nowrap;        
+}
+
+.postedGoogleDriveFile {
+    background: transparent url(../images/lms/treeIcons/assignmentResourceSprite.png) 0px -80px no-repeat;
+    margin: 0px;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+}
+
+#accordion .ui-accordion-header {
+	background:none;
+    background-color: #ffffcc;
+    padding:5px;
+    color:black;
+    font-weight: bold;
+    font-size: x-small;
+}
+
+/*
+ * Begin new buttons
+ */
+ 
+.button {
+    display: inline-block;
+    padding: 0 10px;
+    background-color: #6f6f6f;
+    border: 2px solid #fff;
+    color: #fff;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,.2),0 1px 1px 0 rgba(0,0,0,.14),0 2px 1px -1px rgba(0,0,0,.12);
+    font-family: Lucida Grande, Lucida Sans, Arial, sans-serif;
+    font-size: .9em;
+    text-decoration: none;
+    line-height: 28px;
+    white-space: nowrap;
+    margin-right: 10px;
+}
+
+.button i
+{
+	padding-right: 4px;
+}
+
+.button:hover {
+    background-color: #777;
+    cursor: pointer;
+}
+
+.button:active {
+    box-shadow: none;
+}
+
+.button.disabled:hover, .button[disabled]:hover {
+    cursor: default;
+}
+
+.button.disabled:active, .button[disabled]:active {
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,.2),0 1px 1px 0 rgba(0,0,0,.14),0 2px 1px -1px rgba(0,0,0,.12);
+}
+
+.button.disabled:focus, .button[disabled]:focus {
+    outline: none;
+}
+
+.primary.button {
+    background-color: #26af89;
+}
+
+.primary.button:hover {
+    background-color: #29c89c;
+}
+
+.button.primary.disabled:hover, .button.primary[disabled]:hover {
+    cursor: default;
+}
+
+.button.primary.disabled:active, .button.primary[disabled]:active {
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,.2),0 1px 1px 0 rgba(0,0,0,.14),0 2px 1px -1px rgba(0,0,0,.12);
+}
+
+.button.primary.disabled:focus, .button.primary[disabled]:focus {
+    outline: none;
+}
+
+.button[disabled] {
+    background-color: #CCCCCC;
+    box-shadow: none;
+}
+
+.button span {
+    vertical-align: middle;
+    padding-right: 4px;
+}
+
+.activityTrackingYellow, .activityTrackingRed, .activityTrackingGreen
+{
+    background:
+        url("../images/activityTrackingIcons.png")
+        repeat-x;
+    background-position: 0px 0px;    
+    vertical-align: middle; 
+}
+ 
+.activityTrackingGreen {
+    background-position: 0px 0px;
+}
+
+.activityTrackingYellow {
+    background-position: 48px 0px;
+}
+
+.activityTrackingRed {
+    background-position: 24px 0px;
+}
+
+ .activityTracking
+{
+    display: inline-block; 
+    width: 24px;
+    height: 24px;
+}
+
+.tableLockIconGreen, .tableLockIconRed, .tableLockIconYellow
+{
+	background:
+		url("../images/tableLockIcons32.png")
+		repeat-x;
+	background-position: 0px 0px;
+}
+ 
+.tableLockIconGreen {
+    background-position: 0px 0px;
+}
+
+.tableLockIconYellow {
+    background-position: 0px -64px;
+}
+
+.tableLockIconRed {
+    background-position: 0px -32px;
+}
+
+ .tableLockIcon
+{
+    display: inline-block; 
+    width: 32px;
+    height: 32px;
+}
+
+.tableLockIconGreen-small, .tableLockIconRed-small, .tableLockIconYellow-small
+{
+	background:
+		url("../images/tableLockIcons16.png")
+		repeat-x;
+	background-position: 0px 0px;
+}
+
+.tableLockIconGreen-small {
+    background-position: 0px 0px;
+}
+
+.tableLockIconYellow-small {
+    background-position: 0px -32px;
+}
+
+.tableLockIconRed-small {
+    background-position: 0px -16px;
+}
+
+.tableLockIcon-small 
+{
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+}
+
+/*
+ * Begin top menu scroll arrows
+ */
+
+.topMenuLeftScroll
+{
+    float: left;
+    z-index: 1001;
+    position: relative;
+    cursor: pointer;
+    display:none;
+    top:6px;
+}
+
+.topMenuRightScroll
+{
+    float: right;
+    z-index: 1001;
+    position: relative;
+    cursor: pointer;
+    display:none;
+    top:6px;
+}
+
+.topMenuCenter
+{
+    overflow-x: hidden;
+    width: 100%;
+}
+
+/**
+ * Styles definitions for side tabs scroll arrows
+ */
+#sideMenuArrowToUp {
+    text-align: center;
+    margin: 0 0 3px 6px;
+    padding-top: 9px;
+    padding-bottom: 2px;
+}
+
+.arrowToUp {
+    width: 6px;
+    height: 6px;
+    border: 2px solid;
+    border-color: black transparent transparent black;
+    transform: rotate(45deg);
+    display: inline-block;
+}
+
+#sideMenuArrowToDown {
+    text-align: center;
+    margin: 3px 0 0 6px;
+    padding-top: 4px;
+    padding-bottom: 7px;
+}
+
+.arrowToDown {
+    width: 6px;
+    height: 6px;
+    border: 2px solid;
+    border-color: black transparent transparent black;
+    transform: rotate(225deg);
+    display: inline-block;
+}
+
+/* Button "Skip to ..." - hidden out of the window */
+.skipnav {
+  position: absolute;
+  z-index: 999999;
+  top: 6px;
+  left: 6px;
+  -webkit-transform: translateY(-100px);
+  -ms-transform: translateY(-100px);
+  transform: translateY(-100px);
+  -webkit-transition: -webkit-transform 0.3s ease;
+  -ms-transition: -ms-transform 0.3s ease;
+  transition: transform 0.3s ease;
+}
+
+/* In focus state (when user is navigating using Tab ) - appears from the top */
+.skipnav:focus {
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+  outline-offset: -1px;
+  display: block;
+  width: auto;
+  height: auto;
+  font-size: 1em;
+  font-weight: 400;
+  padding: 1em 1.5em;
+  background: #f1f1f1;
+  color: #0073aa;
+  line-height: normal;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+}
+
+/* Anchors to jump on them using "Skip to ..." buttons */
+a.skip_link_anchor, div.hidden_button_empty_table {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+h1.reset_style_h1 {
+    display: block;
+    font-size: 100%;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    font-weight: bold;
+}
+
+h1.reset_style_h1_top {
+    display: block;
+    font-size: 100%;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    font-weight: bold;
+}
+
+.screenReaderHiddenLabel
+{
+    position: absolute !important;
+    height: 1; width: 1;
+    overflow: hidden;
+    clip: rect(1px, 1px, -1px, -1px);
+}

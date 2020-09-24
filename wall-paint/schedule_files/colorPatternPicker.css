@@ -1,0 +1,94 @@
+ .topLine {
+    text-align: center;
+    border-top: solid black 1px; 
+    padding: 10px 5px 10px 5px;
+}
+
+.bottomLine {
+    text-align: center;
+    border-bottom: solid black 1px; 
+    padding: 10px 5px 10px 5px;
+}
+
+.buttonrow {
+    text-align: center;
+    border-top: solid black 1px; 
+    border-bottom: solid black 1px;
+    padding: 10px 5px 10px 5px;
+} 
+
+ .patternPickerPreview
+{
+    border: solid gray 1px; 
+    border-radius: 4px;
+    display: inline-block; 
+    width: 30px;
+    height: 30px;
+}
+
+.largerPreviewPattern
+{
+    border: solid gray 1px; 
+    border-radius: 4px;
+    display: inline-block;
+    width: 50px;
+    height: 30px;
+}
+ 
+/* .pattern0, .pattern1,
+.pattern2, .pattern3,
+.pattern4, .pattern5,
+.pattern6, .pattern7,
+.pattern8, .pattern9
+{
+    background:
+        url(../images/patterns.png)
+        repeat-x;
+    background-position: 0px 0px;    
+    vertical-align: middle; 
+}
+ 
+.pattern0 {
+    background-position: 0px 0px;
+}
+
+.pattern1 {
+    background-position: 0px -30px;
+}
+
+.pattern2 {
+    background-position: 0px -61px;
+}
+
+.pattern3 {
+    background-position: 0px -91px;
+}
+
+.pattern4 {
+    background-position: 0px -120px;
+}
+
+.pattern5 {
+    background-position: 0px -151px;
+}
+
+.pattern6 {
+    background-position: 0px -180px;
+}
+
+.pattern7 {
+    background-position: 0px -210px;
+}
+
+.pattern8 {
+    background-position: 0px -240px;
+}
+
+.pattern9 {
+    background-position: 0px -270px;
+}
+ */ 
+
+.vAlign {
+    vertical-align: middle;
+} 

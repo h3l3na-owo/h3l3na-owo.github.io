@@ -1,0 +1,2749 @@
+
+<!-- saved from url=(0149)https://ma-brookline.myfollett.com/aspen/studentScheduleMatrix.do?navkey=myInfo.sch.matrix&termOid=&schoolOid=&k8Mode=&viewDate=9/15/2020&userEvent=0 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+ 
+  <link rel="SHORTCUT ICON" href="https://ma-brookline.myfollett.com/aspen/images/favicon.ico">
+
+
+  
+
+  
+  
+  
+   
+  
+  
+  
+  
+  
+  
+
+  
+
+    
+  
+  <script src="./schedule_files/lodash.3.8.0.compat.min.js" type="text/javascript"></script>
+  <script src="./schedule_files/json2.js" type="text/javascript"></script>
+  <script src="./schedule_files/jquery-3.4.1.min.js" type="text/javascript"></script>
+  <script src="./schedule_files/jquery-ui-1.12.1.min.js" type="text/javascript"></script>
+  <script src="./schedule_files/quicktags-1.3.1-concat.js" type="text/javascript"></script>
+ 
+  
+  
+  <script src="./schedule_files/jquery-common.js" type="text/javascript"></script>
+  <script src="./schedule_files/common.js" type="text/javascript"></script>
+  <script src="./schedule_files/hoverText.js" type="text/javascript"></script>
+  <script src="./schedule_files/menu.js" type="text/javascript"></script>
+  <script src="./schedule_files/date-en-US.js" type="text/javascript"></script>  
+  <script src="./schedule_files/dateTime.js" type="text/javascript"></script>
+  <script src="./schedule_files/dependencyHandler.js" type="text/javascript"></script>
+  <script src="./schedule_files/dynamicPickList.js" type="text/javascript"></script>
+  <script src="./schedule_files/resourceGrabber.js" type="text/javascript"></script>
+  <script src="./schedule_files/spellCheckField.js" type="text/javascript"></script>
+  <script src="./schedule_files/messageWindow.js" type="text/javascript"></script>
+  <script src="./schedule_files/help.js" type="text/javascript"></script>
+  <script src="./schedule_files/grid.js" type="text/javascript"></script>
+  <script src="./schedule_files/commentBank.js" type="text/javascript"></script>
+  
+  
+  
+  <script src="./schedule_files/seatingChartDesign.js" type="text/javascript"></script> 
+
+  
+  <script src="./schedule_files/ckeditor.js" type="text/javascript"></script><style>.cke{visibility:hidden;}</style>
+  <script src="./schedule_files/ckEditorSetup.js" type="text/javascript"></script>
+
+  
+
+  <script language="JavaScript">
+   window.name = "root_aspen_window";
+  
+   // Setting Locale for Global variable in dateTime.js
+   SYSTEM_LOCALE = 'en_US';
+
+   includeStylesheet('student');
+   sessionId = '1MWBuHRK0ZNtDidzFpEzYkOlplmhe9b19_QJYWYT';
+   resetSessionTimeout( 1800 );
+   sessionTimeoutMessage1 = 'Your session will expire in less than one minute.';
+   sessionTimeoutMessage2 = 'Would you like to continue with your session?';
+   sessionExpiredMessage = 'Your session has expired at';
+   updateSessionTimeout();
+
+   function onLoad()
+   {
+       makeTabsClickable();
+       scrollToCoordinates();
+       
+       if (this.resizeFrames)
+       {
+           resizeFrames();
+       }
+       if (this.updateCheckboxViews)
+       {
+           updateCheckboxViews();
+       }
+
+       
+   }
+
+  
+   
+  
+
+  </script><link rel="StyleSheet" href="./schedule_files/common-mo.css" type="text/css" media="screen"><link rel="StyleSheet" href="./schedule_files/colorPatternPicker.css" type="text/css"><link rel="StyleSheet" href="./schedule_files/student.css" type="text/css" media="screen">
+ 
+  
+
+  
+  
+  <title>Aspen: Current schedule</title>
+
+  <!-- Start Analytics -->
+  <script>      
+       var trackAnalytics = false;
+       
+           var analyticUserView = 'Student view';
+           var analyticUserRole = 'Student';
+           var districtName = 'Brookline Public Schools';
+       
+		var aspenVersion = '6.2.0.14.179';
+  </script>
+  <script src="./schedule_files/analyticsCore.js" type="text/javascript"></script>
+
+ <script src="./schedule_files/reader-accessibility.js"></script></head>
+
+ <body class="bodyBackground" onload="onLoad()">
+ <div id="overlay" style="display: none; z-index: 500; position: fixed; left: 0; right: 0; bottom: 0; top: 0; background-color: rgba(0,0,0,0.5);"></div>
+  <div id="spellingMenu" class="suggestionMenu spellCheckBackground"></div>
+  
+  <form name="scheduleMatrixForm" method="post" action="https://ma-brookline.myfollett.com/aspen/studentScheduleContextList.do"><div><input type="hidden" name="org.apache.struts.taglib.html.TOKEN" value="34f93a6d4e1a48eaa33b7adee966669c"></div>
+<input type="hidden" id="userEvent" name="userEvent" value="930">
+<input type="hidden" id="userParam" name="userParam" value="">
+<input type="hidden" id="operationId" name="operationId" value="">
+<input type="hidden" id="deploymentId" name="deploymentId" value="ma-brookline">
+<input type="hidden" id="scrollX" name="scrollX" value="0">
+<input type="hidden" id="scrollY" name="scrollY" value="0">
+<input type="hidden" id="formFocusField" name="formFocusField" value="">
+   <input type="hidden" name="formContents" value="">
+   <input type="hidden" name="formContentsDirty" value="">
+   <input type="hidden" name="maximized" value="false">
+   
+   
+   
+   
+   <table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+    <tbody><tr class="layoutHeader" id="layoutHeader">
+     <td id="header">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+       <tbody><tr>
+        <td>
+            <div id="topTitleBar" style="">
+                
+
+
+
+
+
+
+
+<!--[if lte IE 6]>
+ <script src="js/supersleight-min.js?version=6.2.0.14.179" type="text/javascript"></script>
+<![endif]-->
+  
+
+
+
+
+<iframe id="downloadFrame" src="javascript:false;" style="display: none" src="./schedule_files/saved_resource.html"></iframe>
+
+  
+
+
+
+<script language="Javascript">
+function confirmLogout()
+{
+    if (confirm('Do you really want to log off and end your session?'))
+    {
+        window.open('logout.do', '_top');
+    }
+}
+</script>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0" height="55px" style="float:left;"> <tbody><tr>
+
+
+  <td valign="top" width="40%">
+   <table cellpadding="0" cellspacing="0" border="0" style="height: 100%;">
+    <tbody><tr valign="top">
+     
+     <td rowspan="1" class="applicationTitle lightTitle" style="vertical-align: middle" valign="middle">
+      
+      <span style="padding-left: 10px;">
+      Brookline Public Schools 2020-2021
+      </span>
+     </td>
+    </tr>
+    <tr>
+      
+      <td class="applicationSubtitle lightTitle">
+        <span style="padding-left: 10px;">
+        Andrus, Francisco
+        </span>
+      </td>
+      
+ 
+    </tr>
+   </tbody></table>
+  </td>
+  <td align="center">
+  
+  </td>
+  <td align="right" width="40%">
+  
+  <div style="float: right;">
+   <table border="0" cellspacing="0" cellpadding="0" style="margin-left: auto; margin-right: auto">
+   <tbody><tr><td>
+
+
+
+
+    
+    </td>
+
+
+     
+     
+     
+     
+
+     
+
+     
+
+     
+
+     
+      
+     
+
+     
+     <td>
+     <table border="0" cellspacing="0" cellpadding="0">
+     <tbody><tr>
+        <td>
+             <div id="userPreferenceMenu" class="toolbarText pointer toolbarItem" tabindex="0">
+                 Andrus, Francisco
+                 <img src="./schedule_files/white_down_arrow.png" class="whiteDownArrow" alt="white down arrow">
+              </div>
+        </td>
+    </tr>
+     <tr>
+        <td>
+              <div id="userPreferenceMenuPane" class="menuPane menuPlainBackground c2Border-left">
+                <table border="0" cellspacing="0" cellpadding="0">
+                  <tbody><tr id="userPreferenceContext" tabindex="0" class="pointer">
+                   <td nowrap="" class="menuOptionFullPadding">Set preferences</td>
+                   <td nowrap="" class="menuOptionFullPadding" width="1" align="right">&nbsp;</td>
+                  </tr>
+                  
+                </tbody></table>
+               </div>
+          </td>
+       </tr>
+       </tbody></table>
+       </td>
+       <script language="Javascript">
+           var userPreferenceMenu = new Menu('userPreferenceMenu', null, 'menuItemHighlight pointer', 'pointer');
+           userPreferenceMenu.addOption('userPreferenceContext', 'doNamedPopup(\'userPreferences.do\',\'500\',\'450\',\'preferencesPopup\',\'scrollbars=1,resizable=1,menubar=0,location=0\');');
+       </script>
+
+    
+    <td>
+        <div class="toolbarPadding toolbarItem" nowrap="" onmouseover="this.className = &#39;toolbarPadding toolbarItem c2Background&#39;" onmouseout="this.className = &#39;toolbarPadding toolbarItem&#39;">
+          <a href="javascript:confirmLogout();" class="toolbarText"><span class="fa fa-sign-out" style="padding-right:5px;"></span>Log Off</a>
+         </div>
+    </td>
+</tr>
+</tbody></table>
+</div>
+  </td>
+ </tr>
+</tbody></table>
+
+            </div>
+        </td>
+       </tr>
+       <tr>
+        <td>
+
+<!--         <span id="autoSaveDebugButton">&nbsp;</span>-->
+
+         <div id="c2colorRef" class="c2color"> </div>
+            <div id="topMenuBar" style="">
+
+                <div id="topMenuBarLeft" class="topMenuLeftScroll">
+                    <img src="./schedule_files/previous-arrow-white-black-border.png" style="color: transparent;" alt="previous arrow white black border">
+                </div>
+
+                <div id="actualTopMenuBar" class="topMenuCenter">
+                    
+
+
+
+
+
+
+
+
+
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse;">
+ <tbody><tr>
+
+
+  
+    </tr></tbody><tbody style="display: inline-block">
+        <tr><td width="1" id="left-arrow-container" class="c1Background navTabBackground" nowrap="" onmouseover="this.className = &#39;navTabBackgroundHover&#39;" onmouseout="this.className = &#39;navTabBackground c1Background&#39;" style="display: none">
+            <div class="arrowToLeft"></div>
+        </td>
+    </tr></tbody>
+
+   <tbody id="topTabs" style="width: 100%; display:inline-block; overflow:hidden">
+   <tr><td style="width: 80px; text-align: center;" class="c1Background navTabBackground" nowrap="" onmouseover="this.className = &#39;navTabBackgroundHover&#39;" onmouseout="this.className = &#39;navTabBackground c1Background&#39;">
+    <a href="https://ma-brookline.myfollett.com/aspen/home.do" class="navTab">Pages</a>
+   </td>
+
+  
+
+
+  
+  
+	<!-- D-25797 We do not want to display the tab if the user does not have a role with access to the tab. -->
+	
+	
+
+    <td width="1" class="navTabDividerSolid"><img src="./schedule_files/spacer.gif" height="1" width="1" alt=" "></td>
+    <td width="1" class=" navTabBackgroundSelected" nowrap="">
+    	<a href="https://ma-brookline.myfollett.com/aspen/portalStudentDetail.do?navkey=myInfo.details.detail" class="navTab" title="My information tab">My&nbsp;Info</a>
+    </td>
+
+    
+
+  
+  
+	<!-- D-25797 We do not want to display the tab if the user does not have a role with access to the tab. -->
+	
+	
+
+    <td width="1" class="navTabDividerSolid"><img src="./schedule_files/spacer.gif" height="1" width="1" alt=" "></td>
+    <td width="1" class="c1Background navTabBackground" nowrap="" onmouseover="this.className = &#39;navTabBackgroundHover &#39;" onmouseout="this.className = &#39;navTabBackground c1Background&#39;">
+    	<a href="https://ma-brookline.myfollett.com/aspen/portalClassList.do?navkey=academics.classes.list" class="navTab" title="Academics tab">Academics</a>
+    </td>
+
+    
+
+  
+  
+	<!-- D-25797 We do not want to display the tab if the user does not have a role with access to the tab. -->
+	
+	
+
+    <td width="1" class="navTabDividerSolid"><img src="./schedule_files/spacer.gif" height="1" width="1" alt=" "></td>
+    <td width="1" class="c1Background navTabBackground" nowrap="" onmouseover="this.className = &#39;navTabBackgroundHover &#39;" onmouseout="this.className = &#39;navTabBackground c1Background&#39;">
+    	<a href="https://ma-brookline.myfollett.com/aspen/studentLockerList.do?navkey=locker.files.list" class="navTab" title="Locker tab">Locker</a>
+    </td>
+
+    
+
+  
+  
+	<!-- D-25797 We do not want to display the tab if the user does not have a role with access to the tab. -->
+	
+	
+
+    <td width="1" class="navTabDividerSolid"><img src="./schedule_files/spacer.gif" height="1" width="1" alt=" "></td>
+    <td width="1" class="c1Background navTabBackground" nowrap="" onmouseover="this.className = &#39;navTabBackgroundHover &#39;" onmouseout="this.className = &#39;navTabBackground c1Background&#39;">
+    	<a href="https://ma-brookline.myfollett.com/aspen/oneSearchSearchContainer.do?navkey=discovery.oneSearch.oneSearch" class="navTab" title="Quest">Quest</a>
+    </td>
+
+    
+
+  
+
+  
+   <td width="1" class="navTabDividerSolid"><img src="./schedule_files/spacer.gif" height="1" width="1" alt=" "></td>
+   <td width="100%" class="navTabBackground c1Background"><img src="./schedule_files/spacer.gif" height="1" width="1" alt=" "></td>
+   </tr></tbody>
+
+    <tbody style="display: inline-block">
+    <tr><td width="1" id="right-arrow-container" class="c1Background navTabBackground" nowrap="" onmouseover="this.className = &#39;navTabBackgroundHover&#39;" onmouseout="this.className = &#39;navTabBackground c1Background&#39;" style="display: none">
+        <div class="arrowToRight"></div>
+    </td>
+    </tr></tbody>
+ 
+</table>
+
+
+
+                </div>
+
+                <div id="topMenuBarRight" class="topMenuRightScroll">
+                    <img src="./schedule_files/next-arrow-white-black-border.png" style="color: transparent;" alt="next arrow white black border">
+                </div>
+
+            </div>
+        </td>
+       </tr>
+      </tbody></table>
+     </td>
+    </tr>
+
+             
+             
+             
+    <tr>
+     <td>
+      <div id="contentArea" class="contentPad">
+       <table class="breadcrumbsOuterContainer" width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tbody><tr>
+            <td id="breadcrumbsContainer">
+           
+            
+            
+            
+            
+           
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table cellpadding="0" cellspacing="0" border="0">
+ <tbody><tr>
+  <td id="bodytop" class="breadcrumbs"><h1 class="reset_style_h1_top">
+   
+      Current schedule
+      <img src="./schedule_files/spacer.gif" height="1" width="2" alt=" ">
+      
+   
+  </h1></td><td>
+   <img src="./schedule_files/spacer.gif" height="1" width="2" alt=" ">
+   
+  </td>
+  <td>
+   
+  </td>
+  <td>
+    
+  </td>
+  <td>
+    <img src="./schedule_files/spacer.gif" height="27" width="1" alt=" ">
+  </td>
+ </tr> 
+</tbody></table>
+
+            </td>
+         <td align="right">
+         
+           
+            
+            
+            
+            
+            
+            
+           
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script language="Javascript">
+/**
+ * Opens and closes the search div
+ */
+function expandSearchString() 
+{
+	if (document.getElementById("searchStringDiv").style.visibility == "hidden")
+	{
+		document.getElementById("searchStringDiv").style.visibility = "visible";
+		document.getElementById("searchStringNameID").focus();
+	}
+	else
+	{
+		document.getElementById("searchStringDiv").style.visibility = "hidden";
+	}
+}
+
+/**
+ * Searches for a student to replace the current one on the detail page, using javascript and a 'hidden' action. 
+ * Strips off all params that this method uses before searching, then calls the JumpToSearchAction.
+ * This allows us to change the oid to the one we searched for, then redirect back to the action we are on
+ */
+function redirectWithSearch(studentOID)
+{
+	var nameOrId = document.getElementById("searchStringNameID").value;
+	var last = document.getElementById("searchStringLast").value;
+	
+	if ((nameOrId == null || nameOrId == '') && (last == null || last == ''))
+	{
+		var elem = document.getElementById("searchErrorMessage");
+		var changeVal = grabResource("studentSearch.missingFields");
+		
+		//Cross browser fix
+		//innerText - chrome
+		//textContent - firefox
+		//error on innerText -> setting the sibling -> IE
+		try 
+		{
+	        elem.innerText = changeVal;
+	        elem.textContent = changeVal;
+		}
+		catch(err)
+		{
+			elem.nextSibling.data = changeVal;
+		}
+	}		
+	else
+	{
+		var first = document.getElementById("searchStringFirst").value;
+		var gradeLevel = document.getElementById("searchStringGradeLevel").value;
+		var gender = document.getElementById("searchStringGender").value;
+		var dob = document.getElementById("searchStringDOB").value;
+		var pathname = document.location["pathname"];
+		var navKey = document.location["search"];
+		var deploymentId = "ma-brookline";
+		
+		navKey = removeParam(navKey, 'nameID');
+		navKey = removeParam(navKey, 'last');
+		navKey = removeParam(navKey, 'first');
+		navKey = removeParam(navKey, 'gradeLevel');
+		navKey = removeParam(navKey, 'gender');
+		navKey = removeParam(navKey, 'dob');
+		navKey = removeParam(navKey, 'studentOID');
+		
+		//If there is no navKey, we need a ? to say we have params. If there is one, we need to add an identifier for the end of it
+		if (navKey.indexOf('?') < 0)
+		{
+			navKey = '?';
+		}
+		else
+		{
+			navKey = navKey + '&';
+		}
+		var resouce = rewriteUrl('searchString.do?navkey=' + navKey +
+	            '&nameID=' + nameOrId +
+	            '&last=' + last +
+	            '&first=' + first +
+	            '&gradeLevel=' + gradeLevel +
+	            '&gender=' + gender +
+	            '&dob=' + dob +
+	            '&studentOID=' + studentOID +
+	            '&deploymentId=' + deploymentId);
+		
+		$.ajax({
+            type: "GET",
+            url: resouce,
+            async: false,
+            success: function()
+            {
+            	doSubmit(0, document.forms[0]);
+            },
+            error: function(){$("#sra-status").text("Communication failure");},
+            cache: false
+            });
+	}
+}
+
+/**
+ * Removes a param from the nav key from the url. finds 'param...&' which can be any number of characters. Will also get the last param
+ * instead getting '&param...'
+ */
+function removeParam(navKey, param)
+{
+	var paramLocation = navKey.indexOf(param);
+	if (paramLocation > -1)
+	{
+		var amperLocation = navKey.indexOf('&', paramLocation);
+		if (amperLocation > -1)
+		{
+			return navKey.substring(0, paramLocation) +	navKey.substring(amperLocation + 1, navKey.length)
+		}
+		else
+		{
+			//There is the last param in the list, so we need to remove the previous &
+			return navKey.substring(0, paramLocation - 1);
+		}
+	}
+	return navKey;
+}
+</script>
+
+<style type="text/css">
+
+span.button-text {
+    padding-right: 0 !important;
+}
+
+</style>
+
+
+         
+         
+         </td>
+        </tr>
+
+        
+
+        <tr>
+         <td colspan="2"><img src="./schedule_files/spacer.gif" height="5" width="1" alt=" "></td>
+        </tr>
+       </tbody></table>
+
+       
+       <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tbody><tr valign="top">
+         <td height="1" width="100" id="layoutVerticalTabsContainer" style="min-width: 100px; width: 100px;">
+          <div id="layoutVerticalTabs" style="">
+          
+           
+          
+
+
+
+
+
+
+
+
+
+<script language="Javascript">
+
+function openNode(url)
+{
+    var lastSelection = getLastSelectedValue("scheduleMatrixForm");
+    if (lastSelection != "")
+    {
+        url += "&oid=" + lastSelection;
+    }
+    url = rewriteUrl(url);
+    window.name = "parentWindow";
+    window.open(url, window.name);
+}
+
+</script>
+
+
+
+
+
+
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" height="100%">
+
+  
+ 
+  
+ <tbody><tr height="1">
+  <td class="verticalTab pointer  verticalTabTopBorder  " onmouseover="this.className = &#39;verticalTabHighlight verticalTab pointer  verticalTabTopBorder &#39;" onmouseout="this.className = &#39;verticalTab pointer  verticalTabTopBorder&#39;">
+  
+    
+   <div class="verticalTabLabel">
+   <a href="https://ma-brookline.myfollett.com/aspen/portalStudentDetail.do?navkey=myInfo.details.detail" title="My Details" class="verticalTabText">My Details</a>
+
+      
+   </div>
+  
+  </td> 
+ </tr> 
+  
+ 
+  
+ <tr height="1">
+  <td class="verticalTab pointer   " onmouseover="this.className = &#39;verticalTabHighlight verticalTab pointer  &#39;" onmouseout="this.className = &#39;verticalTab pointer &#39;">
+  
+    
+   <div class="verticalTabLabel">
+   <a href="https://ma-brookline.myfollett.com/aspen/transcriptList.do?navkey=myInfo.trn.list" title="Transcript information including credit and grade point summaries" class="verticalTabText">Transcript</a>
+
+      
+   </div>
+  
+  </td> 
+ </tr> 
+  
+ 
+  
+ 
+  
+ 
+  
+ 
+  
+ 
+  
+ <tr height="1">
+  <td class="verticalTabSelected verticalTabShadowDown ">
+  
+    
+   <div class="verticalTabLabel verticalTabBar c2Border">
+   <a href="https://ma-brookline.myfollett.com/aspen/studentScheduleContextList.do?navkey=myInfo.sch.list" title="Current schedule" class="verticalTabTextSelected verticalTabLink">Current Schedule</a>
+
+   
+    
+      <table border="0" width="100%">
+       <tbody><tr>
+        <td nowrap="">
+         
+         <a href="javascript:openNode(&#39;studentScheduleDetail.do?navkey=myInfo.sch.list.detail&#39;);" title="Details for a student schedule" class="nestedNodeText verticalTabLink">
+         
+         
+          <img src="./schedule_files/spacer.gif" height="1" width="5" alt=" ">
+         
+          Details
+         </a>
+        </td>
+       </tr>
+      </tbody></table>
+      
+     
+     
+   </div>
+  
+  </td> 
+ </tr> 
+  
+ 
+  
+ <tr height="1">
+  <td class="verticalTab pointer   " onmouseover="this.className = &#39;verticalTabHighlight verticalTab pointer  &#39;" onmouseout="this.className = &#39;verticalTab pointer &#39;">
+  
+    
+   <div class="verticalTabLabel">
+   <a href="https://ma-brookline.myfollett.com/aspen/contextList.do?navkey=myInfo.con.list" title="Contacts" class="verticalTabText">Contacts</a>
+
+      
+   </div>
+  
+  </td> 
+ </tr> 
+  
+ 
+  
+ <tr height="1">
+  <td class="verticalTab pointer   " onmouseover="this.className = &#39;verticalTabHighlight verticalTab pointer  &#39;" onmouseout="this.className = &#39;verticalTab pointer &#39;">
+  
+    
+   <div class="verticalTabLabel">
+   <a href="https://ma-brookline.myfollett.com/aspen/studentAttendanceList.do?navkey=myInfo.att.list" title="Attendance" class="verticalTabText">Attendance</a>
+
+      
+   </div>
+  
+  </td> 
+ </tr> 
+  
+ 
+  
+ <tr height="1">
+  <td class="verticalTab pointer   " onmouseover="this.className = &#39;verticalTabHighlight verticalTab pointer  &#39;" onmouseout="this.className = &#39;verticalTab pointer &#39;">
+  
+    
+   <div class="verticalTabLabel">
+   <a href="https://ma-brookline.myfollett.com/aspen/studentRequestList.do?navkey=myInfo.req.req" title="Request info including current schedule and graduation progress" class="verticalTabText">Requests</a>
+
+      
+   </div>
+  
+  </td> 
+ </tr> 
+  
+ 
+
+
+ <tr height="*">
+  <td id="fillerRow" width="1" class="borderRight"></td>
+ </tr>
+</tbody></table>
+
+          </div>
+         </td>
+         <td rowspan="2" width="*" class="contentContainer">
+          
+           
+           
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table border="0" cellspacing="0" cellpadding="0" class="optionsBar">
+ <tbody><tr class="" height="22">
+
+     
+     <td width="1%" style="display: none;">
+         
+
+<div id="maximizeMenuButton" class="menu pointer menuBarSegment c1Background" onclick="showMaximizeMenus(event)">
+  <img src="./schedule_files/menu-icon-white.png" style="height: 15px" alt="menu icon white">
+</div>
+
+     </td>
+
+
+  
+  
+  
+  <td width="1%">
+    <div id="options" tabindex="0" class="menuDisabled menuBarSegmentDisabled">Options<img src="./schedule_files/white_down_arrow.png" class="whiteDownArrow" alt="white down arrow"></div><div id="optionsPane" class="menuPane c2Border-left"><table width="70" id="optionsColumn0Table" border="0" cellspacing="0" cellpadding="0" class="menuColumn"></table><table width="70" id="optionsColumn0Table" border="0" cellspacing="0" cellpadding="0" class="menuColumn"></table></div><script language="Javascript">var options = new Menu('options', null, 'menuItemHighlight pointer', 'menuPlainBackground pointer',false);
+options.disable();</script>
+  </td>
+  
+  
+
+  <td width="1%">
+    
+    <div id="reportsMenu" tabindex="0" class="menu pointer menuBarSegment c1Background">Reports<img src="./schedule_files/white_down_arrow.png" class="whiteDownArrow" alt="white down arrow"></div><div id="reportsMenuPane" class="menuPane c2Border-left" style="display: none;"><table width="105" id="reportsMenuColumn0Table" border="0" cellspacing="0" cellpadding="0" class="menuColumn"><tbody><tr data-name="menu.tools.reports.option.quickChart" id="reportsMenu_Option0" data-id="null" tabindex="0" class="menuPlainBackground pointer"><td nowrap="" class="menuOption" width="1" align="left"><img src="./schedule_files/spacer.gif" width="4" alt=" "></td><td nowrap="" class="menuOption" width="*" align="left">Quick Chart</td><td nowrap="" class="menuOption" width="1" align="right">&nbsp;</td></tr>
+<tr data-name="menu.tools.reports.option.quickReport" id="reportsMenu_Option1" data-id="null" tabindex="0" class="menuPlainBackground pointer"><td nowrap="" class="menuOption" width="1" align="left"><img src="./schedule_files/spacer.gif" width="4" alt=" "></td><td nowrap="" class="menuOption" width="*" align="left">Quick Report</td><td nowrap="" class="menuOption" width="1" align="right">&nbsp;</td></tr>
+<tr data-name="menu.tools.reports.option.queue" id="reportsMenu_Option2" data-id="null" tabindex="0" class="menuPlainBackground pointer"><td nowrap="" class="menuOption" width="1" align="left"><img src="./schedule_files/spacer.gif" width="4" alt=" "></td><td nowrap="" class="menuOption" width="*" align="left">My Job Queue...</td><td nowrap="" class="menuOption" width="1" align="right">&nbsp;</td></tr>
+</tbody></table></div><script language="Javascript">var reportsMenu = new Menu('reportsMenu', null, 'menuItemHighlight pointer', 'menuPlainBackground pointer',false);
+reportsMenu.addOption('reportsMenu_Option0', 'doWizard(\'quickChart0.do\');');
+reportsMenu.addOption('reportsMenu_Option1', 'doWizard(\'quickReport0.do\');');
+reportsMenu.addOption('reportsMenu_Option2', 'doNamedPopup(\'personalToolQueue.do\', 450, 350, \'reportQueue\', \'\');');
+</script>
+  </td>
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <td width="1%">
+   <div id="helpMenu" class="menu pointer menuBarSegment c1Background" tabindex="0">
+    Help
+    <img src="./schedule_files/white_down_arrow.png" class="whiteDownArrow" alt="white down arrow">
+   </div>
+   <div id="helpMenuPane" class="menuPane c2border-left" style="display: none;">
+    <table border="0" cellspacing="0" cellpadding="0">
+      <tbody><tr id="helpOnline" tabindex="0" class="menuPlainBackground pointer">
+       <td nowrap="" class="menuOption" width="1"><img src="./schedule_files/spacer.gif" height="1" width="4" alt=" "></td>
+       <td nowrap="" class="menuOption" width="*">Help for this Page</td>
+       <td nowrap="" class="menuOption" width="1" align="right">&nbsp;</td>
+      </tr>
+      <tr id="helpCenter" tabindex="0" class="menuPlainBackground pointer">
+       <td nowrap="" class="menuOption" width="1"><img src="./schedule_files/spacer.gif" height="1" width="4" alt=" "></td>
+       <td nowrap="" class="menuOption" width="*">Help Center</td>
+       <td nowrap="" class="menuOption" width="1" align="right">&nbsp;</td>
+      </tr>
+      <tr id="helpReleaseNotes" tabindex="0" class="menuPlainBackground pointer">
+       <td nowrap="" class="menuOption" width="1"><img src="./schedule_files/spacer.gif" height="1" width="4" alt=" "></td>
+       <td nowrap="" class="menuOption" width="*">Release Notes</td>
+       <td nowrap="" class="menuOption" width="1" align="right"><img src="./schedule_files/sub-menu-arrow.gif" alt=" ">
+        <div id="helpReleaseNotesPane" class="menuPane c2border-left">
+         <table border="0" cellspacing="0" cellpadding="0">
+          
+                <tbody><tr id="helpReleaseNotes1" tabindex="0" class="menuPlainBackground pointer">
+                <td nowrap="" class="menuOption" width="1"><img src="./schedule_files/spacer.gif" height="1" width="4" alt=" "></td>
+                <td nowrap="" class="menuOption" width="*" align="left">Aspen Release Notes</td>
+                <td nowrap="" class="menuOption" width="1" align="right">&nbsp;</td>
+               </tr>
+               
+                <tr id="helpReleaseNotes3" tabindex="0" class="menuPlainBackground pointer">
+                <td nowrap="" class="menuOption" width="1"><img src="./schedule_files/spacer.gif" height="1" width="4" alt=" "></td>
+                <td nowrap="" class="menuOption" width="*" align="left">Previous Release Notes</td>
+                <td nowrap="" class="menuOption" width="1" align="right">&nbsp;</td>
+               </tr>
+               
+                <tr id="helpReleaseNotes2" tabindex="0" class="menuPlainBackground pointer">
+                <td nowrap="" class="menuOption" width="1"><img src="./schedule_files/spacer.gif" height="1" width="4" alt=" "></td>
+                <td nowrap="" class="menuOption" width="*" align="left">Release Highlight Videos</td>
+                <td nowrap="" class="menuOption" width="1" align="right">&nbsp;</td>
+               </tr>
+               
+         </tbody></table>
+        </div>
+        
+       </td>
+      </tr>
+      <tr id="helpUserGuides" tabindex="0" class="menuPlainBackground pointer">
+       <td nowrap="" class="menuOption" width="1"><img src="./schedule_files/spacer.gif" height="1" width="4" alt=" "></td>
+       <td nowrap="" class="menuOption" width="*">User Guides</td>
+       <td nowrap="" class="menuOption" width="1" align="right"><img src="./schedule_files/sub-menu-arrow.gif" alt=" ">
+        <div id="helpUserGuidesPane" class="menuPane c2border-left">
+         <table border="0" cellspacing="0" cellpadding="0">
+          
+                <tbody><tr id="helpUserGuides0" tabindex="0" class="menuPlainBackground pointer">
+                <td nowrap="" class="menuOption" width="1"><img src="./schedule_files/spacer.gif" height="1" width="4" alt=" "></td>
+                <td nowrap="" class="menuOption" width="*" align="left">Family and Student Portals - User Guide</td>
+                <td nowrap="" class="menuOption" width="1" align="right">&nbsp;</td>
+                </tr>
+               
+         </tbody></table>
+        </div>
+        
+       </td>
+      </tr>
+      
+      <tr class="menuPlainBackground pointer">
+       <td nowrap="" class="menuSeparator" colspan="3"><img src="./schedule_files/spacer.gif" height="1" width="1" alt=" "></td>
+      </tr>
+      <tr id="helpAbout" tabindex="0" class="menuPlainBackground pointer">
+       <td nowrap="" class="menuOption" width="1"><img src="./schedule_files/spacer.gif" height="1" width="4" alt=" "></td>
+       <td nowrap="" class="menuOption" width="*">About Aspen</td>
+       <td nowrap="" class="menuOption" width="1" align="right">&nbsp;</td>
+      </tr>
+    </tbody></table>
+   </div>
+   
+   
+   <script language="Javascript">
+    var helpMenu = new Menu('helpMenu', null, 'menuItemHighlight pointer', 'menuPlainBackground pointer');
+    var helpUrl    = "#Family_and_Student_Portals/Student_Portal_Requests.htm";
+    var helpUrlEsc = "null";
+    helpUrl = (helpUrl != "null") ? helpUrl : (helpUrlEsc != "null") ? helpUrlEsc : "";
+    if (true && (!isSafari() || false))
+    {
+        var helpFullUrl = "http://aspenhelp.follettlearning.com?sessid=NjIwLFNJLDIwMjAtMDktMTUsRU5fVVM=&path=help/aspen_CSH.htm&anchor="+helpUrl.replace("#", "");
+        var helpCenterUrl = "http://aspenhelp.follettlearning.com?sessid=NjIwLFNJLDIwMjAtMDktMTUsRU5fVVM=&path=" + "help/Content/Help_Center/Aspen_Main.htm";
+    }
+    else
+    {
+        var helpFullUrl = "help/aspen_CSH.htm" + helpUrl;
+        var helpCenterUrl = "help/Content/Help_Center/Aspen_Main.htm";
+    }
+    helpFullUrl = rewriteUrl(helpFullUrl);
+    helpMenu.addOption('helpOnline', 'window.open("'+helpFullUrl+'", "_blank");'); 
+    
+    helpCenterUrl = rewriteUrl(helpCenterUrl);
+    	helpMenu.addOption('helpCenter', 'window.open("'+helpCenterUrl+'", "_blank");');
+
+    if(false)
+    {
+        helpMenu.addOption('helpReportProblem', 'doNamedPopup("ticketSubmit.do", 700, 400, "ticketSubmitWindow", "");');
+    }
+
+    helpMenu.addOption('helpReleaseNotes', 'doNamedPopup("about.do", 400, 170, "aboutWindow", "");');
+    helpMenu.addOption('helpUserGuides', 'doNamedPopup("about.do", 400, 170, "aboutWindow", "");');
+    helpMenu.addOption('helpAbout', 'doNamedPopup("about.do", 400, 200, "aboutWindow", "");');
+
+    var helpReleaseNotesMenu = new Menu('helpReleaseNotes', helpMenu, 'menuItemHighlight pointer', 'menuPlainBackground pointer');
+
+                helpReleaseNotesMenu.addOption('helpReleaseNotes1', 'window.open(rewriteUrl("http://aspenhelp.follettlearning.com?sessid=NjIwLFNJLDIwMjAtMDktMTUsRU5fVVM=&path=latestReleaseNotes/ReleaseNotes.pdf"), "_blank");');
+
+                helpReleaseNotesMenu.addOption('helpReleaseNotes3', 'window.open(rewriteUrl("http://aspenhelp.follettlearning.com?sessid=NjIwLFNJLDIwMjAtMDktMTUsRU5fVVM=&path=releaseNotes-archive.html"), "_blank");');
+
+                helpReleaseNotesMenu.addOption('helpReleaseNotes2', 'window.open(rewriteUrl("https://resources.follettlearning.com/support/aspen/training/aspen-release-highlight-videos/aspen-58-release-highlights-videos"), "_blank");');
+
+    
+    var helpUserGuidesMenu = new Menu('helpUserGuides', helpMenu, 'menuItemHighlight pointer', 'menuPlainBackground pointer');
+    
+            helpUserGuidesMenu.addOption('helpUserGuides0', 'window.open(rewriteUrl("http://aspenhelp.follettlearning.com?sessid=NjIwLFNJLDIwMjAtMDktMTUsRU5fVVM=&path=guides/Family_Student_portal.pdf"), "_blank");');       
+      
+
+    </script>
+  </td>
+
+
+
+  <td width="*" align="right">
+   
+      &nbsp;
+   
+  </td>
+  
+  <td width="1" onmouseout="this.className = &#39;&#39;;" onmouseover="this.className = this.className = &#39;controlHoverBackground&#39;;" class="">
+   
+    
+   
+  </td>  
+  <td width="1">
+   <img src="./schedule_files/spacer.gif" height="1" width="7" alt=" ">
+  </td>
+  <td width="1" onmouseover="this.className = this.className = &#39;controlHoverBackground&#39;;" onmouseout="this.className = &#39;&#39;;" style="padding-right: 3px">
+   <a href="javascript:toggleMaximize(&#39;Maximize&#39;, &#39;Minimize&#39;)"><img id="maximizeImg" src="./schedule_files/max-window.gif" border="0" title="Maximize" alt="Maximize"></a>
+  </td>
+ </tr>
+</tbody></table>
+
+          
+            
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+
+
+
+
+
+
+
+
+
+
+
+ <tbody><tr align="left">
+  <td align="left" nowrap="" class="matrixViewToggle">
+   <a href="javascript:doParamSubmit(360, document.forms[&#39;scheduleMatrixForm&#39;], &#39;&#39;)">&lt;&lt; List view</a>
+  </td>
+ </tr>
+ <tr>
+  <td colspan="3">
+   <hr class="c3background">
+  </td>
+ </tr>
+ <tr>
+  <td><img src="./schedule_files/spacer.gif" height="15" width="1" alt=" "></td>
+ </tr>
+
+
+<tr>
+ <td>
+  <div class="detailContainer">
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+   <tbody><tr height="1">
+    <td class="detailPropertyGutter headerLabelBackground"><img src="./schedule_files/spacer.gif" height="1" width="1" alt=" "></td>
+    <td class="detailValueGutter"><img src="./schedule_files/spacer.gif" height="1" width="1" alt=" "></td>
+   </tr>
+
+  
+
+
+
+   <tr>
+    <td width="120" class="detailProperty headerLabelBackground" nowrap="">
+     Time
+    </td>
+    
+    <td width="*" class="detailValue" nowrap="">
+        <label for="selectedTermOid" class="screenReaderHiddenLabel">Time</label>
+     <select name="selectedTermOid" onchange="doSubmit(2210, this.form);return false;" id="selectedTermOid" class="listHeaderDropdown"><option value="today">Today</option>
+      
+     
+      <option value="TRM00PqJVEG8lx" selected="selected">Q1</option>
+<option value="TRM00PqJVEG8lr">Q2</option>
+<option value="TRM00PqJVEG8ll">Q3</option>
+<option value="TRM00PqJVEG8lf">Q4</option>
+<option value="TRM00PqJVEG8lZ">S1</option>
+<option value="TRM00PqJVEG8lT">S2</option>
+<option value="TRM00PqJVEG8m3">FY</option></select>
+   </td>
+  </tr>
+
+
+ 
+
+   <tr height="1">
+    <td class="detailPropertyGutter headerLabelBackground"><img src="./schedule_files/spacer.gif" height="1" width="1" alt=" "></td>
+    <td class="detailValueGutter"><img src="./schedule_files/spacer.gif" height="1" width="1" alt=" "></td>
+   </tr>
+  </tbody></table>
+  </div>
+ </td>
+</tr>
+
+<tr>
+ <td><img src="./schedule_files/spacer.gif" height="15" width="1" alt=" "></td>
+</tr>
+
+
+
+
+
+<tr>
+ <td colspan="2" valign="top" align="left">
+  <div class="listGridFixed">
+  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+   <tbody><tr>
+    <td>
+     <table cellspacing="1" border="0" height="100%" width="100%">
+      <tbody><tr class="listHeader headerLabelBackground">
+       <th class="inputGridHeader" width="50">&nbsp;</th>
+
+       
+       
+       <th align="center" class="inputGridHeader inputGridColumnHeader" style="font-size:small;; width:125px" nowrap="">
+        M&nbsp;-&nbsp;Monday
+       </th>
+       
+       
+       <th align="center" class="inputGridHeader inputGridColumnHeader" style="font-size:small;; width:125px" nowrap="">
+        T&nbsp;-&nbsp;Tuesday
+       </th>
+       
+       
+       <th align="center" class="inputGridHeader inputGridColumnHeader" style="font-size:small;; width:125px" nowrap="">
+        W&nbsp;-&nbsp;Wednesday
+       </th>
+       
+       
+       <th align="center" class="inputGridHeader inputGridColumnHeader" style="font-size:small;; width:125px" nowrap="">
+        R&nbsp;-&nbsp;Thursday
+       </th>
+       
+       
+       <th align="center" class="inputGridHeader inputGridColumnHeader" style="font-size:small;; width:125px" nowrap="">
+        F&nbsp;-&nbsp;Friday
+       </th>
+       
+      </tr>
+
+      
+     
+     
+      <tr>
+
+       <td align="center" style="background-color:white;" height="11%" width="5%">
+        <table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%">
+         
+         <tbody><tr>
+          <th align="center" style="font-size:small" nowrap="">
+           P1-Period 1
+          </th>
+         </tr>
+         
+         
+        </tbody></table>
+       </td>
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+         <td align="center" style="background-color:#FFFFFF;" rowspan="1" valign="center" height="11%" width="*">
+           
+              
+           
+         </td>
+       
+     
+     
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+         <td align="center" style="background-color:#E6E6FA;" rowspan="1" valign="center" height="11%" width="*">
+           
+             <table border="0" cellpadding="0" cellspacing="0" height="100%" width="90%">
+               
+               
+                 
+                 <tbody><tr>
+                   <td align="center" style="width: 125px">
+                     
+                      MA3030-03<br>Precalculus H<br>Padgett, Julie<br>145<br> 
+                   </td>
+                 </tr>
+               
+               
+                 <tr>
+                   <td align="right" valign="bottom" style="font-weight: bold;">
+                     E Block
+                   </td>
+                 </tr>
+               
+             </tbody></table>
+           
+         </td>
+       
+     
+     
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+         <td align="center" style="background-color:#FFFFFF;" rowspan="1" valign="center" height="11%" width="*">
+           
+              
+           
+         </td>
+       
+     
+     
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+         <td align="center" style="background-color:#FFFFFF;" rowspan="1" valign="center" height="11%" width="*">
+           
+              
+           
+         </td>
+       
+     
+     
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+         <td align="center" style="background-color:#E6E6FA;" rowspan="1" valign="center" height="11%" width="*">
+           
+             <table border="0" cellpadding="0" cellspacing="0" height="100%" width="90%">
+               
+               
+                 
+                 <tbody><tr>
+                   <td align="center" style="width: 125px">
+                     
+                      MA3030-03<br>Precalculus H<br>Padgett, Julie<br>145<br> 
+                   </td>
+                 </tr>
+               
+               
+                 <tr>
+                   <td align="right" valign="bottom" style="font-weight: bold;">
+                     E Block
+                   </td>
+                 </tr>
+               
+             </tbody></table>
+           
+         </td>
+       
+     
+     
+   </tr>
+ 
+     
+      <tr>
+
+       <td align="center" style="background-color:white;" height="11%" width="5%">
+        <table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%">
+         
+         <tbody><tr>
+          <th align="center" style="font-size:small" nowrap="">
+           P2-Period 2
+          </th>
+         </tr>
+         
+         
+        </tbody></table>
+       </td>
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+         <td align="center" style="background-color:#FFF8DC;" rowspan="1" valign="center" height="11%" width="*">
+           
+             <table border="0" cellpadding="0" cellspacing="0" height="100%" width="90%">
+               
+               
+                 
+                 <tbody><tr>
+                   <td align="center" style="width: 125px">
+                     
+                      WE2800-01<br>Yoga<br>Gorman, Elizabeth<br>344<br> 
+                   </td>
+                 </tr>
+               
+               
+                 <tr>
+                   <td align="right" valign="bottom" style="font-weight: bold;">
+                     B Block(1)
+                   </td>
+                 </tr>
+               
+             </tbody></table>
+           
+         </td>
+       
+     
+     
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+         <td align="center" style="background-color:#F0F8FF;" rowspan="1" valign="center" height="11%" width="*">
+           
+             <table border="0" cellpadding="0" cellspacing="0" height="100%" width="90%">
+               
+               
+                 
+                 <tbody><tr>
+                   <td align="center" style="width: 125px">
+                     
+                      HRSW01-01<br>Advisory SWS<br>Brokenrope, Z; Flynn-Carson, K; Hou, S; Kozel, B; Berman, B; Lantos, S; Martin, J; Wheeler, M<br> 
+                   </td>
+                 </tr>
+               
+               
+                 <tr>
+                   <td align="right" valign="bottom" style="font-weight: bold;">
+                     T(T,F)
+                   </td>
+                 </tr>
+               
+             </tbody></table>
+           
+         </td>
+       
+     
+     
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+         <td align="center" style="background-color:#FFFFFF;" rowspan="1" valign="center" height="11%" width="*">
+           
+              
+           
+         </td>
+       
+     
+     
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+         <td align="center" style="background-color:#FFE4C4;" rowspan="1" valign="center" height="11%" width="*">
+           
+             <table border="0" cellpadding="0" cellspacing="0" height="100%" width="90%">
+               
+               
+                 
+                 <tbody><tr>
+                   <td align="center" style="width: 125px">
+                     
+                      SW6000-01<br>SWS Town Mtg<br>Flynn-Carson, K; Berman, B; Wheeler, M; Brokenrope, Z; Hou, S; Kozel, B; Lantos, S; Martin, J<br>403<br> 
+                   </td>
+                 </tr>
+               
+               
+                 <tr>
+                   <td align="right" valign="bottom" style="font-weight: bold;">
+                     B(R)
+                   </td>
+                 </tr>
+               
+             </tbody></table>
+           
+         </td>
+       
+     
+     
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+         <td align="center" style="background-color:#F0F8FF;" rowspan="1" valign="center" height="11%" width="*">
+           
+             <table border="0" cellpadding="0" cellspacing="0" height="100%" width="90%">
+               
+               
+                 
+                 <tbody><tr>
+                   <td align="center" style="width: 125px">
+                     
+                      HRSW01-01<br>Advisory SWS<br>Brokenrope, Z; Flynn-Carson, K; Hou, S; Kozel, B; Berman, B; Lantos, S; Martin, J; Wheeler, M<br> 
+                   </td>
+                 </tr>
+               
+               
+                 <tr>
+                   <td align="right" valign="bottom" style="font-weight: bold;">
+                     T(T,F)
+                   </td>
+                 </tr>
+               
+             </tbody></table>
+           
+         </td>
+       
+     
+     
+   </tr>
+ 
+     
+      <tr>
+
+       <td align="center" style="background-color:white;" height="11%" width="5%">
+        <table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%">
+         
+         <tbody><tr>
+          <th align="center" style="font-size:small" nowrap="">
+           P3-Period 3
+          </th>
+         </tr>
+         
+         
+        </tbody></table>
+       </td>
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+         <td align="center" style="background-color:#FFFFFF;" rowspan="1" valign="center" height="11%" width="*">
+           
+              
+           
+         </td>
+       
+     
+     
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+         <td align="center" style="background-color:#FFFFFF;" rowspan="1" valign="center" height="11%" width="*">
+           
+              
+           
+         </td>
+       
+     
+     
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+         <td align="center" style="background-color:#F5F5DC;" rowspan="1" valign="center" height="11%" width="*">
+           
+             <table border="0" cellpadding="0" cellspacing="0" height="100%" width="90%">
+               
+               
+                 
+                 <tbody><tr>
+                   <td align="center" style="width: 125px">
+                     
+                      SW4130-01<br>SWS US Hist H<br>Wheeler, Mark<br>403<br> 
+                   </td>
+                 </tr>
+               
+               
+                 <tr>
+                   <td align="right" valign="bottom" style="font-weight: bold;">
+                     C Block
+                   </td>
+                 </tr>
+               
+             </tbody></table>
+           
+         </td>
+       
+     
+     
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+         <td align="center" style="background-color:#FFFFFF;" rowspan="1" valign="center" height="11%" width="*">
+           
+              
+           
+         </td>
+       
+     
+     
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+         <td align="center" style="background-color:#FFFFFF;" rowspan="1" valign="center" height="11%" width="*">
+           
+              
+           
+         </td>
+       
+     
+     
+   </tr>
+ 
+     
+      <tr>
+
+       <td align="center" style="background-color:white;" height="11%" width="5%">
+        <table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%">
+         
+         <tbody><tr>
+          <th align="center" style="font-size:small" nowrap="">
+           P4-Period 4
+          </th>
+         </tr>
+         
+         
+        </tbody></table>
+       </td>
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+         <td align="center" style="background-color:#F5F5DC;" rowspan="1" valign="center" height="11%" width="*">
+           
+             <table border="0" cellpadding="0" cellspacing="0" height="100%" width="90%">
+               
+               
+                 
+                 <tbody><tr>
+                   <td align="center" style="width: 125px">
+                     
+                      SW4130-01<br>SWS US Hist H<br>Wheeler, Mark<br>403<br> 
+                   </td>
+                 </tr>
+               
+               
+                 <tr>
+                   <td align="right" valign="bottom" style="font-weight: bold;">
+                     C Block
+                   </td>
+                 </tr>
+               
+             </tbody></table>
+           
+         </td>
+       
+     
+     
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+         <td align="center" style="background-color:#FFFFFF;" rowspan="1" valign="center" height="11%" width="*">
+           
+              
+           
+         </td>
+       
+     
+     
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+         <td align="center" style="background-color:#BDB76B;" rowspan="1" valign="center" height="11%" width="*">
+           
+             <table border="0" cellpadding="0" cellspacing="0" height="100%" width="90%">
+               
+               
+                 
+                 <tbody><tr>
+                   <td align="center" style="width: 125px">
+                     
+                      WL0400-01<br>Chinese IV<br>Shorter, Lihua<br>265<br> 
+                   </td>
+                 </tr>
+               
+               
+                 <tr>
+                   <td align="right" valign="bottom" style="font-weight: bold;">
+                     D Block
+                   </td>
+                 </tr>
+               
+             </tbody></table>
+           
+         </td>
+       
+     
+     
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+         <td align="center" style="background-color:#F5F5DC;" rowspan="1" valign="center" height="11%" width="*">
+           
+             <table border="0" cellpadding="0" cellspacing="0" height="100%" width="90%">
+               
+               
+                 
+                 <tbody><tr>
+                   <td align="center" style="width: 125px">
+                     
+                      SW4130-01<br>SWS US Hist H<br>Wheeler, Mark<br>403<br> 
+                   </td>
+                 </tr>
+               
+               
+                 <tr>
+                   <td align="right" valign="bottom" style="font-weight: bold;">
+                     C Block
+                   </td>
+                 </tr>
+               
+             </tbody></table>
+           
+         </td>
+       
+     
+     
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+         <td align="center" style="background-color:#FFFFFF;" rowspan="1" valign="center" height="11%" width="*">
+           
+              
+           
+         </td>
+       
+     
+     
+   </tr>
+ 
+     
+      <tr>
+
+       <td align="center" style="background-color:white;" height="11%" width="5%">
+        <table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%">
+         
+         <tbody><tr>
+          <th align="center" style="font-size:small" nowrap="">
+           P5-Period 5
+          </th>
+         </tr>
+         
+         
+        </tbody></table>
+       </td>
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+         <td align="center" style="background-color:#BDB76B;" rowspan="1" valign="center" height="11%" width="*">
+           
+             <table border="0" cellpadding="0" cellspacing="0" height="100%" width="90%">
+               
+               
+                 
+                 <tbody><tr>
+                   <td align="center" style="width: 125px">
+                     
+                      WL0400-01<br>Chinese IV<br>Shorter, Lihua<br>265<br> 
+                   </td>
+                 </tr>
+               
+               
+                 <tr>
+                   <td align="right" valign="bottom" style="font-weight: bold;">
+                     D Block
+                   </td>
+                 </tr>
+               
+             </tbody></table>
+           
+         </td>
+       
+     
+     
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+         <td align="center" style="background-color:#D2B48C;" rowspan="1" valign="center" height="11%" width="*">
+           
+             <table border="0" cellpadding="0" cellspacing="0" height="100%" width="90%">
+               
+               
+                 
+                 <tbody><tr>
+                   <td align="center" style="width: 125px">
+                     
+                      SW7130-02<br>SWS Biology H<br>Kozel, Brad<br>360<br> 
+                   </td>
+                 </tr>
+               
+               
+                 <tr>
+                   <td align="right" valign="bottom" style="font-weight: bold;">
+                     F Block
+                   </td>
+                 </tr>
+               
+             </tbody></table>
+           
+         </td>
+       
+     
+     
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+         <td align="center" style="background-color:#FFFFFF;" rowspan="1" valign="center" height="11%" width="*">
+           
+              
+           
+         </td>
+       
+     
+     
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+         <td align="center" style="background-color:#BDB76B;" rowspan="1" valign="center" height="11%" width="*">
+           
+             <table border="0" cellpadding="0" cellspacing="0" height="100%" width="90%">
+               
+               
+                 
+                 <tbody><tr>
+                   <td align="center" style="width: 125px">
+                     
+                      WL0400-01<br>Chinese IV<br>Shorter, Lihua<br>265<br> 
+                   </td>
+                 </tr>
+               
+               
+                 <tr>
+                   <td align="right" valign="bottom" style="font-weight: bold;">
+                     D Block
+                   </td>
+                 </tr>
+               
+             </tbody></table>
+           
+         </td>
+       
+     
+     
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+         <td align="center" style="background-color:#D2B48C;" rowspan="1" valign="center" height="11%" width="*">
+           
+             <table border="0" cellpadding="0" cellspacing="0" height="100%" width="90%">
+               
+               
+                 
+                 <tbody><tr>
+                   <td align="center" style="width: 125px">
+                     
+                      SW7130-02<br>SWS Biology H<br>Kozel, Brad<br>360<br> 
+                   </td>
+                 </tr>
+               
+               
+                 <tr>
+                   <td align="right" valign="bottom" style="font-weight: bold;">
+                     F Block
+                   </td>
+                 </tr>
+               
+             </tbody></table>
+           
+         </td>
+       
+     
+     
+   </tr>
+ 
+     
+      <tr>
+
+       <td align="center" style="background-color:white;" height="11%" width="5%">
+        <table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%">
+         
+         <tbody><tr>
+          <th align="center" style="font-size:small" nowrap="">
+           P6-Period 6
+          </th>
+         </tr>
+         
+         
+        </tbody></table>
+       </td>
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+         <td align="center" style="background-color:#FFFFFF;" rowspan="1" valign="center" height="11%" width="*">
+           
+              
+           
+         </td>
+       
+     
+     
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+         <td align="center" style="background-color:#8FBC8F;" rowspan="1" valign="center" height="11%" width="*">
+           
+             <table border="0" cellpadding="0" cellspacing="0" height="100%" width="90%">
+               
+               
+                 
+                 <tbody><tr>
+                   <td align="center" style="width: 125px">
+                     
+                      SW5730-01<br>Coming of Age in Lit H<br>Brokenrope, Zachary<br>404<br> 
+                   </td>
+                 </tr>
+               
+               
+                 <tr>
+                   <td align="right" valign="bottom" style="font-weight: bold;">
+                     G Block
+                   </td>
+                 </tr>
+               
+             </tbody></table>
+           
+         </td>
+       
+     
+     
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+         <td align="center" style="background-color:#E6E6FA;" rowspan="1" valign="center" height="11%" width="*">
+           
+             <table border="0" cellpadding="0" cellspacing="0" height="100%" width="90%">
+               
+               
+                 
+                 <tbody><tr>
+                   <td align="center" style="width: 125px">
+                     
+                      MA3030-03<br>Precalculus H<br>Padgett, Julie<br>145<br> 
+                   </td>
+                 </tr>
+               
+               
+                 <tr>
+                   <td align="right" valign="bottom" style="font-weight: bold;">
+                     E Block
+                   </td>
+                 </tr>
+               
+             </tbody></table>
+           
+         </td>
+       
+     
+     
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+         <td align="center" style="background-color:#FFFFFF;" rowspan="1" valign="center" height="11%" width="*">
+           
+              
+           
+         </td>
+       
+     
+     
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+         <td align="center" style="background-color:#8FBC8F;" rowspan="1" valign="center" height="11%" width="*">
+           
+             <table border="0" cellpadding="0" cellspacing="0" height="100%" width="90%">
+               
+               
+                 
+                 <tbody><tr>
+                   <td align="center" style="width: 125px">
+                     
+                      SW5730-01<br>Coming of Age in Lit H<br>Brokenrope, Zachary<br>404<br> 
+                   </td>
+                 </tr>
+               
+               
+                 <tr>
+                   <td align="right" valign="bottom" style="font-weight: bold;">
+                     G Block
+                   </td>
+                 </tr>
+               
+             </tbody></table>
+           
+         </td>
+       
+     
+     
+   </tr>
+ 
+     
+      <tr>
+
+       <td align="center" style="background-color:white;" height="11%" width="5%">
+        <table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%">
+         
+         <tbody><tr>
+          <th align="center" style="font-size:small" nowrap="">
+           P7-Period 7
+          </th>
+         </tr>
+         
+         
+        </tbody></table>
+       </td>
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+         <td align="center" style="background-color:#FFFFFF;" rowspan="1" valign="center" height="11%" width="*">
+           
+              
+           
+         </td>
+       
+     
+     
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+         <td align="center" style="background-color:#FFFFFF;" rowspan="1" valign="center" height="11%" width="*">
+           
+              
+           
+         </td>
+       
+     
+     
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+         <td align="center" style="background-color:#D2B48C;" rowspan="1" valign="center" height="11%" width="*">
+           
+             <table border="0" cellpadding="0" cellspacing="0" height="100%" width="90%">
+               
+               
+                 
+                 <tbody><tr>
+                   <td align="center" style="width: 125px">
+                     
+                      SW7130-02<br>SWS Biology H<br>Kozel, Brad<br>360<br> 
+                   </td>
+                 </tr>
+               
+               
+                 <tr>
+                   <td align="right" valign="bottom" style="font-weight: bold;">
+                     F Block
+                   </td>
+                 </tr>
+               
+             </tbody></table>
+           
+         </td>
+       
+     
+     
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+         <td align="center" style="background-color:#FFFFFF;" rowspan="1" valign="center" height="11%" width="*">
+           
+              
+           
+         </td>
+       
+     
+     
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+         <td align="center" style="background-color:#FFFFFF;" rowspan="1" valign="center" height="11%" width="*">
+           
+              
+           
+         </td>
+       
+     
+     
+   </tr>
+ 
+     
+      <tr>
+
+       <td align="center" style="background-color:white;" height="11%" width="5%">
+        <table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%">
+         
+         <tbody><tr>
+          <th align="center" style="font-size:small" nowrap="">
+           P8-Period 8
+          </th>
+         </tr>
+         
+         
+        </tbody></table>
+       </td>
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+         <td align="center" style="background-color:#FFFFFF;" rowspan="1" valign="center" height="11%" width="*">
+           
+              
+           
+         </td>
+       
+     
+     
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+         <td align="center" style="background-color:#FFFFFF;" rowspan="1" valign="center" height="11%" width="*">
+           
+              
+           
+         </td>
+       
+     
+     
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+         <td align="center" style="background-color:#8FBC8F;" rowspan="1" valign="center" height="11%" width="*">
+           
+             <table border="0" cellpadding="0" cellspacing="0" height="100%" width="90%">
+               
+               
+                 
+                 <tbody><tr>
+                   <td align="center" style="width: 125px">
+                     
+                      SW5730-01<br>Coming of Age in Lit H<br>Brokenrope, Zachary<br>404<br> 
+                   </td>
+                 </tr>
+               
+               
+                 <tr>
+                   <td align="right" valign="bottom" style="font-weight: bold;">
+                     G Block
+                   </td>
+                 </tr>
+               
+             </tbody></table>
+           
+         </td>
+       
+     
+     
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+         <td align="center" style="background-color:#FFFFFF;" rowspan="1" valign="center" height="11%" width="*">
+           
+              
+           
+         </td>
+       
+     
+     
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+         <td align="center" style="background-color:#FFFFFF;" rowspan="1" valign="center" height="11%" width="*">
+           
+              
+           
+         </td>
+       
+     
+     
+   </tr>
+ 
+     
+      <tr>
+
+       <td align="center" style="background-color:white;" height="11%" width="5%">
+        <table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%">
+         
+         <tbody><tr>
+          <th align="center" style="font-size:small" nowrap="">
+           P9-Period 9
+          </th>
+         </tr>
+         
+         
+        </tbody></table>
+       </td>
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+         <td align="center" style="background-color:#FFFFFF;" rowspan="1" valign="center" height="11%" width="*">
+           
+              
+           
+         </td>
+       
+     
+     
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+         <td align="center" style="background-color:#FFFFFF;" rowspan="1" valign="center" height="11%" width="*">
+           
+              
+           
+         </td>
+       
+     
+     
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+         <td align="center" style="background-color:#FFFFFF;" rowspan="1" valign="center" height="11%" width="*">
+           
+              
+           
+         </td>
+       
+     
+     
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+         <td align="center" style="background-color:#FFFFFF;" rowspan="1" valign="center" height="11%" width="*">
+           
+              
+           
+         </td>
+       
+     
+     
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+         <td align="center" style="background-color:#FFFFFF;" rowspan="1" valign="center" height="11%" width="*">
+           
+              
+           
+         </td>
+       
+     
+     
+   </tr>
+ 
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+</div>
+</td>
+</tr>
+
+
+</tbody></table>
+
+         </td>
+         <td>
+          
+            
+          
+         </td>
+        </tr>
+        <tr>
+         <td height="*" class="borderRight">
+          <img src="./schedule_files/spacer.gif" height="1" width="1" alt=" ">
+         </td>
+        </tr>
+       </tbody></table>
+      </div>
+     </td>
+    </tr>
+   </tbody></table>
+  </form>
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script language="JavaScript">
+/**
+ * Join the messages in the array with a break, so they all display on a newline.
+ * Display the messages in the window, if they are NOT errorMessages, the box will fade away
+ */
+function displayActionMessages(messagesArray, isErrorMessage)
+{
+   var messages = messagesArray.join("<br>");
+   
+   
+     showMessageWindow(messages, isErrorMessage, false, 250);
+     if(!isErrorMessage) {
+       $(function(){$('#messageWindow').stop().animate({opacity: 1.0}, 2000).fadeTo(500, 0, closeMessageWindow);});
+     }
+   
+}
+</script>
+   <div id="messageWindow"><img src="./schedule_files/spacer.gif" height="1" width="1" alt=" "></div>
+
+
+<script language="JavaScript">
+ setInitialMaximizedState('Maximize', 'Minimize');
+</script>
+ 
+
+
+
+ 
+
+</body></html>

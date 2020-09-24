@@ -11,7 +11,9 @@ body {
 }
 
 div#query {
-	
+	font-size: 20px;
+	color:white;
+	font-weight: bold;
 	position:fixed;
 	right: 0;
 	border:1px;
@@ -39,8 +41,4 @@ div#query .label {
 	color:white;
 	font-size: 20px;
 }
-#position {
-	font-size: 20px;
-	color:white;
-	font-weight: bold;
-}
+
