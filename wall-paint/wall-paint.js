@@ -46,6 +46,9 @@ function degToRad(degrees) {
   return degrees * Math.PI / 180;
 };
 
+function playMusic() {
+  music.play();
+}
 
 
 function mouseCircle(x, y){
@@ -127,7 +130,7 @@ function stopDraw(){
    prevX=null;
    prevY=null; 
    document.body.style.cursor = isErasing ? 'crosshair' : 'default';
-   evt.preventDefault();
+   e.preventDefault();
 }
 
 canvas.addEventListener('mousedown', function(){
@@ -172,10 +175,8 @@ document.querySelector('#eraseButton').addEventListener("click", function() {
   }
 }); 
 
+window.addEventListener('resize', resizeCanvas, false);
 
 document.querySelector('#submitButton').addEventListener("click",function(){
   circleRad = document.querySelector('input#brushSize').value;
 });
-
-     
-window.addEventListener('resize', resizeCanvas, false);
