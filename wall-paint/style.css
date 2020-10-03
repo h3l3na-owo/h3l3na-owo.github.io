@@ -9,6 +9,9 @@ body {
 	margin:0px;
 	
 }
+audio{
+	visibility: hidden;
+}
 
 div#query {
 	font-size: 20px;

@@ -9,9 +9,11 @@ let w;
 let h;
 const ctx = canvas.getContext('2d');
 const position = document.querySelector('#position');
-const eventType = document.querySelector('#evtype');
+//const eventType = document.querySelector('#evtype');
 const wallPicker = document.querySelector('select#wall');
 const colorPicker = document.querySelector('select#color');
+const music = document.querySelector('audio');
+const musicButton = document.querySelector('#musicButton');
 let color = 'rgb(20,250,20)';
 let wall = "url('wall.jpg')"; 
 let e = window.event;
@@ -50,6 +52,9 @@ function playMusic() {
   music.play();
 }
 
+function stopMusic() {
+  music.pause();
+}
 
 function mouseCircle(x, y){
 
@@ -88,6 +93,11 @@ function mouseCircle(x, y){
   prevY = y; 
 }
 
+function playMusic() {
+  music.play();
+  console.log("mus");
+}
+
 function getMousePos(canvas, evt) {
   var rect = canvas.getBoundingClientRect();
   var x = evt.type === "mousemove" ? evt.clientX : evt.touches[0].clientX;
@@ -106,7 +116,7 @@ function trackMouse(evt){
     var mousePos = getMousePos(canvas, evt);
     var message = mousePos.x + ',' + mousePos.y;
     position.textContent = 'X;Y:'+ message;
-    eventType.textContent = evt.type;
+    //eventType.textContent = evt.type;
     if(isDrawing === true || evt.type==="touchmove"){
         mouseCircle(mousePos.x, mousePos.y);
     }
@@ -130,7 +140,7 @@ function stopDraw(){
    prevX=null;
    prevY=null; 
    document.body.style.cursor = isErasing ? 'crosshair' : 'default';
-   e.preventDefault();
+   event.preventDefault();
 }
 
 canvas.addEventListener('mousedown', function(){
@@ -144,8 +154,8 @@ canvas.addEventListener('mouseup', stopDraw, false);
 canvas.addEventListener('mouseout', stopDraw, false);
 
 
-canvas.addEventListener('touchstart', trackMouse, false);
-canvas.addEventListener('touchmove', trackMouse, false);
+canvas.addEventListener('touchstart', trackMouse, false, {passive: true});
+canvas.addEventListener('touchmove', trackMouse, false, {passive: true});
 canvas.addEventListener('touchend', stopDraw, false);
 canvas.addEventListener('touchcancel', stopDraw, false);
 
@@ -154,6 +164,8 @@ colorPicker.addEventListener("change", function(){
   color = colorPicker.value;
   erasingOff();
 });
+
+
 
 wallPicker.addEventListener("change", function(){
   wall = wallPicker.value;
@@ -165,6 +177,16 @@ document.querySelector('#resetButton').addEventListener("click", function() {
   ctx.clearRect(0,0,w,h);
 });
  
+document.querySelector('#musicButton').addEventListener('click', function(){
+ if (musicButton.value === "on"){
+  stopMusic();
+  musicButton.value = "off";
+ }
+ else {
+  playMusic();
+  musicButton.value = "on";
+ }
+});
 
 document.querySelector('#eraseButton').addEventListener("click", function() {
   if (isErasing === false){
@@ -174,8 +196,14 @@ document.querySelector('#eraseButton').addEventListener("click", function() {
     erasingOff();
   }
 }); 
-
+wallPicker.addEventListener("load", function(){
+  console.log("wallpick");
+});
 window.addEventListener('resize', resizeCanvas, false);
+
+window.addEventListener('DOMContentLoaded', function(){
+  console.log('page is fully loaded');
+});
 
 document.querySelector('#submitButton').addEventListener("click",function(){
   circleRad = document.querySelector('input#brushSize').value;

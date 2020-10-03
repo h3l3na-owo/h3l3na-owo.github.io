@@ -14,6 +14,10 @@
 </head>
 
 <body>
+
+	<audio controls>
+	  <source src="beats.mp3" type="audio/mp3">
+	</audio>
 	<canvas class="myCanvas">
 	  <p>Add suitable fallback here.</p>
 	</canvas>
@@ -38,11 +42,12 @@
 				  <option value="url('metal.jpg')">Metal</option>
 				  <option value="url('wood.jpg')">Wood</option>
 				</select> <br> <br>
+				<span class="label">Music:</span>
+				<input type="button" id="musicButton" value="off"><br><br>
 				<span class="label">Eraser:</span>
 				<input type="button" id="eraseButton" value="off"><br><br>
 				<input type="button" id="resetButton" value="reset canvas"><br><br>
         <span id="position"></span><br><br>
-        <span id="evtype"></span>
 
     </div>
 
