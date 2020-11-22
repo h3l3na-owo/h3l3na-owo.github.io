@@ -1,0 +1,24 @@
+body {
+	text-align: center;
+	background: rgb(40,40,40);
+	font-family: 'Times New Roman', serif; ;
+  	src: url(https://fonts.google.com/);
+  	padding: 170px;
+    border: 3px;
+}
+
+a {
+	font-size: 80px;
+	color: rgb(200,50,50);
+}
+
+#genre {
+	font-size: 40px;
+	color: rgb(200,50,50);
+
+}
+
+#artistImage{
+
+	max-height:30%;
+}
