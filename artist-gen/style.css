@@ -1,15 +1,21 @@
+
+
 body {
 	text-align: center;
 	background: rgb(40,40,40);
 	font-family: 'Times New Roman', serif; ;
   	src: url(https://fonts.google.com/);
-  	padding: 170px;
+  	padding: 10px;
     border: 3px;
 }
 
 a {
 	font-size: 80px;
 	color: rgb(200,50,50);
+}
+
+div#search{
+	float:left;
 }
 
 #genre {
@@ -20,5 +26,5 @@ a {
 
 #artistImage{
 
-	max-height:30%;
+	max-width:20%;
 }
