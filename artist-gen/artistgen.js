@@ -103,5 +103,5 @@ selectButton.addEventListener("click", function(){
 	randomButton();
 });
 
-// so that it reauthenticates first thing
+.
 randomButton();
