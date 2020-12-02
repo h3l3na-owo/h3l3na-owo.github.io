@@ -7,15 +7,22 @@ body {
   	src: url(https://fonts.google.com/);
   	padding: 10px;
     border: 3px;
+    color: rgb(200,50,50);
 }
 
-a {
-	font-size: 80px;
+#artist {
 	color: rgb(200,50,50);
+	font-size: 80px;
 }
 
 div#search{
 	float:left;
+}
+
+#authButton{
+	color: rgb(200,50,50);
+	font-size:30px;
+	visibility: hidden;
 }
 
 #genre {

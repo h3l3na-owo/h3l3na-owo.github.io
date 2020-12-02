@@ -1,8 +1,12 @@
 //token url
 //https://accounts.spotify.com/en/authorize?client_id=163f41ea630d40358a5b6c7a98d5134b&response_type=token&redirect_uri=http:%2F%2F0.0.0.0:8000
+const parsedHash = new URLSearchParams(
+  window.location.hash.substr(1) // skip the first char (#)
+);
 
+console.log("access token:"+parsedHash.get("access_token")); // any_value
 
-//authtoken = BQC2W1D8K9vz54gLBiZdmu33-5KVL6G5oPPQ6cEYPXiVFU6B9f0SoEQNlxU_jj37m4cHHbiWpRLeHBPqqA2J6JCPB7kMVvYL3iehvHpzWv4QornW4ZxgdP9akqIFJAAl2vGVRX6VqlP--ke-dpt4k0lz-7kF8fA
+var authToken = parsedHash.get("access_token");
 
 // TO DO click genre ---> search by that genre
 
@@ -21,10 +25,12 @@ var artistName;
 
 
 var spotifyApi = new SpotifyWebApi();
-spotifyApi.setAccessToken('BQC2W1D8K9vz54gLBiZdmu33-5KVL6G5oPPQ6cEYPXiVFU6B9f0SoEQNlxU_jj37m4cHHbiWpRLeHBPqqA2J6JCPB7kMVvYL3iehvHpzWv4QornW4ZxgdP9akqIFJAAl2vGVRX6VqlP--ke-dpt4k0lz-7kF8fA');
+spotifyApi.setAccessToken(authToken);
 
 
 function randomButton(){
+	searchedGenre = 'genre:"'+searchBar.value+'"';
+
 	// get artist count
 	console.log('genre: '+searchedGenre);
 	spotifyApi.searchArtists(yearRange+searchedGenre).then(
@@ -55,12 +61,16 @@ function randomButton(){
 		  },
 		  function (err) {
 		    console.error(err);
+		    //console.log('reAuth!');
+		    reAuth();
 		  }
 		); 
 
 	  },
 	  function (err) {
 	    console.error(err);
+	    
+	    reAuth();
 	  }
 	);
 }
@@ -74,19 +84,24 @@ function textChange(artist){
 }
 
 
-//artistName = artist.artists.items[0].name;
+function reAuth(){
+	console.log('reAuth!');
+	document.querySelector('#authButton').style.visibility = 'visible';
+	document.querySelector("#randomButton").style.visibility = 'hidden';
+}
 
 
 var artistTitle = document.querySelector('#artist');
 var genre = document.querySelector('#genre');
 var selectButton = document.querySelector("#randomButton");
-var searchButton = document.querySelector('#searchButton');
-var searchBar = document.querySelector('#searchBar')
+var searchBar = document.querySelector('#searchBar');
 var artistImage = document.querySelector('#artistImage');
 
 
 
 selectButton.addEventListener("click", function(){
-	searchedGenre = 'genre:"'+searchBar.value+'"';
 	randomButton();
 });
+
+// so that it reauthenticates first thing
+randomButton();
