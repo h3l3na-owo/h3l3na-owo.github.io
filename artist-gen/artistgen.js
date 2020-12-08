@@ -4,7 +4,11 @@ const parsedHash = new URLSearchParams(
   window.location.hash.substr(1) // skip the first char (#)
 );
 
+const parsedHost = window.location.hostname; // skip the first char (#)
+
+
 console.log("access token:"+parsedHash.get("access_token")); // any_value
+console.log("host: "+parsedHost);
 
 var authToken = parsedHash.get("access_token");
 
@@ -88,6 +92,9 @@ function reAuth(){
 	console.log('reAuth!');
 	document.querySelector('#authButton').style.visibility = 'visible';
 	document.querySelector("#randomButton").style.visibility = 'hidden';
+	if (parsedHost === '0.0.0.0'){
+		authButton.href = "https://accounts.spotify.com/en/authorize?client_id=163f41ea630d40358a5b6c7a98d5134b&response_type=token&redirect_uri=http:%2F%2F0.0.0.0:8000";
+	}
 }
 
 
@@ -103,5 +110,5 @@ selectButton.addEventListener("click", function(){
 	randomButton();
 });
 
-.
+
 randomButton();
