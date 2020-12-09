@@ -17,6 +17,13 @@ body {
 
 div#search{
 	float:left;
+	width:250px;
+	font-size:20px;
+}
+
+#searchBar{
+	width:250px;
+	height:30px;
 }
 
 #authButton{
@@ -32,6 +39,7 @@ div#search{
 }
 
 #artistImage{
-
+	margin-left: auto;
+    margin-right: auto;
 	max-width:20%;
 }

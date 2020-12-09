@@ -113,5 +113,13 @@ selectButton.addEventListener("click", function(){
 	randomButton();
 });
 
+window.addEventListener("keyup", function(event){
+	event.preventDefault();
+    if (event.keyCode === 13) {
+        randomButton();
+    }	
+});
+	
+
 
 randomButton();
