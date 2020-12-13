@@ -13,6 +13,8 @@ console.log("host: "+parsedHost);
 var authToken = parsedHash.get("access_token");
 
 // TO DO click genre ---> search by that genre
+// TO DO add genre search erro message
+
 
 var client_id = '163f41ea630d40358a5b6c7a98d5134b'; 
 var client_secret = '037a66f588924117964601f182ba29dc';
@@ -62,6 +64,7 @@ function randomButton(){
 		  	console.log('artist name:' + artistName);
 		    console.log('random artist:', data);
 		    //console.log(artistNum);
+		    
 		  },
 		  function (err) {
 		    console.error(err);
@@ -82,10 +85,19 @@ function randomButton(){
 function textChange(artist){
 	artistTitle.textContent = artist.name;
 	artistTitle.href = "https://open.spotify.com/artist/"+artist.id;
-	genre.textContent = artist.genres.join(', ');
+	//genre.textContent = artist.genres.join(', ');
 	console.log('artist name:' + artist.name);
 	artistImage.src = artist.images[0].url;
+	for (x=0; x < artist.genres.length;x++){
+		displayGenre(artist.genres[x]);
+	}
 }
+
+function displayGenre(g){
+   const addGenre = document.createElement('a');
+   addGenre.textContent = g;
+   genres.appendChild(addGenre);
+ }
 
 
 function reAuth(){
@@ -102,16 +114,17 @@ function reAuth(){
 
 
 var artistTitle = document.querySelector('#artist');
+var genres = document.querySelector('#genres');
 var genre = document.querySelector('#genre');
 var selectButton = document.querySelector("#randomButton");
 var searchBar = document.querySelector('#searchBar');
 var artistImage = document.querySelector('#artistImage');
 
-
-
-selectButton.addEventListener("click", function(){
-	randomButton();
+genres.addEventListener("click", function(){
+	searchBar.value = 'working!';
 });
+
+selectButton.addEventListener("click", randomButton);
 
 window.addEventListener("keyup", function(event){
 	event.preventDefault();

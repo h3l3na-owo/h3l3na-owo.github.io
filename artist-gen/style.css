@@ -43,3 +43,9 @@ div#search{
     margin-right: auto;
 	max-width:20%;
 }
+
+#randomButton{
+	width:400px;
+	height:50px;
+	font-size:140%;
+}
