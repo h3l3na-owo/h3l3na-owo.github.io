@@ -60,7 +60,7 @@ function randomButton(){
 		  	//artist = data;
 		  	//artistName = artist.artists.items[0].name;
 		  	//artistTitle.textContent = artistName;
-		  	textChange(data.artists.items[0]);
+		  	displayArtist(data.artists.items[0]);
 		  	console.log('artist name:' + artistName);
 		    console.log('random artist:', data);
 		    //console.log(artistNum);
@@ -82,21 +82,29 @@ function randomButton(){
 	);
 }
 
-function textChange(artist){
+function displayArtist(artist){
 	artistTitle.textContent = artist.name;
 	artistTitle.href = "https://open.spotify.com/artist/"+artist.id;
 	//genre.textContent = artist.genres.join(', ');
 	console.log('artist name:' + artist.name);
 	artistImage.src = artist.images[0].url;
-	for (x=0; x < artist.genres.length;x++){
+
+
+	genres.textContent = '';
+	for (var x=0; x < artist.genres.length;x++){
+		
 		displayGenre(artist.genres[x]);
 	}
 }
 
 function displayGenre(g){
-   const addGenre = document.createElement('a');
-   addGenre.textContent = g;
-   genres.appendChild(addGenre);
+	const addGenre = document.createElement('a');
+	addGenre.textContent = g+', ';
+	addGenre.addEventListener("click", function(){
+		searchBar.value = g;
+		randomButton();
+	});
+	genres.appendChild(addGenre);
  }
 
 
@@ -120,9 +128,6 @@ var selectButton = document.querySelector("#randomButton");
 var searchBar = document.querySelector('#searchBar');
 var artistImage = document.querySelector('#artistImage');
 
-genres.addEventListener("click", function(){
-	searchBar.value = 'working!';
-});
 
 selectButton.addEventListener("click", randomButton);
 
