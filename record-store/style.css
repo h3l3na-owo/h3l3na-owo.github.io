@@ -24,6 +24,7 @@ div#search{
 
 #search-new{
 	text-align:left;
+	float:left;
 }
 
 #get-another{
