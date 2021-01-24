@@ -1,0 +1,35 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Knewave&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<div id="search">
+		<input type="text" id="searchBar">
+		<p id="searchedSong"> Test </p>
+	</div>
+	<br>
+	<a  href="https://accounts.spotify.com/en/authorize?client_id=2e53a5b23a78477e99eae192a230276c&response_type=token&redirect_uri=http://0.0.0.0:8000" id="reauth">
+		Uh Oh! Looks like u gotta reauthenticate the page
+	</a>
+	<p id="main">
+		just follow the link and click the green button so we have access to spotify's data :-)
+	</p>
+	<span href="" id="song-link">
+		song link (player goes under here)
+	</span>
+	<input type="button" id="yes" value="check">
+	<br>
+	<br>
+	<div id="search-new">
+		search new song
+	</div>
+	<div id="get-another">
+		get another song
+	</div>
+
+<script src="spotify-web-api.js"></script>
+<script src="record-store.js"></script>
+</body>
+</html>
