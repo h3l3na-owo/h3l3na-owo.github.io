@@ -26,16 +26,6 @@ var searchBar= document.querySelector('#search');
 
 var isAuth=false;
 
-searchNew.addEventListener("click", function(){
-	searchNew.textContent="it worked!";
-	console.log("search new test"+searchNew.textContent);
-});
-
-getAnother.addEventListener("click", function(){
-	getAnother.textContent="it worked2 !";
-	console.log("get another test:"+getAnother.textContent);
-});
-
 function test(){
 	var searchedGenre = 'genre:"metal"';
 	var yearRange = 'year:0000-9999 ';
@@ -84,7 +74,20 @@ window.addEventListener('load', function(){
 	getAnother.style.display ='none';
 	searchedSong.style.visibility = 'hidden';
 	searchBar.style.visibility = 'hidden';
-})
+});
+
+window.addEventListener("keyup", function(event){
+	event.preventDefault();
+    if (event.keyCode === 13) {
+        selected1();
+    }	
+});
+
+searchNew.addEventListener("click", searchnew);
+
+getAnother.addEventListener("click", getanother);
+
+
 
 function displayArtist(artist){
 	isAuth=true;
@@ -107,12 +110,43 @@ function search1(){
 	console.log("screen twoooooo");
 	mainText.innerHTML = "Alright, type in your song!";
 	searchBar.style.visibility = 'visible';
-	yesButton.display = "none";
+	yesButton.style.display = "none";
 }
+
+function selected1(){
+	console.log("screen 3");
+	mainText.innerHTML = "Awesome! If you like that song, check this one out. It's fire!";
+	searchBar.style.visibility = 'hidden';
+	songLink.style.display = 'block';
+	getAnother.style.display = 'block';
+	searchNew.style.display = 'block';
+	yesButton.style.display = "none";
+	searchedSong.style.visibility = 'visible';
+
+}
+
+function getanother(){
+	mainText.innerHTML = "You want another one? Of course! Here you go";
+	songLink.style.display = 'block';
+	getAnother.style.display = 'block';
+	searchNew.style.display = 'block';
+	searchedSong.style.visibility = 'visible';
+}
+
+function searchnew(){
+	mainText.innerHTML = "Want something new? That's fair. Type away!";
+	searchBar.style.visibility = 'visible';
+	getAnother.style.display = 'none';
+	searchNew.style.display = 'none';
+	searchedSong.style.visibility = 'hidden';
+	songLink.style.display = 'none';
+}
+
 
 function reAuth(){
 	console.log('reAuth!');
 	authButton.style.display = 'block';
+	yesButton.display = "none";
 	if (parsedHost === '0.0.0.0'){
 		authButton.href = "https://accounts.spotify.com/en/authorize?client_id=2e53a5b23a78477e99eae192a230276c&response_type=token&redirect_uri=http://0.0.0.0:8000";
 	}

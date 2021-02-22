@@ -44,8 +44,8 @@ function randomButton(){
 	  	console.log('genre: '+searchedGenre);
 	    console.log('all artists:', data);
 	    artistNum = data.artists.total;
-	    if (artistNum > 1999){
-	    	artistNum = 2000;
+	    if (artistNum > 999){
+	    	artistNum = 1000;
 	    }
 	    console.log('artist number: ' + artistNum);
 
