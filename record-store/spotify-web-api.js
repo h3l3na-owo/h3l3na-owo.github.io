@@ -1,4 +1,4 @@
-GET/* global module */
+/* global module */
 'use strict';
 
 /**

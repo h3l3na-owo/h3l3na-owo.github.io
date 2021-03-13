@@ -22,19 +22,26 @@ var authButton = document.querySelector('#reauth');
 var mainText = document.querySelector('#main');
 var yesButton = document.querySelector('#yes');
 var songLink = document.querySelector("#song-link");
-var searchBar= document.querySelector('#search');
+var searchBar= document.querySelector('#searchBar');
+
+var searchedTitle;
 
 var isAuth=false;
+
 
 function test(){
 	var searchedGenre = 'genre:"metal"';
 	var yearRange = 'year:0000-9999 ';
 	var artistName;
 
-	spotifyApi.searchArtists(yearRange+searchedGenre).then(
+	spotifyApi.searchTracks(yearRange+searchedGenre).then(
 	  function (data) {
-	    console.log('all artists:', data);
-	    artistNum = data.artists.total;
+	    console.log('all results:', data);
+
+
+
+
+	    artistNum = data.tracks.total;
 	    if (artistNum > 500){
 	    	artistNum = 501;
 	    }
@@ -42,12 +49,12 @@ function test(){
 	    // get random artist
 	    limit = 1;
 		offset = Math.floor(Math.random()*artistNum);
-		spotifyApi.searchArtists(yearRange+searchedGenre,{limit:limit , offset:offset}).then(
+		spotifyApi.searchTracks(yearRange+searchedGenre,{limit:limit , offset:offset}).then(
 		  function (data) {
 		  	//artist = data;
 		  	//artistName = artist.artists.items[0].name;
 		  	//artistTitle.textContent = artistName;
-		  	displayArtist(data.artists.items[0]);
+		  	//displayArtist(data.tracks.items[0]);
 		    //console.log(artistNum);
 		    
 		  },
@@ -66,6 +73,26 @@ function test(){
 }
 
 
+
+function trackSelector(){
+	var yearRange = 'year:0000-9999 ';
+	console.log('year range:'+yearRange);
+	searchedTitle = 'track:"'+searchBar.value+'"';
+	console.log(searchedTitle);
+
+	spotifyApi.searchTracks(yearRange+searchedTitle).then(
+	  function (data) {
+	    console.log('all results:', data);
+	    displaySong(data.tracks.items[0]);
+
+	  },
+	  function (err) {
+	    console.error(err);
+	    reAuth();
+	  }
+	);
+}
+
 yesButton.addEventListener('click', search1);
 
 window.addEventListener('load', function(){
@@ -79,7 +106,7 @@ window.addEventListener('load', function(){
 window.addEventListener("keyup", function(event){
 	event.preventDefault();
     if (event.keyCode === 13) {
-        selected1();
+        
     }	
 });
 
@@ -89,14 +116,10 @@ getAnother.addEventListener("click", getanother);
 
 
 
-function displayArtist(artist){
-	isAuth=true;
-	searchedSong.textContent = artist.name;
+function displaySong(track){
+	searchedSong.textContent = track.name;
 	console.log(searchedSong.textContent);
 	console.log("auth: "+isAuth);
-	if (isAuth === true){
-		introScreen();
-	}
 }
 
 function introScreen(){
@@ -155,8 +178,23 @@ function reAuth(){
 	}
 }
 
+function auth(){
+	isAuth=true;
+	if (isAuth === true){
+		introScreen();
+	}
+}
+auth();
 
 test();
+
+
+document.querySelector('#search-button').addEventListener("click", function(event){
+	//event.preventDefault();   *undelete later with submit form*
+    trackSelector();
+    selected1();
+});
+
 
 /* TO DO: 
 make page recognize reauthentication
