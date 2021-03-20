@@ -23,6 +23,7 @@ var mainText = document.querySelector('#main');
 var yesButton = document.querySelector('#yes');
 var songLink = document.querySelector("#song-link");
 var searchBar= document.querySelector('#searchBar');
+var resultList = document.querySelector('#results');
 
 var searchedTitle;
 
@@ -83,7 +84,8 @@ function trackSelector(){
 	spotifyApi.searchTracks(yearRange+searchedTitle).then(
 	  function (data) {
 	    console.log('all results:', data);
-	    displaySong(data.tracks.items[0]);
+	    //displaySong(data.tracks.items[0]);
+	    displayResults(data.tracks.items);
 
 	  },
 	  function (err) {
@@ -114,7 +116,7 @@ searchNew.addEventListener("click", searchnew);
 
 getAnother.addEventListener("click", getanother);
 
-
+searchBar.addEventListener("input", trackSelector);
 
 function displaySong(track){
 	searchedSong.textContent = track.name;
@@ -122,11 +124,16 @@ function displaySong(track){
 	console.log("auth: "+isAuth);
 }
 
+function displayResults(tracks){
+	const myLI = document.createElement('li');
+	myLI.textContent = tracks[0].name+" by "+tracks[0].artists[0].name;
+	resultList.appendChild(myLI);
+}
+
 function introScreen(){
 	authButton.style.display = 'none';
 	mainText.innerHTML="Sup! Welcome to my record store. Give me a song and I'll give you another. You ready?";
 	yesButton.value= "yes";
-	console.log(mainText);
 }
 
 function search1(){
@@ -186,7 +193,7 @@ function auth(){
 }
 auth();
 
-test();
+//test();
 
 
 document.querySelector('#search-button').addEventListener("click", function(event){
@@ -197,10 +204,11 @@ document.querySelector('#search-button').addEventListener("click", function(even
 
 
 /* TO DO: 
-make page recognize reauthentication
-figure out how to make reauth button not take up space
 
 set up drop-down search
+	-make list reset after ever character
+		-show multiple songs per new character
+	-make li's clickable
 
 set up audio player	
 
