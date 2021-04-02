@@ -29,6 +29,12 @@ var searchedTitle;
 
 var isAuth=false;
 
+const myLI1 = document.createElement('li');
+const myLI2 = document.createElement('li');
+const myLI3 = document.createElement('li');
+const myLI4 = document.createElement('li');
+const myLI5 = document.createElement('li');
+
 
 function test(){
 	var searchedGenre = 'genre:"metal"';
@@ -85,7 +91,9 @@ function trackSelector(){
 	  function (data) {
 	    console.log('all results:', data);
 	    //displaySong(data.tracks.items[0]);
+	    resetResults();
 	    displayResults(data.tracks.items);
+	    
 
 	  },
 	  function (err) {
@@ -125,9 +133,41 @@ function displaySong(track){
 }
 
 function displayResults(tracks){
-	const myLI = document.createElement('li');
-	myLI.textContent = tracks[0].name+" by "+tracks[0].artists[0].name;
-	resultList.appendChild(myLI);
+	var max = 8;
+	if (tracks.length <= max){
+		max = tracks.length;
+	}
+	for (i = 0; i < max; i++) {
+		const myLI1 = document.createElement('li');
+		myLI1.textContent = tracks[i].name+" by "+tracks[i].artists[0].name;
+        resultList.appendChild(myLI1);
+    }
+	// const myLI1 = document.createElement('li');
+	// const myLI2 = document.createElement('li');
+	// const myLI3 = document.createElement('li');
+	// const myLI4 = document.createElement('li');
+	// const myLI5 = document.createElement('li');
+
+
+
+	// myLI1.textContent = tracks[0].name+" by "+tracks[0].artists[0].name;
+	// myLI2.textContent = tracks[1].name+" by "+tracks[1].artists[0].name;
+	// myLI3.textContent = tracks[2].name+" by "+tracks[2].artists[0].name;
+	// myLI4.textContent = tracks[3].name+" by "+tracks[3].artists[0].name;
+	// myLI5.textContent = tracks[4].name+" by "+tracks[4].artists[0].name;
+
+	// resultList.appendChild(myLI1);
+	// resultList.appendChild(myLI2);
+	// resultList.appendChild(myLI3);
+	// resultList.appendChild(myLI4);
+	// resultList.appendChild(myLI5);
+}
+
+function resetResults(){
+	while (resultList.firstChild) {
+        resultList.removeChild(resultList.firstChild);
+    }
+	
 }
 
 function introScreen(){
@@ -193,14 +233,7 @@ function auth(){
 }
 auth();
 
-//test();
 
-
-document.querySelector('#search-button').addEventListener("click", function(event){
-	//event.preventDefault();   *undelete later with submit form*
-    trackSelector();
-    selected1();
-});
 
 
 /* TO DO: 
