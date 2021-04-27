@@ -90,7 +90,7 @@ function trackSelector(){
 	spotifyApi.searchTracks(yearRange+searchedTitle).then(
 	  function (data) {
 	    console.log('all results:', data);
-	    //displaySong(data.tracks.items[0]);
+	    displaySong(data.tracks.items[0]);
 	    resetResults();
 	    displayResults(data.tracks.items);
 	    
@@ -104,6 +104,9 @@ function trackSelector(){
 }
 
 yesButton.addEventListener('click', search1);
+
+myLI1.addEventListener("click", selected1);
+console.log("my li "+myLI1);
 
 window.addEventListener('load', function(){
 	songLink.style.display = 'none';
@@ -141,26 +144,11 @@ function displayResults(tracks){
 		const myLI1 = document.createElement('li');
 		myLI1.textContent = tracks[i].name+" by "+tracks[i].artists[0].name;
         resultList.appendChild(myLI1);
+        myLI1.addEventListener("click", selected1);
+		console.log("my li "+myLI1.value);
     }
-	// const myLI1 = document.createElement('li');
-	// const myLI2 = document.createElement('li');
-	// const myLI3 = document.createElement('li');
-	// const myLI4 = document.createElement('li');
-	// const myLI5 = document.createElement('li');
-
-
-
-	// myLI1.textContent = tracks[0].name+" by "+tracks[0].artists[0].name;
-	// myLI2.textContent = tracks[1].name+" by "+tracks[1].artists[0].name;
-	// myLI3.textContent = tracks[2].name+" by "+tracks[2].artists[0].name;
-	// myLI4.textContent = tracks[3].name+" by "+tracks[3].artists[0].name;
-	// myLI5.textContent = tracks[4].name+" by "+tracks[4].artists[0].name;
-
-	// resultList.appendChild(myLI1);
-	// resultList.appendChild(myLI2);
-	// resultList.appendChild(myLI3);
-	// resultList.appendChild(myLI4);
-	// resultList.appendChild(myLI5);
+    myLI1.addEventListener("click", selected1);
+	console.log("my li "+myLI1.value);
 }
 
 function resetResults(){
@@ -183,7 +171,7 @@ function search1(){
 	yesButton.style.display = "none";
 }
 
-function selected1(){
+function selected1(track){
 	console.log("screen 3");
 	mainText.innerHTML = "Awesome! If you like that song, check this one out. It's fire!";
 	searchBar.style.visibility = 'hidden';
@@ -239,10 +227,10 @@ auth();
 /* TO DO: 
 
 set up drop-down search
-	-make list reset after ever character
-		-show multiple songs per new character
-	-make li's clickable
-
+	-make individual li's clickable
+		-creat li handles
+		
+		-clicking transitions yo next screen
 set up audio player	
 
 change non-local (production) reauth url

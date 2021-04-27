@@ -35,7 +35,12 @@ spotifyApi.setAccessToken(authToken);
 
 
 function randomButton(){
-	searchedGenre = 'genre:"'+searchBar.value+'"';
+	if(searchBar.value !== ""){
+		searchedGenre = 'genre:"'+searchBar.value+'"';
+	}
+	else{
+		searchedGenre = null;
+	}
 
 	// get artist count
 	console.log('genre: '+searchedGenre);
