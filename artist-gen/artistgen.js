@@ -88,6 +88,9 @@ function randomButton(){
 }
 
 function displayArtist(artist){
+	if (artist.genres.length = 0){
+		randomButton();
+	}
 	artistTitle.textContent = artist.name;
 	artistTitle.href = "https://open.spotify.com/artist/"+artist.id;
 	//genre.textContent = artist.genres.join(', ');
